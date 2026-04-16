@@ -36,11 +36,12 @@ Read docs/plans/design.md fully before starting any task.
 
 ## Phase 5: Output Writer
 
-- [ ] Write failing tests for output format
-- [ ] Implement output_writer.py — writes paragraph files and index
-      - Paragraph files: ch##_p###.txt with single header line + content
-      - index.txt: full TOC with filenames, plain text format per design.md
-- [ ] Verify filenames sort correctly (zero-padded paragraph numbers)
+- [x] Write failing tests for output format
+- [x] Implement output_writer.py — writes ch##_p###.txt paragraph files and index.txt
+      - Paragraph files: plain text, header line + content, no markdown
+      - index.txt: chapter/section/paragraph listing with filenames
+      - Filenames zero-padded to 3 digits using paragraph number within chapter
+- [x] 10 tests passing; 37 total
 
 ## Phase 6: Main Entry Point
 
