@@ -64,6 +64,7 @@
 ===== 9. Canopy and Panels =====
   - [[panels-armrests|Armrests]]
   - [[panels-canopy|Canopy]]
+  - [[panels-canopy-cleaning|Canopy Cleaning]]
   - [[panels-canopy-access-door|Canopy Access Door]]
   - [[panels-cowling|Cowling]]
   - [[panels-firewall-cover|Firewall Cover Panel]]

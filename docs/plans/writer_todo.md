@@ -46,4 +46,43 @@ Once the print footer is working, write the `Record of Revisions` page for Secti
 
 ---
 
+### [ ] PILOT PAGE: Write canopy component page and canopy cleaning procedure
+
+**Purpose:** Validate that templates, formatting, cross-linking, and OtterWiki rendering all work correctly before bulk content development begins. After completion, Tom and Claude review the output together and adjust standards if needed.
+
+**Prerequisite:** OtterWiki instance must be running (see architect_todo).
+
+#### Page 1: `panels-canopy` — Canopy component page (Type 1b)
+
+Write the Canopy component page for Section 9. This is a reference page — description, specifications, inspection criteria. The cleaning procedure is a cross-reference link, not inline content.
+
+**Research needed:**
+- Canopy material and construction (Cozy Mark IV uses a blown acrylic canopy)
+- Location, dimensions if known
+- Inspection criteria: crazing, scratches, delamination, seal condition, latch mechanism
+
+**Cross-reference to include:**
+- `See [[panels-canopy-cleaning|Canopy Cleaning]] for cleaning procedure.`
+
+#### Page 2: `panels-canopy-cleaning` — Canopy Cleaning procedure (Type 2)
+
+Write the canopy cleaning procedure for Section 9.
+
+**Research needed:**
+- Cleaners safe for acrylic canopies (aviation-specific recommendations)
+- Cleaners that must be avoided (solvents that cause crazing)
+- Proper technique to avoid scratching
+- Anti-static and UV protectant products if applicable
+- Check `docs/references/AC43_13/` for relevant guidance on transparent enclosures
+
+**Expected structure:** Overview, Tools and Materials Required, Safety Notes (harmful cleaners), Procedure steps, Post-Procedure Checks.
+
+#### After both pages are written:
+- Verify both render correctly in OtterWiki
+- Verify the cross-link from canopy page to cleaning page resolves
+- Verify `[TOC]` renders if used
+- Tom and Claude review together — adjust templates/standards before proceeding
+
+---
+
 ## Completed
