@@ -28,13 +28,11 @@ Read docs/plans/design.md fully before starting any task.
 
 ## Phase 4: Document Parser
 
-- [ ] Write failing tests for paragraph boundary detection
-- [ ] Implement doc_parser.py — walks all content pages (35+), splits text into paragraphs
-      - Detects paragraph boundaries by matching pattern "N-N." at start of text block
-      - Associates each paragraph with its chapter/section from TOC structure
-      - Inserts figure and table markers at correct positions in text flow
-- [ ] Handle paragraphs that span multiple pages
-- [ ] Handle sub-paragraphs (a., b., c.) as part of parent paragraph content
+- [x] Write failing tests for paragraph boundary detection
+- [x] Implement doc_parser.py — walks content pages, splits text into paragraphs,
+      attaches chapter/section metadata, inserts [FIG] and [TABLE] markers,
+      joins hyphenated line-break words
+- [x] 12 tests passing; multi-page paragraphs and sub-paragraphs handled correctly
 
 ## Phase 5: Output Writer
 
