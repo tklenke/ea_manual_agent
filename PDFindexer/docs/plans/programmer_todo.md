@@ -4,21 +4,19 @@ Read docs/plans/design.md fully before starting any task.
 
 ## Phase 1: Project Setup
 
-- [ ] Create requirements.txt with pdfplumber and pytest
-- [ ] Set up venv and install dependencies
-- [ ] Create pdfindexer/ package directory with __init__.py
-- [ ] Create tests/ directory
-- [ ] Add pdfplumber and pytest to requirements.txt
-- [ ] Verify pdfplumber can open and read the source PDF
+- [x] Create requirements.txt with pdfplumber and pytest
+- [x] Set up venv and install dependencies
+- [x] Create pdfindexer/ package directory with __init__.py
+- [x] Create tests/ directory with conftest.py
+- [x] Verify pdfplumber can open and read the source PDF
 
 ## Phase 2: TOC Parser
 
-- [ ] Write failing test for TOC extraction using tests/fixtures/ac_43_13_excerpt.pdf
-      (page 1 of fixture = PDF page 2 = TOC Chapter 1 entries)
-- [ ] Implement toc_parser.py — extracts chapter/section/paragraph structure from pages 2-34
-      Output: nested dict of {chapter -> {section -> [{para_num, para_title, page_ref}]}}
-- [ ] Handle reserved paragraph ranges (e.g., "1-12. 1-17. [RESERVED.]")
-- [ ] Verify parser produces correct structure for Chapter 1 (compare to TOC page image)
+- [x] Write failing test for TOC extraction using tests/fixtures/ac_43_13_excerpt.pdf
+- [x] Implement toc_parser.py — extracts chapter/section/paragraph structure from TOC pages
+      Output: list of chapter dicts with nested sections and paragraphs
+- [x] Verify parser produces correct structure for Chapter 1 (all 4 sections, all paragraphs)
+      Note: reserved paragraph ranges (1-12 to 1-17 etc.) are absent from TOC — handled correctly
 
 ## Phase 3: Page Text Extractor
 
