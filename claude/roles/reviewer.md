@@ -19,8 +19,10 @@ When assuming the Reviewer role, read these files to understand what to review:
 1. **CLAUDE.md** - Project standards, rules, and development philosophy
 2. **claude/project_status.md** - Project status, structure, document management
 3. **claude/content_development_overview.md** - Version control, issue tracking, reference materials
-4. **docs/plans/style_guide.md** - Writing style, formatting standards, NOTE formats, citation format
-5. **docs/acronyms.md** - Domain terminology to verify correct usage
+4. **docs/plans/style.md** - Voice, tense, and language rules
+5. **docs/plans/formatting.md** - Page naming, NOTE formats, citations, cross-references
+6. **docs/plans/templates.md** - Standard page structures by page type
+7. **docs/acronyms.md** - Domain terminology to verify correct usage
 6. **Git diff** - All changes being reviewed (staged and unstaged)
 7. **Git status** - Files modified, added, or deleted
 

@@ -1,8 +1,8 @@
-# Style Guide
+# Formatting
 
-This document defines writing and formatting standards for the ea_mxmanual maintenance manual. It is the authoritative reference for how content is written, formatted, and cited.
+This document defines formatting conventions for the ea_mxmanual maintenance manual. It covers page naming, callout formats, citations, and cross-references.
 
-**Note to Writer:** This document will be published in the Otterwiki. When that migration occurs, update `claude/content_development_overview.md` to reference the Otterwiki location.
+**Note to Writer:** This document will be published in the Otterwiki alongside Manual Standards and Writing Style.
 
 ---
 
@@ -17,18 +17,7 @@ This document defines writing and formatting standards for the ea_mxmanual maint
 
 ---
 
-## Writing Style
-
-- Write in present tense. Content must be evergreen — valid regardless of when it is read.
-- NEVER reference the document's own history ("this section was updated to...", "previously...", "as of this revision...")
-- NEVER use marketing or evaluative language ("improved", "better", "enhanced")
-- Use active voice and imperative mood for procedures (e.g., "Torque the bolt to 25 in-lbs" not "The bolt should be torqued...")
-- Define acronyms on first use in each page. Add new terms to `docs/acronyms.md`.
-- Be specific. Vague guidance is dangerous in a maintenance manual. If a specific value is unknown, say so explicitly and flag it for research rather than writing around it.
-
----
-
-## NOTE Format
+## NOTE Callouts
 
 ### General Note
 
@@ -54,9 +43,9 @@ When a manufacturer Technical Data Sheet (TDS) conflicts with AC 43.13 and the T
 ```
 
 **Fields:**
-- `[procedure/specification/value]` — what specifically is affected (e.g., "cure time", "application procedure", "torque specification")
+- `[procedure/specification/value]` — what specifically is affected (e.g., "cure time", "torque specification")
 - `[TDS name]` — the common name of the TDS (e.g., "Permatex Thread Sealant TDS")
-- `[tds/filename]` — the filename in `docs/references/tds/` (e.g., `Permatex_Thread_Sealant_TDS.pdf`)
+- `[tds/filename]` — the filename in `docs/references/tds/`
 - `[ch##_p###]` — the AC 43.13 chapter and page reference (e.g., `ch01_p001`)
 
 **Example:**
@@ -66,7 +55,7 @@ When a manufacturer Technical Data Sheet (TDS) conflicts with AC 43.13 and the T
 
 ## Citing Sources
 
-All specific values, procedures, and specifications MUST include a citation. Use these formats inline:
+All specific values, procedures, and specifications MUST include an inline citation.
 
 - AC 43.13: `(AC 43.13, ch01_p001)`
 - TDS: `(Permatex Thread Sealant TDS)`

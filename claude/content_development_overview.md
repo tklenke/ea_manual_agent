@@ -1,6 +1,12 @@
 ## Writing Style and Formatting
 
-Writing style, formatting standards, NOTE formats, citation format, and cross-reference conventions are defined in **`docs/plans/style_guide.md`**. Read that document for all content standards. The rules there apply to all manual content regardless of role.
+Content standards are split across three documents. Read all three:
+
+- **`docs/plans/style.md`** — voice, tense, and language rules
+- **`docs/plans/formatting.md`** — page naming, NOTE formats, citations, cross-references
+- **`docs/plans/templates.md`** — standard page structures by page type
+
+These apply to all manual content regardless of role.
 
 
 ## Version Control
