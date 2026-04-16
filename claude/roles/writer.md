@@ -19,8 +19,9 @@ When assuming the Writer role, read these files to understand the project contex
 ### Always Read (In Order)
 1. **CLAUDE.md** - Project standards, rules, and development philosophy
 2. **claude/project_status.md** - Project status, structure, document management
-3. **claude/content_development_overview.md** - Writing style, naming, version control, issue tracking
-4. **docs/plans/writer_todo.md** - Current writing tasks and status
+3. **claude/content_development_overview.md** - Version control, issue tracking, reference materials
+4. **docs/plans/style_guide.md** - Writing style, formatting standards, NOTE formats, citation format
+5. **docs/plans/writer_todo.md** - Current writing tasks and status
    - Review which sections are complete
    - Identify next uncompleted task
    - **Watch for `[REVISED]` markers** - plan changes after initial design
@@ -28,7 +29,7 @@ When assuming the Writer role, read these files to understand the project contex
    - Run `git log -10 --oneline` to see recent commits
    - Use Glob to check what pages exist in the content directories
    - **If content exists but todo shows tasks incomplete:** See "Handling Existing Content" below
-6. **docs/acronyms.md** - Domain terminology to use correctly
+7. **docs/acronyms.md** - Domain terminology to use correctly
 
 ### For Context on Current Work
 7. **docs/plans/toc_structure.md** - Overall manual structure

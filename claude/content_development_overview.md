@@ -1,23 +1,6 @@
-## File and Section Naming
+## Writing Style and Formatting
 
-Otterwiki uses lowercase hyphenated page names. Follow this convention exactly:
-- Page names: `lowercase-hyphenated` (e.g., `brake-system-fluid-choice`)
-- Wiki links: `[[page-name|Display Text]]`
-- Section headings: Title Case for top-level, sentence case for sub-sections
-
-Names must describe the content, not the document's history or status:
-- NEVER use temporal or status terms in names (e.g., "new-procedure", "updated-checklist", "revised-spec")
-- Names should be evergreen — valid regardless of when they are read
-
-
-## Writing Style
-
-- Write in the present tense. Content should be evergreen — valid regardless of when it is read.
-- NEVER reference the document's own history ("this section was updated to...", "previously...", "as of this revision...")
-- NEVER use marketing or evaluative language ("improved", "better", "enhanced")
-- Use active voice and imperative mood for procedures (e.g., "Torque the bolt to 25 in-lbs" not "The bolt should be torqued...")
-- Define acronyms on first use. Add new terms to `docs/acronyms.md`.
-- Be specific. Vague guidance is dangerous in a maintenance manual. If you don't have a specific value, say so explicitly and flag it for research.
+Writing style, formatting standards, NOTE formats, citation format, and cross-reference conventions are defined in **`docs/plans/style_guide.md`**. Read that document for all content standards. The rules there apply to all manual content regardless of role.
 
 
 ## Version Control
@@ -80,9 +63,4 @@ When a TDS supersedes AC 43.13:
 
 ### Citing Sources
 
-All specific values, procedures, and specifications MUST include a citation. Use this format inline:
-
-- AC 43.13 citation: `(AC 43.13, ch01_p001)`
-- TDS citation: `(Permatex Thread Sealant TDS)`
-
-If a value cannot be traced to a source in `docs/references/`, flag it with `@@TOM:` for resolution rather than presenting it without attribution.
+Citation format is defined in `docs/plans/style_guide.md`. If a value cannot be traced to a source in `docs/references/`, flag it with `@@TOM:` for resolution rather than presenting it without attribution.
