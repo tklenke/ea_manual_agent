@@ -50,13 +50,39 @@ When in doubt whether something belongs here: if a future Architect or Writer wo
 
 ---
 
-## Section 5: Servicing as Master Index
+## Section 6: Servicing as Master Index
 
-**Decision:** Section 5 is a master index of all servicing tasks, not a collection of procedures. Each entry describes the task, its service interval, and points to the full procedure in its home section.
+**Decision:** Section 6 is a master index of all servicing tasks, not a collection of procedures. Each task entry states the service interval and points to the full procedure in its home section.
 
-**Reasoning:** A maintainer planning a service event needs a single place to see everything that requires attention. Duplicating procedures in Section 5 would create maintenance burden and risk of conflicting information.
+**Reasoning:** A maintainer planning a service event needs a single place to see everything that requires attention. Duplicating procedures in Section 6 would create maintenance burden and risk of conflicting information.
 
-**Effect:** Procedures like oil change live in Section 12 (Power Plant). Section 5 lists "Oil and Filter" with interval and a pointer to Section 12.
+**Effect:** Procedures like oil change live in Section 14 (Power Plant). Section 6 lists "Oil and Filter" with interval and a pointer to Section 14.
+
+**TOC structure:** Two pages in the TOC:
+- `[[servicing|Servicing]]` — master index page; all tasks listed below are `##` sections within this page
+- `[[servicing-lubrication|Lubrication]]` — its own page due to volume (comprehensive list of all lubrication points with intervals and pointers)
+
+**Tasks consolidated as sections within `servicing`:**
+- Air Filter → Section 14 (Power Plant)
+- Avionics Software Updates → Section 17 (Avionics)
+- Battery Service → Section 16 (Electrical)
+- Brakes → Section 13 (Landing Gear and Brake System)
+- Canopy and Door Seals → Section 9 (Canopy and Panels)
+- Control Surface Hinges and Linkages → Section 12 (Flight Controls)
+- Cooling System → Section 14 (Power Plant)
+- Fuel Filters → Section 15 (Fuel System)
+- Interior → Section 10 (Cargo and Cabin Systems)
+- Lighting → Section 16 (Electrical)
+- Oil and Filter → Section 14 (Power Plant)
+- Pitot/Static System → Section 17 (Avionics)
+- Propeller → Section 14 (Power Plant)
+- Spark Plugs → Section 14 (Power Plant)
+- Tires and Wheels → Section 13 (Landing Gear and Brake System)
+- Wing Removal and Installation → Section 8 (Structures)
+
+**Tasks that may warrant their own page** (Writer to decide based on content volume):
+- Exterior Finish — may have enough product notes, cautions, and technique guidance to stand alone
+- Fueling — may have enough detail (fuel grades, quantities, anti-contamination steps) to stand alone
 
 ---
 

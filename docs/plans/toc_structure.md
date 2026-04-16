@@ -30,24 +30,8 @@
   - [[ground-handling-towing|Towing Procedures]]
 
 ===== 6. Servicing =====
-  - [[servicing-air-filter|Air Filter]]
-  - [[servicing-avionics-software-updates|Avionics Software Updates]]
-  - [[servicing-battery-service|Battery Service]]
-  - [[servicing-brakes|Brakes]]
-  - [[servicing-canopy-and-door-seals|Canopy and Door Seals]]
-  - [[servicing-control-surface-hinges-and-linkages|Control Surface Hinges and Linkages]]
-  - [[servicing-cooling-system|Cooling System]]
-  - [[servicing-exterior-finish|Exterior Finish]]
-  - [[servicing-fuel-filters|Fuel Filters]]
-  - [[servicing-fueling|Fueling]]
-  - [[servicing-interior|Interior]]
-  - [[servicing-lighting|Lighting]]
+  - [[servicing|Servicing]]
   - [[servicing-lubrication|Lubrication]]
-  - [[servicing-oil-and-filter|Oil and Filter]]
-  - [[servicing-pitot-static-system|Pitot/Static System]]
-  - [[servicing-propeller|Propeller]]
-  - [[servicing-spark-plugs|Spark Plugs]]
-  - [[servicing-tires-and-wheels|Tires and Wheels]]
 
 ===== 7. Inspection =====
   - [[inspection-annual-condition|Annual Condition Inspection]]
