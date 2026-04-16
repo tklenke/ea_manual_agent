@@ -250,3 +250,56 @@ def test_para_12_8_no_broken_word_recom(para_12_8):
     assert "recom\xad" not in text
     # The word "recommended" appears whole, not as a bare fragment
     assert "recom\n" not in text
+
+
+# ---------------------------------------------------------------------------
+# Mid-line paragraph marker — fixture page 1 (PDF page 431)
+# Paragraph 9-17 marker appears on the same line as a figure label:
+# "TIRE DANGER 9-17. DISASSEMBLE THE WHEEL in"
+# The primary ^(\d+-\d+) pattern cannot match; a secondary search is required.
+# ---------------------------------------------------------------------------
+
+def _make_toc_with_9_17():
+    """Minimal synthetic TOC containing only paragraph 9-17."""
+    return [
+        {
+            "number": 9,
+            "title": "AIRCRAFT LANDING GEAR SYSTEMS",
+            "sections": [
+                {
+                    "number": 1,
+                    "title": "INSPECTION AND MAINTENANCE OF LANDING GEAR",
+                    "paragraphs": [
+                        {"number": "9-17", "title": "Disassemble the Wheel", "page_ref": "9-7"},
+                    ],
+                }
+            ],
+        }
+    ]
+
+
+@pytest.fixture(scope="module")
+def para_9_17():
+    """Parse paragraph 9-17 from the CHG 1 fixture (fixture page 1 = PDF page 431)."""
+    toc = _make_toc_with_9_17()
+    with pdfplumber.open(CHG1_FIXTURE) as pdf:
+        paragraphs = parse_document(pdf, toc, content_start_page=1)
+    return next((p for p in paragraphs if p["number"] == "9-17"), None)
+
+
+def test_para_9_17_detected(para_9_17):
+    """Paragraph 9-17 is detected even though its marker appears mid-line after a figure label."""
+    assert para_9_17 is not None
+
+
+def test_para_9_17_has_chapter_metadata(para_9_17):
+    """Paragraph 9-17 carries correct chapter metadata."""
+    assert para_9_17 is not None
+    assert para_9_17["chapter"] == 9
+
+
+def test_para_9_17_text_starts_at_marker(para_9_17):
+    """Paragraph 9-17 text begins at the paragraph marker, not the figure label."""
+    assert para_9_17 is not None
+    assert para_9_17["text"].startswith("9-17.")
+    assert "TIRE DANGER" not in para_9_17["text"]

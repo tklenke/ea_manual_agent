@@ -43,3 +43,15 @@ Page ranges (1-indexed PDF page numbers):
 - [x] Write tests: soft-hyphenated words joined in both body and appendix contexts
 - [x] Create README.md: purpose, CMW consumer, how to run, output structure,
       known gaps (5 paragraphs undetected: 9-17, 10-17, 11-54, 11-55, 11-56)
+
+## Phase 11: Mid-line Paragraph Marker Fix — COMPLETE
+
+- [x] Rebuild CHG 1 fixture to include PDF page 431 (9-17 mid-line case) at index 1
+- [x] Write failing tests: test_para_9_17_detected, test_para_9_17_has_chapter_metadata,
+      test_para_9_17_text_starts_at_marker
+- [x] Fix _split_paragraphs in doc_parser.py: secondary mid-line detection using
+      mid_para_pattern; only triggers when no lowercase precedes the number
+      (avoids false positives from body-text cross-references)
+- [x] Re-run full pipeline: 662/666 paragraphs; 9-17 now in output
+- [x] Update README.md known gaps: 4 remaining paragraphs with root causes documented
+      (10-17: header cutoff; 11-54/55/56: TOC/body numbering inconsistency in source PDF)

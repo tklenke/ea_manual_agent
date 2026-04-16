@@ -87,17 +87,17 @@ acetylene—gas composed of two parts of carbon and two parts of hydrogen...
 
 ## Known gaps
 
-661 of 666 TOC paragraphs are extracted. The 5 unextracted paragraphs are not
-detected in the body text, most likely because their paragraph number marker
-is on a page that also contains a figure or table caption that interrupts the
-text flow, or because the paragraph boundary falls in an unusual layout that
-the extractor does not recognize:
+662 of 666 TOC paragraphs are extracted. The 4 unextracted paragraphs have
+root causes that cannot be addressed with pattern changes alone:
 
-- 9-17  Disassemble the Wheel
-- 10-17  Weight and Balance Extreme Conditions
+- 10-17  Weight and Balance Extreme Conditions — paragraph marker sits at
+  y=64.3, just below the HEADER_CUTOFF=65 filter; the word is stripped as
+  a page header before extraction reaches the splitter.
 - 11-54  Relays
 - 11-55  Load Considerations
-- 11-56  Operating Conditions for Switches and Relays
+- 11-56  Operating Conditions for Switches and Relays — the body text uses
+  paragraph numbers 11-48/49/50 for the same content; the TOC numbers and
+  body numbers diverge due to an inconsistency in the source PDF.
 
 These paragraphs appear in `index.txt` without a filename. CMW will not be
 able to open them directly but can still see their titles in the index.
@@ -105,7 +105,7 @@ able to open them directly but can still see their titles in the index.
 ## Development
 
 ```
-python -m pytest          # run all tests (61 tests)
+python -m pytest          # run all tests (64 tests)
 ```
 
 Tests use small PDF fixtures in `tests/fixtures/` rather than the full PDF.

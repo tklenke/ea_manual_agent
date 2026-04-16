@@ -96,9 +96,17 @@ def _split_paragraphs(text, para_lookup):
 
     If a paragraph number is encountered again (can happen due to cross-column layout),
     the extra content is appended to the original paragraph rather than creating a duplicate.
+
+    Two detection modes:
+    - Primary: line starts with the paragraph number ("1-1. TITLE" or "12-70 TITLE")
+    - Secondary: paragraph number appears mid-line after an all-caps figure/caption label
+      (e.g., "TIRE DANGER 9-17. DISASSEMBLE THE WHEEL") — only triggers when no
+      lowercase letter precedes the number, to avoid false positives from cross-references
     """
     # Match original format "1-1. TITLE" OR CHG 1 format "12-70 TITLE" (no period)
     para_pattern = re.compile(r"^(\d+-\d+)(?:\.|\s+[A-Z])")
+    # Secondary: paragraph number mid-line after all-caps figure label ("TIRE DANGER 9-17.")
+    mid_para_pattern = re.compile(r"(\d+-\d+)\.\s+[A-Z]")
 
     paragraphs = []
     seen_nums = {}   # para number → index in paragraphs list
@@ -117,19 +125,31 @@ def _split_paragraphs(text, para_lookup):
         current_num = None
         current_lines = []
 
+    def _start_or_append(candidate, line):
+        """Begin a new paragraph or append to an existing duplicate."""
+        nonlocal current_num, current_lines
+        _flush()
+        if candidate in seen_nums:
+            paragraphs[seen_nums[candidate]]["text"] += "\n" + line
+            current_num = candidate
+        else:
+            current_num = candidate
+            current_lines = [line]
+
     for line in text.split("\n"):
         m = para_pattern.match(line)
         if m and m.group(1) in para_lookup:
-            candidate = m.group(1)
-            _flush()
-            if candidate in seen_nums:
-                # Duplicate occurrence — append content to existing paragraph
-                paragraphs[seen_nums[candidate]]["text"] += "\n" + line
-                current_num = candidate   # track so subsequent lines append too
-            else:
-                current_num = candidate
-                current_lines = [line]
+            _start_or_append(m.group(1), line)
         else:
+            # Secondary check: paragraph number mid-line after all-caps figure label
+            mid_m = mid_para_pattern.search(line)
+            if mid_m:
+                candidate = mid_m.group(1)
+                prefix = line[:mid_m.start()]
+                if candidate in para_lookup and not re.search(r'[a-z]', prefix):
+                    _start_or_append(candidate, line[mid_m.start():])
+                    continue
+            # Continuation line
             if current_num is not None:
                 if current_num in seen_nums:
                     paragraphs[seen_nums[current_num]]["text"] += "\n" + line
