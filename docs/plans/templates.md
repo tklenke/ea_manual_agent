@@ -4,7 +4,7 @@ This document defines standard page structures for each type of page in the ea_m
 
 **Note to Writer:** Use the appropriate template as a starting point for each new page. Sections marked *[delete if not applicable]* may be removed at Writer's discretion when the section adds no value for that specific page. Do not delete sections just because they are short — a brief Troubleshooting section is better than none if the content is useful.
 
-**Subsection links:** OtterWiki supports links to specific sections within a page using the format `[[page-name#section-heading|Display Text]]`. Use this for cross-references that point to a specific section rather than a whole page.
+**Subsection links:** OtterWiki supports links to specific sections within a page using the format `[[Display Text|page-name#section-heading]]`. Use this for cross-references that point to a specific section rather than a whole page.
 
 ---
 
@@ -32,8 +32,8 @@ What this system does and its role on the aircraft.
 List of components that make up this system, each linking to its
 Component page.
 
-- [[component-page-name|Component Name]] — brief role description
-- [[component-page-name|Component Name]] — brief role description
+- [[Component Name|component-page-name]] — brief role description
+- [[Component Name|component-page-name]] — brief role description
 
 ## Operation
 How the system works. Focus on what a maintainer needs to understand
@@ -78,9 +78,9 @@ Links to procedure pages for this component. Short procedures (no special
 tools, no safety notes, five steps or fewer) may be written inline here
 instead of on a separate page.
 
-- **Removal and Installation:** See [[procedure-page|Procedure Name]]
-- **[Specific Maintenance Task]:** See [[procedure-page|Procedure Name]]
-- **Troubleshooting:** See [[procedure-page|Procedure Name]]
+- **Removal and Installation:** See [[Procedure Name|procedure-page]]
+- **[Specific Maintenance Task]:** See [[Procedure Name|procedure-page]]
+- **Troubleshooting:** See [[Procedure Name|procedure-page]]
 
 *[If all procedures for this component are simple enough to be inline,
 replace the links above with the inline procedures and delete this note.]*

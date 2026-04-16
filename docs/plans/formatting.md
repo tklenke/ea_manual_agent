@@ -9,7 +9,7 @@ This document defines formatting conventions for the ea_mxmanual maintenance man
 ## Page and Section Naming
 
 - Page names use `lowercase-hyphenated` format (e.g., `brake-system-fluid-choice`)
-- Wiki links use `[[page-name|Display Text]]` format
+- Wiki links use `[[Display Text|page-name]]` format
 - Section headings: Title Case for top-level, sentence case for sub-sections
 - Names must describe content, not document history or status
 - NEVER use temporal or status terms in names (e.g., "new-procedure", "updated-checklist", "revised-spec")
@@ -85,8 +85,8 @@ Use `[TOC]` on any page with four or more sections. Omit it on short pages where
 
 When content in one section refers to a procedure or topic covered in another section, use a wiki link rather than duplicating the content.
 
-**Format:** `See [[page-name|Page Title]] in Section N.`
+**Format:** `See [[Page Title|page-name]] in Section N.`
 
-**Example:** `See [[panels-cowling|Cowling]] in Section 9 for removal procedure.`
+**Example:** `See [[Cowling|panels-cowling]] in Section 9 for removal procedure.`
 
 Do not duplicate procedures. One section owns each procedure; all others point to it.
