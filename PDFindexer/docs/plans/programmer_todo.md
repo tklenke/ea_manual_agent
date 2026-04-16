@@ -20,14 +20,11 @@ Read docs/plans/design.md fully before starting any task.
 
 ## Phase 3: Page Text Extractor
 
-- [ ] Write failing test for two-column extraction using tests/fixtures/ac_43_13_excerpt.pdf
-      (pages 2-7 of fixture = PDF pages 35-40 = Chapter 1 Section 1 content)
-- [ ] Implement page_extractor.py — extracts text from a single page with column awareness
-      - Uses extract_words() with bounding boxes
-      - Splits at page midpoint, sorts left then right column by y-coordinate
-      - Strips page header (top ~50pt) and footer (bottom ~50pt)
-- [ ] Implement figure detection — returns list of (y_position, page_label) for images on page
-- [ ] Implement table detection — returns table text with [TABLE X-X, p.X-X] marker
+- [x] Write failing test for two-column extraction using tests/fixtures/ac_43_13_excerpt.pdf
+- [x] Implement page_extractor.py — extracts text with column awareness, strips header/footer,
+      detects figures; classifies lines as full-width, left-col, or right-col based on x position
+- [x] 10 tests passing
+      Note: table detection deferred to doc_parser phase; tables appear across pages 36+ in fixture
 
 ## Phase 4: Document Parser
 
