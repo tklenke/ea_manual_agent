@@ -58,4 +58,37 @@ Read docs/plans/design.md fully before starting any task.
 - [x] Spot-checked paragraph files — content accurate, headers correct, markers working
 - [x] index.txt confirmed: 13 chapters, all sections, 648/656 paragraphs with filenames
 - [x] 8 paragraphs listed in index without filenames (not detectable from body text layout)
-- [x] Reported known gaps to Architect above
+- [x] Reported known gaps to Architect — see architect_todo.md Phase 4
+
+## Phase 8: CHG 1 Format Support (AWAITING ARCHITECT DECISIONS)
+
+See architect_todo.md Phase 4 Issue A for full context. Do not start until Architect
+has marked the decision items complete.
+
+- [ ] Update toc_parser.py to handle CHG 1 paragraph entries (no period after number)
+      Verify pages 33-34 of PDF to understand exact TOC format for Ch.13 entries
+- [ ] Update doc_parser.py paragraph boundary regex to also match `^(\d+-\d+)\s+[A-Z]`
+      for CHG 1 body text format
+- [ ] Add test fixture pages covering a CHG 1 section (e.g. PDF page 631) to
+      tests/fixtures/ and write tests for CHG 1 extraction
+- [ ] Re-run full PDF and verify 12-70/71/72 and Ch.13 paragraphs now extracted
+
+## Phase 9: Appendix Extraction (AWAITING ARCHITECT DECISIONS)
+
+See architect_todo.md Phase 4 Issue B for full context. Do not start until Architect
+has marked the decision items complete.
+
+- [ ] Implement appendix extraction in a new module or extend output_writer.py
+      - Extract pages 633-641 as appendix_1_glossary.txt (plain text, no paragraph splitting)
+      - Extract pages 642-end as appendix_2_acronyms.txt
+- [ ] Add appendix entries to index.txt (separate section at bottom of index)
+- [ ] Write tests for appendix extraction
+- [ ] Re-run full pipeline and verify appendix files are present and readable
+
+## Phase 10: Documentation and CMW References (AWAITING ARCHITECT DECISIONS)
+
+See architect_todo.md Phase 4 Issue C for full context.
+
+- [ ] Create README.md for PDFindexer repo (usage instructions, output description,
+      CMW usage pattern)
+- [ ] Tighten hyphenation regex if Architect decides to (Issue D in architect_todo.md)
