@@ -60,35 +60,50 @@ Read docs/plans/design.md fully before starting any task.
 - [x] 8 paragraphs listed in index without filenames (not detectable from body text layout)
 - [x] Reported known gaps to Architect — see architect_todo.md Phase 4
 
-## Phase 8: CHG 1 Format Support (AWAITING ARCHITECT DECISIONS)
+## Phase 8: CHG 1 Format Support
 
-See architect_todo.md Phase 4 Issue A for full context. Do not start until Architect
-has marked the decision items complete.
+Architect decisions complete. See design.md "CHG 1 Format" section.
 
-- [ ] Update toc_parser.py to handle CHG 1 paragraph entries (no period after number)
-      Verify pages 33-34 of PDF to understand exact TOC format for Ch.13 entries
-- [ ] Update doc_parser.py paragraph boundary regex to also match `^(\d+-\d+)\s+[A-Z]`
-      for CHG 1 body text format
-- [ ] Add test fixture pages covering a CHG 1 section (e.g. PDF page 631) to
-      tests/fixtures/ and write tests for CHG 1 extraction
-- [ ] Re-run full PDF and verify 12-70/71/72 and Ch.13 paragraphs now extracted
+- [ ] Extend test fixture: extract PDF pages 631 and 632 into a new fixture file
+      tests/fixtures/ac_43_13_chg1_excerpt.pdf (Ch.12 Section 5 + Ch.13)
+- [ ] Update toc_parser.py to handle chapters with no section headers
+      — paragraphs listed directly under chapter must still be captured
+      — simplest approach: if no current_section when paragraph found, create a
+        synthetic section {number: 0, title: "", paragraphs: []} on demand
+- [ ] Write tests for CHG 1 TOC parsing (13-1 and 13-2 present, correct metadata)
+- [ ] Update doc_parser.py paragraph boundary detection to also match CHG 1 format:
+      `^(\d+-\d+)\s+[A-Z]` in addition to existing `^(\d+-\d+)\.`
+- [ ] Write tests for CHG 1 body text extraction (12-70 detected, 13-1 detected)
+- [ ] Re-run full PDF — verify 12-70/71/72 and 13-1/13-2 now appear in output
 
-## Phase 9: Appendix Extraction (AWAITING ARCHITECT DECISIONS)
+## Phase 9: Appendix Extraction
 
-See architect_todo.md Phase 4 Issue B for full context. Do not start until Architect
-has marked the decision items complete.
+Architect decisions complete. See design.md "Phase 3: Appendix Extraction" section.
+Three appendices, all plain text extraction (column-aware, no paragraph splitting).
 
-- [ ] Implement appendix extraction in a new module or extend output_writer.py
-      - Extract pages 633-641 as appendix_1_glossary.txt (plain text, no paragraph splitting)
-      - Extract pages 642-end as appendix_2_acronyms.txt
-- [ ] Add appendix entries to index.txt (separate section at bottom of index)
-- [ ] Write tests for appendix extraction
-- [ ] Re-run full pipeline and verify appendix files are present and readable
+Page ranges (PDF page numbers, 1-indexed):
+  Appendix 1 Glossary:    pages 633-641  (10 pages per TOC, two-column dictionary)
+  Appendix 2 Acronyms:    pages 642-645  (4 pages per TOC)
+  Appendix 3 Metric:      page  646      (1 page per TOC)
 
-## Phase 10: Documentation and CMW References (AWAITING ARCHITECT DECISIONS)
+- [ ] Implement pdfindexer/appendix_extractor.py
+      - extract_appendix(pdf, start_page, end_page, title) → plain text string
+      - Uses existing page_extractor.extract_page() for column-aware text
+      - Joins pages, applies hyphen joining, strips headers/footers
+- [ ] Write tests for appendix_extractor.py using a fixture of appendix pages
+      (extract PDF pages 633-634 as tests/fixtures/ac_43_13_appendix_excerpt.pdf)
+- [ ] Update output_writer.py to write appendix files and add APPENDICES section
+      to index.txt
+- [ ] Update __main__.py to run appendix extraction after main content pass
+- [ ] Re-run full pipeline — verify 3 appendix files present and readable
 
-See architect_todo.md Phase 4 Issue C for full context.
+## Phase 10: Hyphenation and README
 
-- [ ] Create README.md for PDFindexer repo (usage instructions, output description,
-      CMW usage pattern)
-- [ ] Tighten hyphenation regex if Architect decides to (Issue D in architect_todo.md)
+- [ ] Tighten hyphenation regex in doc_parser.py:
+      change r"(\w)-\n(\w)" to r"(\w+)-\s*\n\s*(\w+)"
+      also apply same fix in appendix_extractor.py
+- [ ] Create README.md documenting:
+      - What PDFindexer does
+      - How to run it (python -m pdfindexer <pdf> <output_dir>)
+      - Output structure and what CMW does with it
+      - Known gaps (8 paragraphs, reason)
