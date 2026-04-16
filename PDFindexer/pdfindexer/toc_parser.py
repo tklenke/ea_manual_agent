@@ -90,12 +90,21 @@ def _parse_structure(lines):
             continue
 
         # Paragraph entry: first word at x<115 matches "N-N." pattern
-        if x0s and x0s[0] < 115 and current_section is not None:
-            para_match = re.match(r"^(\d+-\d+)\.$", texts[0])
+        if x0s and x0s[0] < 115 and current_chapter is not None:
+            para_match = re.match(r"^(\d+-\d+)\.?$", texts[0])
             if para_match:
                 para_num = para_match.group(1)
                 title, page_ref = _para_title_and_page(texts[1:])
                 if title:
+                    # Chapters with no section headers (e.g., Ch.13): create a
+                    # synthetic section on demand so paragraphs have a home.
+                    if current_section is None:
+                        current_section = {
+                            "number": 0,
+                            "title": "",
+                            "paragraphs": [],
+                        }
+                        current_chapter["sections"].append(current_section)
                     current_section["paragraphs"].append({
                         "number": para_num,
                         "title": title,

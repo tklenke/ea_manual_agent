@@ -54,11 +54,18 @@ def _build_filename_map(paragraphs):
 
 def _write_paragraph_file(para, filename, output_dir):
     """Write a single paragraph text file."""
-    header = (
-        f"AC 43.13-1B  "
-        f"Chapter {para['chapter']}: {para['chapter_title']}  "
-        f"Section {para['section']}: {para['section_title']}"
-    )
+    if para["section"] == 0:
+        # Synthetic section (chapter with no section headers, e.g. Ch.13)
+        header = (
+            f"AC 43.13-1B  "
+            f"Chapter {para['chapter']}: {para['chapter_title']}"
+        )
+    else:
+        header = (
+            f"AC 43.13-1B  "
+            f"Chapter {para['chapter']}: {para['chapter_title']}  "
+            f"Section {para['section']}: {para['section_title']}"
+        )
     content = header + "\n\n" + para["text"] + "\n"
     path = os.path.join(output_dir, filename)
     with open(path, "w", encoding="utf-8") as f:
@@ -73,15 +80,27 @@ def _write_index(toc, filename_map, output_dir):
         lines.append(f"CHAPTER {ch['number']}: {ch['title']}")
         lines.append("")
         for sec in ch["sections"]:
-            lines.append(f"  SECTION {sec['number']}: {sec['title']}")
-            for para in sec["paragraphs"]:
-                num = para["number"]
-                filename = filename_map.get(num, "")
-                if filename:
-                    lines.append(f"    {num}  {para['title']} [{filename}]")
-                else:
-                    lines.append(f"    {num}  {para['title']}")
-            lines.append("")
+            if sec["number"] == 0:
+                # Synthetic section (chapter with no section headers, e.g. Ch.13):
+                # list paragraphs directly under chapter at 2-space indent
+                for para in sec["paragraphs"]:
+                    num = para["number"]
+                    filename = filename_map.get(num, "")
+                    if filename:
+                        lines.append(f"  {num}  {para['title']} [{filename}]")
+                    else:
+                        lines.append(f"  {num}  {para['title']}")
+                lines.append("")
+            else:
+                lines.append(f"  SECTION {sec['number']}: {sec['title']}")
+                for para in sec["paragraphs"]:
+                    num = para["number"]
+                    filename = filename_map.get(num, "")
+                    if filename:
+                        lines.append(f"    {num}  {para['title']} [{filename}]")
+                    else:
+                        lines.append(f"    {num}  {para['title']}")
+                lines.append("")
         lines.append("")
 
     path = os.path.join(output_dir, "index.txt")

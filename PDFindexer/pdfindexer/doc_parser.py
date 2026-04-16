@@ -90,7 +90,8 @@ def _split_paragraphs(text, para_lookup):
     If a paragraph number is encountered again (can happen due to cross-column layout),
     the extra content is appended to the original paragraph rather than creating a duplicate.
     """
-    para_pattern = re.compile(r"^(\d+-\d+)\.")
+    # Match original format "1-1. TITLE" OR CHG 1 format "12-70 TITLE" (no period)
+    para_pattern = re.compile(r"^(\d+-\d+)(?:\.|\s+[A-Z])")
 
     paragraphs = []
     seen_nums = {}   # para number → index in paragraphs list
