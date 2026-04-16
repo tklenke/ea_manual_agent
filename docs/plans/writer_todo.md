@@ -59,4 +59,4 @@ Once the print footer is working, write the `Record of Revisions` page for Secti
 - panels-canopy.md: description (hinge right, electric actuator, manual latch bar, access door), specifications, inspection criteria. Committed to WR.
 - panels-canopy-cleaning.md: full Type 2 procedure — pre-rinse, Plexus, optional Pledge wax, solvents-to-avoid list per AC 43.13 ch03_p025. Committed to WR.
 - One @@TOM flag remains open: canopy seal type and inspection criteria.
-- Review checkpoint pending: verify both pages render correctly in OtterWiki once instance is running.
+- Review checkpoint complete (2026-04-16): pages render correctly in OtterWiki, cross-link resolves, [TOC] renders. Templates and standards confirmed good — proceed with content development.

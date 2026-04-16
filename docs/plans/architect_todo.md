@@ -4,33 +4,18 @@
 
 ## Backlog
 
-### [ ] Set up OtterWiki instance on local machine
+### [x] Set up OtterWiki instance on local machine (2026-04-16)
 
-**Must be done before the pilot page review and before the Writer's print footer task.**
+Instance running. Pilot pages (panels-canopy, panels-canopy-cleaning) and home.md TOC reviewed and look good. Auto-generated sidebar acceptable so far.
 
-The Writer can write the pilot pages (Markdown files committed to git) without OtterWiki running. OtterWiki is needed to review rendering, verify wiki-links resolve, and test the print footer.
+### [ ] OtterWiki navigation sidebar strategy — confirm final decision
 
-**Steps:**
-1. Install OtterWiki (pip or clone from repo)
-2. Configure it to use `ea_mxmanual` as its git repository root
-3. Start the server and verify pages render
-4. Confirm `[[wiki-link]]` format resolves correctly
-5. Confirm `[TOC]` tag renders in-page table of contents
-6. Confirm Markdown code blocks, blockquotes, and NOTE callout format render as expected
+Options evaluated 2026-04-16:
+- **Option A:** Hand-maintained `_sidebar.md`
+- **Option B:** Derived from `toc_structure.md`
+- **Option C:** OtterWiki built-in auto-generated index
 
-Once running, notify Writer to proceed with pilot page review and print footer configuration.
-
-### [ ] OtterWiki navigation sidebar strategy — DECISION TBD (initial: Option C)
-
-Decide how to maintain the OtterWiki navigation sidebar as content is developed. Three options evaluated 2026-04-16:
-
-- **Option A: Hand-maintained `_sidebar.md`** — Writer updates sidebar with each new page commit. Reviewer verifies. Clean hierarchy, manual maintenance burden.
-- **Option B: Derived from `toc_structure.md`** — `toc_structure.md` is already in OtterWiki wiki syntax; use it as the source of truth. Less duplication, requires a generation step or direct use as sidebar.
-- **Option C: OtterWiki built-in auto-generated index** — Rely on OtterWiki's native page index. No maintenance required, less control over organization.
-
-**Initial decision: Option C.** Let OtterWiki auto-generate navigation. Revisit if organization or findability becomes a problem.
-
-**FINAL DECISION: TBD** — confirm after content development begins and the auto-generated index can be evaluated in practice.
+**Current decision: Option C.** Auto-generated sidebar reviewed with initial content (2026-04-16) — acceptable so far. Revisit as content volume grows. Do not close until Tom confirms Option C is the permanent approach.
 
 ### [ ] Migrate architecture_decisions.md to Otterwiki as Manual Standards page
 
