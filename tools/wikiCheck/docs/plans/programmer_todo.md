@@ -34,7 +34,7 @@
 
 ## Phase 2: Statistics
 
-### [ ] 2.1 Compute all statistics
+### [x] 2.1 Compute all statistics
 - Write failing tests for each stat:
   - Total WR page count
   - Broken link count
@@ -47,12 +47,12 @@
 
 ## Phase 3: Output
 
-### [ ] 3.1 Format summary report
+### [x] 3.1 Format summary report
 - Write failing test: output matches expected format exactly (see design.md)
 - Implement
 - Tests pass, commit
 
-### [ ] 3.2 --detail flag
+### [x] 3.2 --detail flag
 - Write failing test: appends sorted lists of broken links, unreviewed pages, missing pages
 - Write failing test: omitted when flag not passed
 - Implement
@@ -60,12 +60,12 @@
 
 ## Phase 4: CLI and integration
 
-### [ ] 4.1 Wire up argparse CLI (--detail)
+### [x] 4.1 Wire up argparse CLI (--detail)
 - Write failing test: correct behavior for each flag combination
 - Implement
 - Tests pass, commit
 
-### [ ] 4.2 End-to-end test against fixture WR and log
+### [x] 4.2 End-to-end test against fixture WR and log
 - Create fixture directory with a small WR and review log
 - Write E2E test covering: broken links, unreviewed, missing pages, missing log
 - Tests pass, commit
