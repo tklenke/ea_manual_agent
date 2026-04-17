@@ -4,6 +4,16 @@
 
 ## Backlog
 
+### [ ] Resolve readme.md and home.md Section 1 mismatch (flagged by Reviewer 2026-04-17)
+
+`home.md` links to `[[README|readme]]` under Section 1, but `toc_structure.md` shows that slot as `[[start#disclaimer|Disclaimer]] and [[https://www.gnu.org/licenses/fdl-1.3.html|License]] Information`. The current `readme.md` is a legacy git README — it does not conform to manual style (emojis, asterisk bullets, evaluative language, broken URL). Options:
+- Rewrite `readme.md` as a proper Disclaimer/License page and update `home.md` to match the TOC
+- Or remove `readme.md` and update `home.md` to point to the Disclaimer/License per the TOC
+
+Discuss with Tom before proceeding. `home.md` is marked pending until resolved.
+
+---
+
 ### [ ] Write panels-turtleback-windows page (flagged by Reviewer 2026-04-17)
 
 Tom has enough information to write this page. It is a Type 1b Component page in Section 9 (Canopy and Panels). Cross-referenced from `panels-canopy-cleaning` — cleaning procedure applies to turtleback windows as well as the canopy.
