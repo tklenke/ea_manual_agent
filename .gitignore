@@ -1,6 +1,7 @@
 #project specific files and directories
 PDFindexer/data
 PDFindexer/docs/references
+input/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
