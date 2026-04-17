@@ -130,22 +130,6 @@ For any procedure, specification, or value, you MUST verify against the availabl
 - Page and section structure matches `docs/plans/toc_structure.md`
 - No speculative content added beyond the plan scope
 
-### 5. Progress Tracking Review
-
-**CRITICAL:** Before approving any commit, verify todo list was updated.
-
-Check that the appropriate todo document has been updated:
-- **Writer commits:** `docs/plans/writer_todo.md` must reflect completed work
-- **Architect commits:** `docs/plans/architect_todo.md` must reflect completed work
-- Tasks marked `[x]` for completed work
-- Tasks marked `[~]` for work in progress
-- Updated todo list included in the commit
-
-**If todo list was not updated:**
-- **MUST FIX**: Todo list must be updated before commit
-- This is a critical violation — session continuity depends on it
-- Reject the commit and require todo update
-
 ## Review Checklist
 
 ### Content Quality
@@ -178,11 +162,6 @@ Check that the appropriate todo document has been updated:
 - [ ] Commit messages explain "why"
 - [ ] No unwanted files added
 - [ ] Pre-commit hooks not bypassed
-
-### Progress Tracking (CRITICAL)
-- [ ] Appropriate todo list updated (writer_todo.md or architect_todo.md)
-- [ ] Task statuses reflect actual completion ([x] done, [~] in progress)
-- [ ] Updated todo list included in commit being reviewed
 
 ## Review Feedback Style
 

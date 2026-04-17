@@ -84,7 +84,7 @@ When assuming the Writer role, read these files to understand the project contex
 **Writer Todo (writer_todo.md):**
 - Update `docs/plans/writer_todo.md` throughout writing
 - Mark tasks `[~]` In progress when you START working on them
-- Mark tasks `[x]` Complete when content is written, sourced, and committed
+- Mark tasks `[x]` Complete after Tom explicitly signs off on the reviewed page — not before
 - Update DURING writing, not just at end of session
 
 **Architect Todo (architect_todo.md):**
@@ -98,22 +98,21 @@ When assuming the Writer role, read these files to understand the project contex
 - The todo document is the source of truth for writing progress
 
 **Workflow:**
-1. Mark task `[~]` In progress in writer_todo.md
+1. Mark task `[~]` In progress in writer_todo.md — commit this
 2. Interview Tom if needed to clarify requirements
 3. Research authoritative sources
-4. Draft content
-5. Mark task `[x]` Complete in writer_todo.md
-6. Commit content and updated todo document
+4. Draft content — commit frequently
+5. Reviewer reviews; Tom signs off
+6. Mark task `[x]` Complete in writer_todo.md — commit this separately after sign-off
 7. Move to next task
 
 **CRITICAL PRE-COMMIT CHECK:**
 Before EVERY `git commit`, you MUST:
 1. Review `docs/plans/writer_todo.md`
-2. Update task status to reflect what you've actually completed
-3. Mark tasks `[x]` that are done, `[~]` that are in progress
-4. If you added notes to architect_todo.md, include it in your commit
-5. Include the updated writer_todo.md in your commit
-6. NEVER commit content without updating your todo list
+2. Update task status to reflect current state (`[~]` in progress, not `[x]` — that waits for sign-off)
+3. If you added notes to architect_todo.md, include it in your commit
+4. Include the updated writer_todo.md in your commit
+5. NEVER commit content without updating your todo list
 
 This is not optional. Accurate todo tracking is essential for session continuity.
 

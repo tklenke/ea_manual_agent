@@ -22,9 +22,9 @@ Verified 2026-04-17. All three criteria met:
 
 ---
 
-### [ ] Writer todo update workflow — add to Writer role (NOTE FROM REVIEWER 2026-04-17)
+### [x] Writer todo update workflow — add to Writer role (2026-04-17)
 
-Tom has asked that the Writer update writer_todo.md after Tom explicitly approves a reviewed page — not during the review session itself. Update `claude/roles/writer.md` to reflect this: Writer marks tasks `[x]` complete after Tom's sign-off, not before.
+Writer marks tasks `[x]` complete after Tom's explicit sign-off, not before. Updated `claude/roles/writer.md` workflow and pre-commit check accordingly. Also removed Progress Tracking Review section from `claude/roles/reviewer.md` — Reviewer is not the todo police; timing was wrong anyway (todo updates after sign-off, Reviewer commits at sign-off).
 
 ---
 
