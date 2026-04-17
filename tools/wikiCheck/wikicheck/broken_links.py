@@ -16,4 +16,5 @@ def collect_referenced_slugs(wr_dir: Path) -> set[str]:
 
 def find_broken_links(wr_dir: Path) -> list[str]:
     known = set(glob_wr_pages(wr_dir))
-    return sorted(collect_referenced_slugs(wr_dir) - known)
+    referenced = {s for s in collect_referenced_slugs(wr_dir) if not s.startswith("/-/")}
+    return sorted(referenced - known)

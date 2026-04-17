@@ -44,3 +44,18 @@ def test_broken_links_sorted(tmp_path):
     (tmp_path / "page-a.md").write_text("[[zebra]] and [[alpha]]")
     broken = find_broken_links(tmp_path)
     assert broken == ["alpha", "zebra"]
+
+
+def test_system_links_excluded_from_broken_links(tmp_path):
+    (tmp_path / "page-a.md").write_text("See [[/-/changelog]] for history.")
+    assert find_broken_links(tmp_path) == []
+
+
+def test_system_link_prefix_excluded(tmp_path):
+    (tmp_path / "page-a.md").write_text("[[/-/history]] and [[/-/edit/page-a]]")
+    assert find_broken_links(tmp_path) == []
+
+
+def test_non_system_broken_link_still_detected(tmp_path):
+    (tmp_path / "page-a.md").write_text("[[/-/changelog]] and [[real-missing]]")
+    assert find_broken_links(tmp_path) == ["real-missing"]
