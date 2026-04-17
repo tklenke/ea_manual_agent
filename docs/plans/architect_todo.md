@@ -18,7 +18,10 @@ When complete: run `wiki_check.py --detail` and verify:
 - Pending pages do NOT appear under "Pages missing from log"
 - `--detail` output includes a "Pending pages" section listing them
 
-Currently pending pages: `home`, `panels-canopy`, `readme`.
+**2026-04-17: Verified — fix is NOT working.** Bug report written to
+`tools/docs/plans/architect_todo.md`. Likely cause: case mismatch — review log uses
+lowercase `pending`, implementation likely checks for `Pending`. Task reopened in tools
+architect_todo.
 
 ---
 
