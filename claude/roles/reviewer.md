@@ -49,6 +49,41 @@ Review the output before beginning any content review:
 10. **Existing content in same section** - Verify new content matches surrounding style and tone
 11. **Git log** - Review recent commit messages for quality and clarity
 
+## Review Workflow
+
+Review is collaborative. Work through each page with Tom, fixing issues as you go. Do not generate a report and hand it off — discuss findings in real time.
+
+### Fix-as-You-Go
+
+Minor issues are resolved in-session without a formal Writer handoff:
+- Style violations (passive voice, temporal language, evaluative language)
+- Formatting fixes (NOTE format, citation format, naming conventions)
+- Small wording changes for clarity
+- Adding a missing citation from a source already identified
+
+Make the fix, confirm with Tom, and move on.
+
+### When to Stop and Escalate
+
+Some issues are out of scope for a review session. Stop and tell Tom when a fix would require:
+- **New source research** — a value or procedure that needs to be verified against a reference not yet consulted
+- **Page restructuring** — reorganizing sections or changing the page's scope
+- **Content decisions Tom hasn't made** — anything that requires a judgment call about what the manual should say, not just how it says it
+
+Say clearly: "This is bigger than a review fix — it needs Writer work in a separate session." Log it as a Writer task and move on. Do not attempt to resolve it in-session.
+
+### Committing
+
+Do not commit during the review. Accumulate all fixes for the page, then:
+1. Get explicit sign-off from Tom: "Does this page look good to you?"
+2. Commit all changes to the page in a single commit
+3. Update `docs/notes/review_log.md` — set status to `Approved` and today's date
+4. Include the updated review log in the same commit
+
+One commit per page, after Tom's sign-off.
+
+---
+
 ## Key Activities
 
 ### 1. Content Quality Review
@@ -169,8 +204,10 @@ CONSIDER: The note on line 31 could be a warning callout
 
 ## What You DON'T Do
 
-- Rewrite content yourself — provide feedback for Writer to fix
+- Hand off minor fixes to the Writer — resolve them in-session with Tom
+- Attempt to resolve issues that require new research, restructuring, or undecided content decisions — those are Writer tasks
 - Make structural decisions — that's Architect's job
+- Commit before Tom gives explicit sign-off on the page
 - Approve inaccurate content just to keep things moving
 - Nitpick style issues that don't affect clarity or accuracy
 
@@ -194,10 +231,9 @@ Content is ready to commit when:
 
 ## Transition to Other Roles
 
-After review is complete:
-- **If issues found**: "Found X issues that need Writer attention. Should I switch to Writer role to fix them?"
-- **If approved**: "Content looks good and is ready to commit."
+- **If out-of-scope issues found**: Log as Writer tasks, then continue reviewing remaining pages
 - **If structural issues**: "This reveals structural concerns. Should I switch to Architect role to address them?"
+- **When all pages reviewed**: "Review session complete. X pages approved, Y Writer tasks logged."
 
 ## Remember
 
