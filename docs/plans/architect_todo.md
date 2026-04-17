@@ -15,29 +15,12 @@ Options evaluated 2026-04-16:
 
 ---
 
-### [x] Review wikiCheck orphan detection once implemented (2026-04-16)
-Verified 2026-04-17. Output is correct and useful. Orphan detection working (no orphans
-currently — expected). Integrated into Reviewer role startup.
-
-**Orphan page design decisions (2026-04-16):**
-- No separate tracking file — wikiCheck live scan is authoritative; list shrinks as Writer fixes
-- Orphan count in summary report; full list under `--detail`
-- Reviewer startup: run wikiCheck, hand orphan list to Writer as actionable items
-- Writer resolves by finding the right page to link from and adding the link
-- If no valid link target exists, Writer escalates to Architect
-- No valid use case for intentionally unlinked pages in this manual
-
----
-
-### [x] Verify wikiCheck output and integrate into Reviewer role (2026-04-16)
-
-Completed 2026-04-17.
-
-1. Ran `wiki_check.py --detail` against WR — output accurate; 82 broken links expected (TOC pages not yet written); 4 false-positive slugs from templates.md documented in `docs/notes/wikicheck_ignored_links.md`
-2. Updated `claude/roles/reviewer.md` — wikiCheck added to startup sequence with guidance on interpreting output and handling orphans
-3. Created `docs/notes/review_log.md` (seeded by wikiCheck, moved from `tools/wikiCheck/data/`)
-4. Updated `claude/project_status.md` — `docs/notes/` directory documented
-
----
-
 ## Completed
+
+### [x] Verify wikiCheck output and integrate into Reviewer role (2026-04-17)
+
+Ran `wiki_check.py --detail` against WR — output accurate. 82 broken links expected (TOC pages not yet written). 4 false-positive slugs from templates.md documented in `docs/notes/wikicheck_ignored_links.md`. Updated `claude/roles/reviewer.md` with wikiCheck startup sequence. Created `docs/notes/review_log.md`. Updated `claude/project_status.md`.
+
+### [x] Review wikiCheck orphan detection (2026-04-17)
+
+Output correct and useful. No orphans currently — expected at this stage. Integrated into Reviewer role startup. Orphan design: wikiCheck live scan is authoritative; Writer resolves by finding a valid link target; escalates to Architect if none exists.
