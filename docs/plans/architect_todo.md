@@ -4,6 +4,12 @@
 
 ## Backlog
 
+### [ ] Design input file archiving for writer_todo and feedback drop zones (flagged by Writer 2026-04-17)
+
+Currently, the Writer deletes input files from `input/writer_todo/` and `input/feedback/` after consuming them. Tom wants consumed files retained. Design an archiving approach — likely an `input/archive/` directory or per-subdirectory archive folders. Update the Writer role instructions and content_development_overview.md to reflect the new behavior.
+
+---
+
 ### [ ] Verify wikiCheck "pending" status fix (flagged 2026-04-17)
 
 Task written to `tools/docs/plans/architect_todo.md` for tools architect to implement.

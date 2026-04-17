@@ -4,7 +4,7 @@
 
 ## Backlog
 
-### [ ] Write fuel-level-sensors page (from input 2026-04-17)
+### [~] Write fuel-level-sensors page (from input 2026-04-17)
 
 Type 1b Component page in Section 15 (Fuel System). Tom provided installation notes and product info for the Stewart Warner 385B fuel level sender (SWW-385B from Summit Racing). No PDF/TDS available — product data from Summit Racing listing only. Gasket sealant used: Permatex Form-A-Gasket No. 2. See `input/writer_todo/fuel_level_sensors.txt` (deleted after logging — content preserved in this entry).
 
