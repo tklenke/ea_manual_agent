@@ -22,6 +22,12 @@ Verified 2026-04-17. All three criteria met:
 
 ---
 
+### [ ] Writer todo update workflow — add to Writer role (NOTE FROM REVIEWER 2026-04-17)
+
+Tom has asked that the Writer update writer_todo.md after Tom explicitly approves a reviewed page — not during the review session itself. Update `claude/roles/writer.md` to reflect this: Writer marks tasks `[x]` complete after Tom's sign-off, not before.
+
+---
+
 ### [ ] OtterWiki navigation sidebar strategy — confirm final decision
 
 Options evaluated 2026-04-16:
