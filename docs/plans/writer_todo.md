@@ -26,7 +26,7 @@ Input file: `input/writer_todo/COZY MKIV General Information` (renamed to `_pend
 
 ---
 
-### [ ] Write ground-handling-jacking-and-leveling page — Section 5 (from input 2026-04-17)
+### [x] Write ground-handling-jacking-and-leveling page — Section 5 (from input 2026-04-17)
 
 Type 2 Procedure page in Section 5 (Ground Handling). Tom provided builder community notes on jacking the Cozy MK IV.
 
