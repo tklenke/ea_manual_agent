@@ -15,6 +15,7 @@ def _stats(**kwargs):
         structural_pages_found=["home", "readme"],
         structural_pages_missing=[],
         approved_count=5,
+        pending_count=0,
         unreviewed_count=0,
         missing_from_log_count=0,
         log_age_days=0,
@@ -46,6 +47,7 @@ def test_format_normal_report():
         "Orphan pages:             5  (exist in WR, never linked to)\n"
         "Structural pages:         2  (home, readme — excluded from orphans)\n"
         "Approved pages:          36  (of 47 in log)\n"
+        "Pending pages:            0  (reviewed, awaiting resolution)\n"
         "Unreviewed pages:         8  (in log, never reviewed)\n"
         "Pages missing from log:   3  (in WR, not in log)\n"
         "Review log last updated: 2026-04-10 (6 days ago)"
@@ -115,6 +117,21 @@ def test_format_missing_log_report():
         "                         tools/wikiCheck/data/review_log.md\n"
         "                         move to: docs/notes/review_log.md"
     )
+
+
+def test_pending_line_in_report():
+    stats = _stats(pending_count=3)
+    output = format_report(stats, today="2026-04-16", log_last_updated="2026-04-16")
+    assert "Pending pages:            3  (reviewed, awaiting resolution)" in output
+
+
+def test_pending_line_between_approved_and_unreviewed():
+    stats = _stats(approved_count=5, pending_count=2, unreviewed_count=3)
+    output = format_report(stats, today="2026-04-16", log_last_updated="2026-04-16")
+    approved_pos = output.index("Approved pages:")
+    pending_pos = output.index("Pending pages:")
+    unreviewed_pos = output.index("Unreviewed pages:")
+    assert approved_pos < pending_pos < unreviewed_pos
 
 
 def test_missing_log_report_structural_error_line():

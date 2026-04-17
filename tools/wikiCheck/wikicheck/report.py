@@ -18,6 +18,7 @@ def format_report(stats: Stats, today: str, log_last_updated: str) -> str:
         f"Orphan pages:            {stats.orphan_count:>2}  (exist in WR, never linked to)",
         structural_line,
         f"Approved pages:          {stats.approved_count}  (of {stats.total_pages} in log)",
+        f"Pending pages:           {stats.pending_count:>2}  (reviewed, awaiting resolution)",
         f"Unreviewed pages:        {stats.unreviewed_count:>2}  (in log, never reviewed)",
         f"Pages missing from log:  {stats.missing_from_log_count:>2}  (in WR, not in log)",
         f"Review log last updated: {log_last_updated} ({stats.log_age_days} days ago)",
@@ -29,6 +30,7 @@ def format_report(stats: Stats, today: str, log_last_updated: str) -> str:
 
 def format_detail(
     broken_links: list,
+    pending: list,
     unreviewed: list,
     missing_from_log: list,
     orphan_pages: list,
@@ -58,6 +60,7 @@ def format_detail(
         section("System links (not checked):", system_links),
         section("Orphan pages:", orphan_pages),
         structural_section,
+        section("Pending pages:", pending),
         section("Unreviewed pages:", unreviewed),
         section("Pages missing from log:", missing_from_log),
     ]

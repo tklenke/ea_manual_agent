@@ -32,10 +32,12 @@ def _run_with_fixtures(log_path, *extra_args):
     structural_found, structural_missing = check_structural_pages(FIXTURE_WR)
     wr_slugs = set(glob_wr_pages(FIXTURE_WR))
     log_slugs = {e.slug for e in log.entries}
+    pending = sorted(e.slug for e in log.entries if e.status == "Pending")
     unreviewed = sorted(e.slug for e in log.entries if e.status == "unreviewed")
     missing = sorted(wr_slugs - log_slugs)
     detail = format_detail(
         broken_links=broken,
+        pending=pending,
         unreviewed=unreviewed,
         missing_from_log=missing,
         orphan_pages=orphans,
@@ -136,6 +138,7 @@ def _run_missing_log_detail(fixture_wr, tmp_path):
     )
     detail = format_detail(
         broken_links=broken,
+        pending=[],
         unreviewed=[],
         missing_from_log=[],
         orphan_pages=orphans,
@@ -151,3 +154,24 @@ def test_e2e_missing_log_detail_shows_real_orphans(tmp_path):
     # fixture has page-a and page-c as orphans (page-b is linked from page-a)
     assert "page-a" in detail
     assert "page-c" in detail
+
+
+FIXTURE_LOG_WITH_PENDING = Path(__file__).parent / "fixtures" / "review_log_with_pending.md"
+
+
+def test_e2e_pending_count_in_summary():
+    # fixture log: page-a=Pending, page-b=unreviewed; page-c missing from log
+    summary, _ = _run_with_fixtures(FIXTURE_LOG_WITH_PENDING)
+    assert "Pending pages:            1" in summary
+
+
+def test_e2e_pending_slug_in_detail():
+    _, detail = _run_with_fixtures(FIXTURE_LOG_WITH_PENDING)
+    assert "Pending pages:" in detail
+    assert "  page-a" in detail
+
+
+def test_e2e_pending_not_in_missing_from_log():
+    # page-a is Pending (in log), page-c is missing from log — missing count must be 1, not 2
+    summary, _ = _run_with_fixtures(FIXTURE_LOG_WITH_PENDING)
+    assert "Pages missing from log:   1" in summary

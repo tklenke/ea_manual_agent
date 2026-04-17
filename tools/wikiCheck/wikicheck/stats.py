@@ -20,6 +20,7 @@ class Stats:
     structural_pages_found: list[str]
     structural_pages_missing: list[str]
     approved_count: int
+    pending_count: int
     unreviewed_count: int
     missing_from_log_count: int
     log_age_days: int
@@ -35,6 +36,7 @@ def compute_stats(wr_dir: Path, log_path: Path, today: str) -> Stats:
 
     log_slugs = {e.slug for e in log.entries}
     approved = sum(1 for e in log.entries if e.status == "Approved")
+    pending = sum(1 for e in log.entries if e.status == "Pending")
     unreviewed = sum(1 for e in log.entries if e.status == "unreviewed")
     missing = len(slugs - log_slugs)
 
@@ -50,6 +52,7 @@ def compute_stats(wr_dir: Path, log_path: Path, today: str) -> Stats:
         structural_pages_found=structural_found,
         structural_pages_missing=structural_missing,
         approved_count=approved,
+        pending_count=pending,
         unreviewed_count=unreviewed,
         missing_from_log_count=missing,
         log_age_days=age,

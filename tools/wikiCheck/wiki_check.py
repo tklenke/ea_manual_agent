@@ -49,6 +49,7 @@ def main():
             print()
             print(format_detail(
                 broken_links=broken,
+                pending=[],
                 unreviewed=[],
                 missing_from_log=[],
                 orphan_pages=orphans,
@@ -69,11 +70,13 @@ def main():
         structural_found, structural_missing = check_structural_pages(WR_DIR)
         wr_slugs = set(glob_wr_pages(WR_DIR))
         log_slugs = {e.slug for e in log.entries}
+        pending = sorted(e.slug for e in log.entries if e.status == "Pending")
         unreviewed = sorted(e.slug for e in log.entries if e.status == "unreviewed")
         missing = sorted(wr_slugs - log_slugs)
         print()
         print(format_detail(
             broken_links=broken,
+            pending=pending,
             unreviewed=unreviewed,
             missing_from_log=missing,
             orphan_pages=orphans,

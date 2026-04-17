@@ -19,7 +19,7 @@ class ReviewLog:
 
 
 _LAST_UPDATED_RE = re.compile(r'^Last updated:\s*(\S+)', re.MULTILINE)
-_ROW_RE = re.compile(r'^\|\s*([^|]+?)\s*\|\s*(Approved|unreviewed)\s*\|', re.MULTILINE)
+_ROW_RE = re.compile(r'^\|\s*([^|]+?)\s*\|\s*(Approved|Pending|unreviewed)\s*\|', re.MULTILINE)
 
 
 def parse_review_log(log_path: Path) -> ReviewLog:

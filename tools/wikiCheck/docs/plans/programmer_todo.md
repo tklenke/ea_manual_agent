@@ -4,7 +4,7 @@
 
 ---
 
-## Phase 8 — Pending status support
+## Phase 8 — Pending status support — [x] Complete
 
 **Goal:** Recognize `Pending` as a valid review log status. Count pending pages separately
 in the summary and in `--detail`. Pending pages are in the log; they must NOT appear in

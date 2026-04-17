@@ -110,3 +110,28 @@ def test_orphan_count_excludes_structural(tmp_path):
     log = _make_log(tmp_path, LOG_CONTENT)
     stats = compute_stats(wr, log, today="2026-04-16")
     assert stats.orphan_count == 1  # page-a is orphan; home is structural, not counted
+
+
+PENDING_LOG_CONTENT = """\
+# Review Log
+Last updated: 2026-04-10
+
+| Page | Status | Last Reviewed |
+|------|--------|---------------|
+| page-a | Approved | 2026-04-10 |
+| page-b | Pending | 2026-04-10 |
+"""
+
+
+def test_pending_count(tmp_path):
+    wr = _make_wr(tmp_path, ["page-a", "page-b"])
+    log = _make_log(tmp_path, PENDING_LOG_CONTENT)
+    stats = compute_stats(wr, log, today="2026-04-16")
+    assert stats.pending_count == 1
+
+
+def test_pending_not_in_missing_from_log(tmp_path):
+    wr = _make_wr(tmp_path, ["page-a", "page-b"])
+    log = _make_log(tmp_path, PENDING_LOG_CONTENT)
+    stats = compute_stats(wr, log, today="2026-04-16")
+    assert stats.missing_from_log_count == 0
