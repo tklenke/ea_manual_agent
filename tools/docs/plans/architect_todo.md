@@ -85,7 +85,7 @@ Design revisions after implementation review:
 
 ### Open
 
-- [ ] Promote spec from architect_todo to a proper design.md in wikiCheck/docs/plans/
+- [x] Promote spec from architect_todo to a proper design.md in wikiCheck/docs/plans/
 - [ ] Write `wiki_check.py` (see spec below)
 - [ ] Create `docs/notes/review_log.md` format spec (in AR — ea_mxmanual project)
 - [ ] Update `claude/roles/reviewer.md` (in AR — ea_mxmanual project)
