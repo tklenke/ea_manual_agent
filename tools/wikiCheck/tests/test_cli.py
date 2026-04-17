@@ -48,3 +48,13 @@ def test_no_detail_flag_omits_detail_sections():
 def test_detail_flag_includes_orphan_section():
     result = _run("--detail")
     assert "Orphan pages:" in result.stdout
+
+
+def test_structural_pages_line_in_normal_output():
+    result = _run()
+    assert "Structural pages:" in result.stdout
+
+
+def test_structural_pages_line_in_detail_output():
+    result = _run("--detail")
+    assert "Structural pages (excluded from orphans):" in result.stdout

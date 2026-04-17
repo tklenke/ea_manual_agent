@@ -6,7 +6,7 @@
 
 See design.md "Structural page exclusion" section for full spec.
 
-### [ ] 7.1 Extend `orphan_pages.py`
+### [x] 7.1 Extend `orphan_pages.py`
 
 - Add `STRUCTURAL_PAGES = ["home", "readme"]` constant
 - Update `find_orphan_pages(wr_dir)` to exclude structural pages (case-insensitive slug
@@ -22,7 +22,7 @@ See design.md "Structural page exclusion" section for full spec.
   - Add test: case-insensitive detection in `check_structural_pages()` (e.g., `README.md` → found)
   - Existing tests must still pass (none use structural slugs)
 
-### [ ] 7.2 Update `Stats` and `compute_stats()`
+### [x] 7.2 Update `Stats` and `compute_stats()`
 
 - Add `structural_pages_found: list[str]` and `structural_pages_missing: list[str]`
   to `Stats` dataclass
@@ -34,7 +34,7 @@ See design.md "Structural page exclusion" section for full spec.
   - Add test: `structural_pages_missing` populated when a structural page is absent
   - Add test: `orphan_count` does not include structural pages
 
-### [ ] 7.3 Update `format_report()` in `report.py`
+### [x] 7.3 Update `format_report()` in `report.py`
 
 - Add `structural_pages_found` and `structural_pages_missing` parameters
 - Insert structural pages line after "Orphan pages":
@@ -45,14 +45,14 @@ See design.md "Structural page exclusion" section for full spec.
   - Add test: ERROR line appears when a structural page is missing
   - Add test: no ERROR line when all structural pages found
 
-### [ ] 7.4 Update `format_missing_log_report()` in `report.py`
+### [x] 7.4 Update `format_missing_log_report()` in `report.py`
 
 - Add `structural_pages_found` and `structural_pages_missing` parameters
 - Insert structural pages line (and any ERROR lines) between broken links and the
   "Review log: NOT FOUND" block
 - TDD: update `test_report.py` (missing-log cases)
 
-### [ ] 7.5 Update `format_detail()` in `report.py`
+### [x] 7.5 Update `format_detail()` in `report.py`
 
 - Add `structural_pages_found` and `structural_pages_missing` parameters
 - Add section "Structural pages (excluded from orphans):" listing `found` slugs
@@ -61,7 +61,7 @@ See design.md "Structural page exclusion" section for full spec.
   - Add test: structural section present with correct slugs
   - Add test: error lines present for missing structural pages
 
-### [ ] 7.6 Fix bug + update `wiki_check.py`
+### [x] 7.6 Fix bug + update `wiki_check.py`
 
 - **Bug fix**: missing-log `--detail` branch (line 43) passes `orphan_pages=[]`
   hardcoded; replace with `find_orphan_pages(WR_DIR)`

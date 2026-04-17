@@ -78,3 +78,26 @@ def test_orphan_count(tmp_path):
     log = _make_log(tmp_path, LOG_CONTENT)
     stats = compute_stats(wr, log, today="2026-04-16")
     assert stats.orphan_count == 2  # page-a and page-c are orphans
+
+
+def test_structural_pages_found(tmp_path):
+    wr = _make_wr(tmp_path, ["page-a", "home", "readme"])
+    log = _make_log(tmp_path, LOG_CONTENT)
+    stats = compute_stats(wr, log, today="2026-04-16")
+    assert sorted(stats.structural_pages_found) == ["home", "readme"]
+    assert stats.structural_pages_missing == []
+
+
+def test_structural_pages_missing(tmp_path):
+    wr = _make_wr(tmp_path, ["page-a", "home"])
+    log = _make_log(tmp_path, LOG_CONTENT)
+    stats = compute_stats(wr, log, today="2026-04-16")
+    assert stats.structural_pages_found == ["home"]
+    assert stats.structural_pages_missing == ["readme"]
+
+
+def test_orphan_count_excludes_structural(tmp_path):
+    wr = _make_wr(tmp_path, ["page-a", "home"])
+    log = _make_log(tmp_path, LOG_CONTENT)
+    stats = compute_stats(wr, log, today="2026-04-16")
+    assert stats.orphan_count == 1  # page-a is orphan; home is structural, not counted

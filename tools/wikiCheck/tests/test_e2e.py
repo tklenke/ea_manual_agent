@@ -19,19 +19,27 @@ def _run_with_fixtures(log_path, *extra_args):
     from wikicheck.review_log import parse_review_log
     from wikicheck.stats import compute_stats
     from wikicheck.report import format_report, format_detail
+    from wikicheck.orphan_pages import find_orphan_pages, check_structural_pages
 
     stats = compute_stats(FIXTURE_WR, log_path, today="2026-04-16")
     log = parse_review_log(log_path)
     summary = format_report(stats, today="2026-04-16", log_last_updated=log.last_updated)
-    from wikicheck.orphan_pages import find_orphan_pages
 
     broken = find_broken_links(FIXTURE_WR)
     orphans = find_orphan_pages(FIXTURE_WR)
+    structural_found, structural_missing = check_structural_pages(FIXTURE_WR)
     wr_slugs = set(glob_wr_pages(FIXTURE_WR))
     log_slugs = {e.slug for e in log.entries}
     unreviewed = sorted(e.slug for e in log.entries if e.status == "unreviewed")
     missing = sorted(wr_slugs - log_slugs)
-    detail = format_detail(broken_links=broken, unreviewed=unreviewed, missing_from_log=missing, orphan_pages=orphans)
+    detail = format_detail(
+        broken_links=broken,
+        unreviewed=unreviewed,
+        missing_from_log=missing,
+        orphan_pages=orphans,
+        structural_pages_found=structural_found,
+        structural_pages_missing=structural_missing,
+    )
     return summary, detail
 
 
@@ -88,3 +96,50 @@ def test_e2e_missing_log_seeds_file(tmp_path):
     assert "page-b" in content
     assert "page-c" in content
     assert "unreviewed" in content
+
+
+def test_e2e_structural_pages_in_summary():
+    summary, _ = _run_with_fixtures(FIXTURE_LOG)
+    assert "Structural pages:" in summary
+
+
+def test_e2e_structural_pages_in_detail():
+    _, detail = _run_with_fixtures(FIXTURE_LOG)
+    assert "Structural pages (excluded from orphans):" in detail
+
+
+def _run_missing_log_detail(fixture_wr, tmp_path):
+    from wikicheck.broken_links import find_broken_links
+    from wikicheck.orphan_pages import find_orphan_pages, check_structural_pages
+    from wikicheck.seed_log import seed_review_log
+    from wikicheck.report import format_missing_log_report, format_detail
+
+    broken = find_broken_links(fixture_wr)
+    orphans = find_orphan_pages(fixture_wr)
+    structural_found, structural_missing = check_structural_pages(fixture_wr)
+    seed_path = tmp_path / "review_log.md"
+    seed_review_log(fixture_wr, tmp_path, today="2026-04-16")
+    summary = format_missing_log_report(
+        total_pages=3,
+        broken_link_count=len(broken),
+        structural_pages_found=structural_found,
+        structural_pages_missing=structural_missing,
+        today="2026-04-16",
+        seed_path=str(seed_path),
+    )
+    detail = format_detail(
+        broken_links=broken,
+        unreviewed=[],
+        missing_from_log=[],
+        orphan_pages=orphans,
+        structural_pages_found=structural_found,
+        structural_pages_missing=structural_missing,
+    )
+    return summary, detail
+
+
+def test_e2e_missing_log_detail_shows_real_orphans(tmp_path):
+    _, detail = _run_missing_log_detail(FIXTURE_WR, tmp_path)
+    # fixture has page-a and page-c as orphans (page-b is linked from page-a)
+    assert "page-a" in detail
+    assert "page-c" in detail

@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 from wikicheck.wr_pages import glob_wr_pages
 from wikicheck.broken_links import find_broken_links
-from wikicheck.orphan_pages import find_orphan_pages
+from wikicheck.orphan_pages import find_orphan_pages, check_structural_pages
 from wikicheck.review_log import parse_review_log
 
 
@@ -15,6 +15,8 @@ class Stats:
     total_pages: int
     broken_link_count: int
     orphan_count: int
+    structural_pages_found: list[str]
+    structural_pages_missing: list[str]
     approved_count: int
     unreviewed_count: int
     missing_from_log_count: int
@@ -25,6 +27,7 @@ def compute_stats(wr_dir: Path, log_path: Path, today: str) -> Stats:
     slugs = set(glob_wr_pages(wr_dir))
     broken = find_broken_links(wr_dir)
     orphans = find_orphan_pages(wr_dir)
+    structural_found, structural_missing = check_structural_pages(wr_dir)
     log = parse_review_log(log_path)
 
     log_slugs = {e.slug for e in log.entries}
@@ -39,6 +42,8 @@ def compute_stats(wr_dir: Path, log_path: Path, today: str) -> Stats:
         total_pages=len(slugs),
         broken_link_count=len(broken),
         orphan_count=len(orphans),
+        structural_pages_found=structural_found,
+        structural_pages_missing=structural_missing,
         approved_count=approved,
         unreviewed_count=unreviewed,
         missing_from_log_count=missing,
