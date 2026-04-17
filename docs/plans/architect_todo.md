@@ -15,6 +15,20 @@ Options evaluated 2026-04-16:
 
 ---
 
+### [ ] Review wikiCheck orphan detection once implemented (2026-04-16)
+Tools architect_todo has the task. Once the programmer builds it, verify output is correct
+and useful, then ensure it's reflected in the Reviewer integration.
+
+**Orphan page design decisions (2026-04-16):**
+- No separate tracking file — wikiCheck live scan is authoritative; list shrinks as Writer fixes
+- Orphan count in summary report; full list under `--detail`
+- Reviewer startup: run wikiCheck, hand orphan list to Writer as actionable items
+- Writer resolves by finding the right page to link from and adding the link
+- If no valid link target exists, Writer escalates to Architect
+- No valid use case for intentionally unlinked pages in this manual
+
+---
+
 ### [ ] Verify wikiCheck output and integrate into Reviewer role (2026-04-16)
 
 **Context:** `tools/wikiCheck/wiki_check.py` is built by the tools Claude per `tools/wikiCheck/docs/plans/architect_todo.md`. Once built, verify the output is correct and useful, then integrate into the Reviewer role startup sequence.

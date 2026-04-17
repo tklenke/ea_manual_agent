@@ -86,7 +86,13 @@ Design revisions after implementation review:
 ### Open
 
 - [x] Promote spec from architect_todo to a proper design.md in wikiCheck/docs/plans/
-- [ ] Write `wiki_check.py` (see spec below)
+- [x] Write `wiki_check.py` (see spec below)
+- [ ] Add orphan page detection to wikiCheck — pages that exist in WR but are never linked
+      to from any other WR page. Include count in summary report and list under `--detail`.
+      Logic is the inverse of broken links: build set of all link targets across WR, flag
+      any existing page not in that set. No separate tracking file — live scan is
+      authoritative. No valid use case for intentionally unlinked pages in this manual.
+      (Requested 2026-04-16)
 - [ ] Create `docs/notes/review_log.md` format spec (in AR — ea_mxmanual project)
 - [ ] Update `claude/roles/reviewer.md` (in AR — ea_mxmanual project)
 - [ ] Document `docs/notes/` in `claude/project_status.md` (in AR)
