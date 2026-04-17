@@ -85,76 +85,11 @@ The current TOC has significant problems identified on 2026-04-15. Do not begin 
 
 ### [ ] Build wiki integrity tooling and update Reviewer role (2026-04-16)
 
-**Context:** Discussed 2026-04-16. The Reviewer needs two persistent quality tools: a broken link report and a page review log. Rather than having Claude do grep/glob work in role definition prose, we build a Python script that does the heavy lifting and outputs a compact summary. Reviewer reads the output and asks Tom what to do.
+**Context:** Discussed 2026-04-16. Build a Python script that checks broken links and review log status in the WR, outputs a compact summary for Reviewer sessions.
 
----
+**Spec and task breakdown:** `tools/wikiCheck/docs/plans/architect_todo.md`
 
-#### 1. Write `tools/wikiCheck/wiki_check.py`
-
-Script lives in the AR at `tools/wikiCheck/wiki_check.py`. It operates on the WR at `/home/tom/projects/N657CZDashTwo`.
-
-**What it does:**
-
-- **Broken link check:** Scan all WR `.md` files for DokuWiki internal links (`[[page-slug]]` and `[[page-slug|Display Text]]`). Extract target slugs. Check which slugs have no corresponding `.md` file in the WR. Report count and list.
-
-- **Review log check:**
-  - Read datestamp from `docs/notes/review_log.md` (AR)
-  - Glob all WR `.md` pages
-  - Grep review log for page entries; identify WR pages missing from the log
-  - Report: log age, count of unreviewed pages (status = `unreviewed`), count of WR pages missing from log entirely
-
-**Output format:** Compact plain-text summary, suitable for pasting into a Claude session. Example:
-```
-Wiki Integrity Report — 2026-04-16
-Broken links:       12  (pages referenced but not yet written)
-Unreviewed pages:    8  (in log, never reviewed)
-Pages missing from log: 3  (in WR, not in log)
-Review log last updated: 2026-04-10 (6 days ago)
-```
-Optionally with `--detail` flag: full lists of broken links, unreviewed pages, missing pages.
-
----
-
-#### 2. Create `docs/notes/review_log.md`
-
-File lives in the AR. Format:
-
-```
-# Review Log
-Last updated: YYYY-MM-DD
-
-| Page | Status | Last Reviewed |
-|------|--------|---------------|
-| panels-canopy | 2026-04-10 | Approved |
-| manual-standards | unreviewed | — |
-```
-
-- **Seeding:** First Reviewer session runs `wiki_check.py`, which identifies all WR pages. Reviewer seeds the log with every page marked `unreviewed`. Asks Tom to confirm before writing.
-- **Updating:** After reviewing a page, Reviewer updates the entry with date and outcome.
-- **Log datestamp** (`Last updated:`) updated whenever Reviewer modifies the log.
-
----
-
-#### 3. Update `claude/roles/reviewer.md`
-
-Add to Reviewer startup sequence (after reading standard files):
-
-1. Run `tools/wiki_check.py` (or ask Tom to run it and paste the output if script execution isn't available)
-2. Report summary to Tom
-3. Ask: "The review log has N unreviewed pages and N pages missing from the log. Want me to update the log? Do you want to run a link check this session?"
-4. If log needs seeding (first run, no log exists): walk Tom through the seeding step
-
-Add to Reviewer workflow: after completing a page review, update `docs/notes/review_log.md` entry and commit.
-
----
-
-#### 4. Document `docs/notes/` in `claude/project_status.md`
-
-Add `docs/notes/` to the directory structure with entries for `review_log.md` and `link_report.md` (if we decide to persist link reports — TBD).
-
----
-
-**Implementation order:** 1 → 2 → 3 → 4. Script first, then log, then role update.
+**Deliverables:** `tools/wikiCheck/wiki_check.py`, `docs/notes/review_log.md`, updates to `claude/roles/reviewer.md` and `claude/project_status.md`.
 
 ---
 
@@ -176,17 +111,10 @@ tools/
 1. `git mv PDFindexer tools/PDFindexer` — preserves history
 2. `git mv PDFindexer/CLAUDE.md tools/CLAUDE.md` — move before step 1, or adjust paths accordingly
 3. `git mv PDFindexer/claude tools/claude` — same
-4. Create `tools/wikiCheck/` with a spec file describing what to build (see below)
+4. Create `tools/wikiCheck/` with architect_todo.md describing what to build
 5. Update `claude/project_status.md` directory structure — replace `PDFindexer/` entry with `tools/` block
 6. Update the wiki integrity tooling task above — `tools/wiki_check.py` becomes `tools/wikiCheck/`
 7. Update any references in role definitions that mention PDFindexer
-
-**wikiCheck spec to seed `tools/wikiCheck/plans/spec.md`:**
-- Inputs: WR path (`/home/tom/projects/N657CZDashTwo`), AR review log path (`docs/notes/review_log.md`)
-- Broken link check: scan all WR `.md` files for `[[slug]]` and `[[slug|Text]]` links; report slugs with no corresponding `.md` file
-- Review log check: read log datestamp; find WR pages missing from log; count entries with status `unreviewed`
-- Output: compact plain-text summary (see wiki integrity task for format); `--detail` flag for full lists
-- Review log seeding: `--seed` flag writes all WR pages to log with status `unreviewed` (asks confirmation before writing)
 
 **Note:** After restructure, main roles delegate scripting work to the tools Claude by dropping a spec into `tools/wikiCheck/` or `tools/PDFindexer/` and switching Claude context to `tools/`.
 
