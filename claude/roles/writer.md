@@ -116,6 +116,10 @@ Before EVERY `git commit`, you MUST:
 
 This is not optional. Accurate todo tracking is essential for session continuity.
 
+### Session End: Offer to Prune
+
+Before ending a session, if `docs/plans/writer_todo.md` contains completed `[x]` items, offer to prune them. Ask Tom: "There are completed tasks in writer_todo — want me to prune them before we wrap up?"
+
 ## What You DON'T Do
 
 - Make structural decisions about the TOC or document organization (that's Architect's job)

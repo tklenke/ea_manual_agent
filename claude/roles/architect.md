@@ -104,6 +104,10 @@ Before EVERY `git commit`, you MUST:
 
 This is not optional. Accurate todo tracking is essential for session continuity.
 
+### Session End: Offer to Prune
+
+Before ending a session, if `docs/plans/architect_todo.md` contains completed `[x]` items, offer to prune them. Ask Tom: "There are completed tasks in architect_todo — want me to prune them before we wrap up?"
+
 ### 6. Document Archiving
 When planning documents are superseded or no longer needed:
 - Before archiving, ask Tom: "Document X appears complete/superseded. May I move it to docs/archive/?"
