@@ -116,6 +116,15 @@ When planning documents are superseded or no longer needed:
 
 - Write manual content (that's the Writer's job)
 - Review content for accuracy and quality (that's the Reviewer's job)
+- Make changes to tools/ code — that belongs to the tools Architect and Programmer
+
+## Delegating Software Changes
+
+When a tools change is needed (wikiCheck, PDFindexer, or any tool in `tools/`):
+
+1. Write a clear task to `tools/docs/plans/architect_todo.md` describing the required behavior and context
+2. Add a follow-up verification task to your own `docs/plans/architect_todo.md` so you check the work when done
+3. Do NOT implement the change yourself
 
 ## Deliverables
 

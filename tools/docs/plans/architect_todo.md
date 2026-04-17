@@ -85,6 +85,23 @@ Design revisions after implementation review:
 
 ### Open
 
+- [ ] **Add "pending" status support to wikiCheck (flagged by manual Architect 2026-04-17)**
+
+  wikiCheck does not recognize `pending` as a valid review log status. Pages with `pending`
+  status are reported as "Pages missing from log" and not counted in any summary category.
+
+  **Required behavior:**
+  - Recognize `pending` as a valid status (alongside `Approved` and `unreviewed`)
+  - Count pending pages separately in the summary: `Pending pages: N  (reviewed, awaiting resolution)`
+  - Do NOT report pending pages under "Pages missing from log"
+  - Include pending pages in `--detail` output under a "Pending pages" section
+
+  **Context:** A page is marked `pending` when review found issues requiring Writer input
+  (e.g., unresolved `@@TOM:` flags) — reviewed but not yet approvable. Three pages are
+  currently pending: `home`, `panels-canopy`, `readme`.
+
+---
+
 - [x] **BUG + DESIGN QUESTION: orphan detection (resolved 2026-04-17)**
 
   **Bug:** Fixed as part of Phase 7.6 — missing-log `--detail` branch now calls

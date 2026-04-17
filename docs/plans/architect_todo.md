@@ -4,6 +4,18 @@
 
 ## Backlog
 
+### [ ] Verify wikiCheck "pending" status fix (flagged 2026-04-17)
+
+Task written to `tools/docs/plans/architect_todo.md` for tools architect to implement.
+When complete: run `wiki_check.py --detail` and verify:
+- Pending pages show under "Pending pages" summary line with correct count
+- Pending pages do NOT appear under "Pages missing from log"
+- `--detail` output includes a "Pending pages" section listing them
+
+Currently pending pages: `home`, `panels-canopy`, `readme`.
+
+---
+
 ### [ ] OtterWiki navigation sidebar strategy — confirm final decision
 
 Options evaluated 2026-04-16:
