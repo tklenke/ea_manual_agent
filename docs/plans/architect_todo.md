@@ -89,9 +89,9 @@ The current TOC has significant problems identified on 2026-04-15. Do not begin 
 
 ---
 
-#### 1. Write `tools/wiki_check.py`
+#### 1. Write `tools/wikiCheck/wiki_check.py`
 
-Script lives in the AR at `tools/wiki_check.py`. It operates on the WR at `/home/tom/projects/N657CZDashTwo`.
+Script lives in the AR at `tools/wikiCheck/wiki_check.py`. It operates on the WR at `/home/tom/projects/N657CZDashTwo`.
 
 **What it does:**
 
@@ -158,7 +158,7 @@ Add `docs/notes/` to the directory structure with entries for `review_log.md` an
 
 ---
 
-### [ ] Restructure tools/ directory and delegate wikiCheck to tools Claude (2026-04-16)
+### [x] Restructure tools/ directory and delegate wikiCheck to tools Claude (2026-04-16)
 
 **Context:** PDFindexer has a Python-optimized CLAUDE.md and claude/ directory. These should live at the `tools/` level and cover all tools. Each tool gets its own subdirectory for code, plans, and data.
 

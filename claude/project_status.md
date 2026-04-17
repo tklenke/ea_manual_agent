@@ -55,8 +55,12 @@ ea_mxmanual/
 │   ├── writer_todo/                 - New writing tasks for Writer to pick up at session start
 │   └── feedback/                   - Feedback on published wiki pages for Writer to process
 ├── otterwiki/                       - Otterwiki instance (not yet configured)
-└── PDFindexer/                      - Python tool used to extract AC43_13 text
-                                       Has its own CLAUDE.md — do not read it
+└── tools/                           - Development tools
+    ├── CLAUDE.md                    - Claude guidance for tools (Python-optimized)
+    ├── claude/                      - Claude role/context files for tools
+    ├── PDFindexer/                  - Python tool used to extract AC43_13 text
+    └── wikiCheck/                   - Wiki integrity checker (broken links, review log)
+        └── plans/spec.md            - Build spec
 ```
 
 ## Key Documents
