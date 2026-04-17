@@ -85,18 +85,7 @@ Prose form is acceptable when it reads naturally: `per the procedure in AC 43.13
 
 ## Table of Contents
 
-For long pages, place a `[TOC]` tag immediately after the page's H1 header. OtterWiki will render an in-page table of contents at that location, linking to all `##` and `###` headings on the page.
-
-```markdown
-# Page Title
-
-[TOC]
-
-## First Section
-...
-```
-
-Use `[TOC]` on any page with four or more sections. Omit it on short pages where a TOC adds no navigation value.
+OtterWiki automatically renders an "On this page" TOC in the sidebar for any page with headings. Do not place `[TOC]` in page content — it renders as literal text, not a table of contents.
 
 ---
 
