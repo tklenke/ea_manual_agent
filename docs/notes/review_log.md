@@ -4,7 +4,7 @@ Last updated: 2026-04-17
 | Page | Status | Last Reviewed |
 |------|--------|---------------|
 | home | unreviewed | — |
-| manual-standards | unreviewed | — |
+| manual-standards | Approved | 2026-04-17 |
 | manual-standards-formatting | unreviewed | — |
 | manual-standards-page-templates | unreviewed | — |
 | manual-standards-section-notes | unreviewed | — |
