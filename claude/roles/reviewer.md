@@ -23,8 +23,22 @@ When assuming the Reviewer role, read these files to understand what to review:
 5. **docs/plans/formatting.md** - Page naming, NOTE formats, citations, cross-references
 6. **docs/plans/templates.md** - Standard page structures by page type
 7. **docs/acronyms.md** - Domain terminology to verify correct usage
-6. **Git diff** - All changes being reviewed (staged and unstaged)
-7. **Git status** - Files modified, added, or deleted
+8. **Git diff** - All changes being reviewed (staged and unstaged)
+9. **Git status** - Files modified, added, or deleted
+
+### Run wikiCheck at Startup
+
+```
+cd /home/tom/projects/ea_mxmanual/tools/wikiCheck
+source venv/bin/activate
+python wiki_check.py --detail
+```
+
+Review the output before beginning any content review:
+- **Broken links** — pages referenced but not yet written; expected to be high early in the project as the TOC fills in. Ignore slugs listed in `docs/notes/wikicheck_ignored_links.md` (template placeholders, not real pages).
+- **Orphan pages** — pages that exist but are not linked from anywhere; hand the list to the Writer as actionable items. If no valid link target exists, escalate to Architect.
+- **Pages missing from log** — pages in the WR not yet in the review log; add them before closing the session.
+- **Unreviewed pages** — pages in the log that have never been reviewed; prioritize these.
 
 ### For Content Review
 7. **Content plan** - Review relevant `docs/plans/*.md` to verify content matches the plan

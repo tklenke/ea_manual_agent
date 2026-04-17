@@ -15,9 +15,9 @@ Options evaluated 2026-04-16:
 
 ---
 
-### [ ] Review wikiCheck orphan detection once implemented (2026-04-16)
-Tools architect_todo has the task. Once the programmer builds it, verify output is correct
-and useful, then ensure it's reflected in the Reviewer integration.
+### [x] Review wikiCheck orphan detection once implemented (2026-04-16)
+Verified 2026-04-17. Output is correct and useful. Orphan detection working (no orphans
+currently — expected). Integrated into Reviewer role startup.
 
 **Orphan page design decisions (2026-04-16):**
 - No separate tracking file — wikiCheck live scan is authoritative; list shrinks as Writer fixes
@@ -29,15 +29,14 @@ and useful, then ensure it's reflected in the Reviewer integration.
 
 ---
 
-### [ ] Verify wikiCheck output and integrate into Reviewer role (2026-04-16)
+### [x] Verify wikiCheck output and integrate into Reviewer role (2026-04-16)
 
-**Context:** `tools/wikiCheck/wiki_check.py` is built by the tools Claude per `tools/wikiCheck/docs/plans/architect_todo.md`. Once built, verify the output is correct and useful, then integrate into the Reviewer role startup sequence.
+Completed 2026-04-17.
 
-**Steps:**
-1. Run `tools/wikiCheck/wiki_check.py` against the WR; verify output is accurate
-2. Update `claude/roles/reviewer.md` — add wikiCheck to startup sequence and post-review workflow
-3. Create `docs/notes/review_log.md` (seeded via `--seed` flag)
-4. Update `claude/project_status.md` — add `docs/notes/` directory entry
+1. Ran `wiki_check.py --detail` against WR — output accurate; 82 broken links expected (TOC pages not yet written); 4 false-positive slugs from templates.md documented in `docs/notes/wikicheck_ignored_links.md`
+2. Updated `claude/roles/reviewer.md` — wikiCheck added to startup sequence with guidance on interpreting output and handling orphans
+3. Created `docs/notes/review_log.md` (seeded by wikiCheck, moved from `tools/wikiCheck/data/`)
+4. Updated `claude/project_status.md` — `docs/notes/` directory documented
 
 ---
 

@@ -42,6 +42,9 @@ ea_mxmanual/
 │   │   ├── architect_todo.md        - Architect task tracking
 │   │   ├── writer_todo.md           - Writer task tracking
 │   │   └── poh_items.md             - Content identified for future POH
+│   ├── notes/                       - Working notes and operational logs
+│   │   ├── review_log.md            - WR page review status (Approved / unreviewed)
+│   │   └── wikicheck_ignored_links.md - Known false-positive broken links to ignore
 │   └── references/                  - Source reference materials (READ ONLY)
 │       ├── AC43_13/                 - FAA Advisory Circular 43.13 extracted text
 │       │                              Files named by chapter and page: ch##_p###.txt
