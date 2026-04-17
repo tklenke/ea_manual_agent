@@ -1,5 +1,12 @@
 # wikiCheck Design
 
+## Design Revision History
+
+- **2026-04-17**: Added structural page exclusion to orphan detection. `home` and `readme`
+  are expected orphans (nothing links to them by design); they are excluded from the
+  orphan count and reported separately. Case-insensitive matching. Missing structural
+  pages are errors. Phase 5 (AR integration) removed — handled outside this repo.
+
 ## Purpose
 
 Check the integrity of the wiki reference (WR) and the AR review log. Produces a
@@ -13,6 +20,8 @@ session.
 
 ## Output
 
+**[REVISED - 2026-04-17]**
+
 Compact plain-text summary printed to stdout:
 
 ```
@@ -20,10 +29,17 @@ Wiki Integrity Report — YYYY-MM-DD
 Total WR pages:          47
 Broken links:            12  (pages referenced but not yet written)
 Orphan pages:             3  (exist in WR, never linked to)
+Structural pages:         2  (home, readme — excluded from orphans)
 Approved pages:          36  (of 47 in log)
 Unreviewed pages:         8  (in log, never reviewed)
 Pages missing from log:   3  (in WR, not in log)
 Review log last updated: 2026-04-10 (6 days ago)
+```
+
+If a structural page is missing from WR entirely, append after the structural pages line:
+
+```
+ERROR: Structural page not in WR: home
 ```
 
 If the review log is missing:
@@ -32,10 +48,13 @@ If the review log is missing:
 Wiki Integrity Report — YYYY-MM-DD
 Total WR pages:          47
 Broken links:            12  (pages referenced but not yet written)
+Structural pages:         2  (home, readme — excluded from orphans)
 Review log:              NOT FOUND — seeded template written to
                          tools/wikiCheck/data/review_log.md
                          move to: docs/notes/review_log.md
 ```
+
+(ERROR lines appear after the structural pages line here too, if applicable.)
 
 ## Flags
 
@@ -45,16 +64,48 @@ Review log:              NOT FOUND — seeded template written to
 
 ### Orphan page detection
 
+**[REVISED - 2026-04-17]**
+
 Scan all WR `.md` files for internal links using the same regex as broken link check.
 Build a set of all referenced slugs. Any existing WR page whose slug does not appear in
 that set is an orphan — it exists but is never linked to.
 
 A helper `collect_referenced_slugs(wr_dir)` should be extracted from `broken_links.py`
 so both checks share the same scan loop. `find_orphan_pages(wr_dir)` returns
-`sorted(known - referenced)`.
+`sorted(known - referenced)`, excluding structural pages (see below).
 
-No separate tracking file — live scan is authoritative. No valid use case for
-intentionally unlinked pages in this manual.
+No separate tracking file — live scan is authoritative.
+
+#### Structural page exclusion
+
+`home` and `readme` are structural pages: they exist in the WR but are never linked to
+by design (`home` is the Otterwiki entry point; `readme` is GitHub-facing). They are
+excluded from the orphan count and reported on their own line.
+
+Matching is **case-insensitive**: `Home.md`, `README.md`, etc. are all recognized.
+
+**`STRUCTURAL_PAGES = ["home", "readme"]`** — hardcoded constant in `orphan_pages.py`.
+
+Two functions handle structural pages:
+
+- **`find_orphan_pages(wr_dir)`** — returns orphan slugs with structural pages removed.
+  Signature unchanged.
+
+- **`check_structural_pages(wr_dir)`** → `tuple[list[str], list[str]]`  
+  Returns `(found, missing)` where:
+  - `found` — structural pages that exist as `.md` files in WR (expected state)
+  - `missing` — structural pages with no `.md` file in WR (error condition)  
+  A structural page that exists and is linked to (not an orphan) is still "found" — not
+  an error. Only absence from WR is an error.
+
+The `Stats` dataclass carries `structural_pages_found: list[str]` and
+`structural_pages_missing: list[str]`. `compute_stats()` calls
+`check_structural_pages()`.
+
+The `format_report()` and `format_missing_log_report()` functions add a structural
+pages line and, if `structural_pages_missing` is non-empty, one ERROR line per missing
+page. The `format_detail()` function adds a "Structural pages (excluded from orphans):"
+section listing found pages, followed by any ERROR lines for missing ones.
 
 ### Broken link check
 

@@ -85,19 +85,16 @@ Design revisions after implementation review:
 
 ### Open
 
-- [ ] **BUG + DESIGN QUESTION: orphan detection (found 2026-04-16)**
+- [x] **BUG + DESIGN QUESTION: orphan detection (resolved 2026-04-17)**
 
-  **Bug:** When `docs/notes/review_log.md` does not exist, `wiki_check.py` calls
-  `format_detail(... orphan_pages=[])` with a hardcoded empty list instead of calling
-  `find_orphan_pages()`. Orphans never appear in `--detail` output on first run.
-  Fix: call `find_orphan_pages(WR_DIR)` in the missing-log branch the same way
-  the normal branch does.
+  **Bug:** Fixed as part of Phase 7.6 — missing-log `--detail` branch now calls
+  `find_orphan_pages(WR_DIR)` instead of passing hardcoded `[]`.
 
-  **Design question:** `home` is always an orphan by the current logic — no WR page
-  links to it, but it's the wiki entry point (Otterwiki renders it as the root page).
-  Similarly `readme.md` is a GitHub-facing page, not a manual page.
-  Decision needed: should `home` and `readme` be excluded from orphan detection?
-  If yes, how — hardcoded exclusion list, or a naming convention?
+  **Decision:** `home` and `readme` are excluded from orphan detection via a hardcoded
+  `STRUCTURAL_PAGES` constant in `orphan_pages.py`. Matching is case-insensitive.
+  They are reported on a separate "Structural pages" line. If either is absent from the
+  WR entirely, that is an error. Phase 7 programmer tasks written in
+  `wikiCheck/docs/plans/programmer_todo.md`.
 
 - [x] Promote spec from architect_todo to a proper design.md in wikiCheck/docs/plans/
 - [x] Write `wiki_check.py` (see spec below)
