@@ -11,5 +11,5 @@ Last updated: 2026-04-17
 | manual-standards-writing-style | Approved | 2026-04-17 |
 | panels-canopy | pending | 2026-04-17 |
 | panels-canopy-cleaning | Approved | 2026-04-17 |
-| readme | unreviewed | — |
+| readme | pending | 2026-04-17 |
 | record-of-revisions | Approved | 2026-04-17 |
