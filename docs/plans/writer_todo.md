@@ -44,7 +44,7 @@ Input file: `input/writer_todo/Jacking General.md` (renamed to `_pending` after 
 
 ---
 
-### [ ] Write wb-weighing-procedures page — Section 4 (from input 2026-04-17)
+### [x] Write wb-weighing-procedures page — Section 4 (from input 2026-04-17)
 
 Type 2 Procedure page in Section 4 (Weight and Balance). Tom provided builder's notes on weighing procedures for the Cozy MK IV.
 
