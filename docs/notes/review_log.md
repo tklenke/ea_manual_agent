@@ -5,7 +5,7 @@ Last updated: 2026-04-17
 |------|--------|---------------|
 | home | unreviewed | — |
 | manual-standards | Approved | 2026-04-17 |
-| manual-standards-formatting | unreviewed | — |
+| manual-standards-formatting | Approved | 2026-04-17 |
 | manual-standards-page-templates | unreviewed | — |
 | manual-standards-section-notes | unreviewed | — |
 | manual-standards-writing-style | Approved | 2026-04-17 |
