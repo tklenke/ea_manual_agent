@@ -85,20 +85,21 @@ Design revisions after implementation review:
 
 ### Open
 
-- [ ] **Add "pending" status support to wikiCheck (flagged by manual Architect 2026-04-17)**
+- [x] **Add `Pending` status support to wikiCheck (2026-04-17)**
 
-  wikiCheck does not recognize `pending` as a valid review log status. Pages with `pending`
-  status are reported as "Pages missing from log" and not counted in any summary category.
+  Designed and programmer tasks written. Status capitalization corrected to `Pending`
+  (matches `Approved`). See `wikiCheck/docs/plans/programmer_todo.md` Phase 8 for
+  implementation tasks covering `review_log.py`, `stats.py`, `report.py`, and
+  `wiki_check.py`.
 
-  **Required behavior:**
-  - Recognize `pending` as a valid status (alongside `Approved` and `unreviewed`)
+  **Required behavior (documented in design.md):**
+  - Recognize `Pending` as a valid status (alongside `Approved` and `unreviewed`)
   - Count pending pages separately in the summary: `Pending pages: N  (reviewed, awaiting resolution)`
   - Do NOT report pending pages under "Pages missing from log"
-  - Include pending pages in `--detail` output under a "Pending pages" section
+  - Include pending pages in `--detail` output before "Unreviewed pages"
 
-  **Context:** A page is marked `pending` when review found issues requiring Writer input
-  (e.g., unresolved `@@TOM:` flags) — reviewed but not yet approvable. Three pages are
-  currently pending: `home`, `panels-canopy`, `readme`.
+  **Context:** A page is marked `Pending` when review found issues requiring Writer input
+  (e.g., unresolved `@@TOM:` flags) — reviewed but not yet approvable.
 
 ---
 

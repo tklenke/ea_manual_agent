@@ -2,6 +2,12 @@
 
 ## Design Revision History
 
+- **2026-04-17**: Added `Pending` as a valid review log status. Pages marked `Pending`
+  are reviewed but blocked on Writer input. They are counted separately in the summary,
+  excluded from "Pages missing from log", and listed in a dedicated `--detail` section
+  that appears before "Unreviewed pages". Status capitalization corrected: `Pending`
+  (matches `Approved`).
+
 - **2026-04-17**: Added structural page exclusion to orphan detection. `home` and `readme`
   are expected orphans (nothing links to them by design); they are excluded from the
   orphan count and reported separately. Case-insensitive matching. Missing structural
@@ -31,6 +37,7 @@ Broken links:            12  (pages referenced but not yet written)
 Orphan pages:             3  (exist in WR, never linked to)
 Structural pages:         2  (home, readme — excluded from orphans)
 Approved pages:          36  (of 47 in log)
+Pending pages:            3  (reviewed, awaiting resolution)
 Unreviewed pages:         8  (in log, never reviewed)
 Pages missing from log:   3  (in WR, not in log)
 Review log last updated: 2026-04-10 (6 days ago)
@@ -58,7 +65,7 @@ Review log:              NOT FOUND — seeded template written to
 
 ## Flags
 
-- `--detail` — append full lists of broken links, orphan pages, unreviewed pages, and missing pages
+- `--detail` — append full lists of broken links, orphan pages, pending pages, unreviewed pages, and missing pages
 
 ## Checks
 
@@ -124,9 +131,11 @@ A broken link is a slug with no corresponding `.md` file. Report count (and list
 - Read `Last updated:` datestamp from `docs/notes/review_log.md`
 - Glob all WR `.md` pages
 - Parse review log for page entries
+- **Approved pages:** entries in the log with status `Approved`
+- **Pending pages:** entries in the log with status `Pending` (reviewed, blocked on Writer input)
 - **Unreviewed pages:** entries in the log with status `unreviewed`
-- **Pages missing from log:** WR pages with no entry in the log at all
-- Report: log age in days, unreviewed count, missing count
+- **Pages missing from log:** WR pages with no entry in the log at all (pending pages are in the log; they do NOT appear here)
+- Report: log age in days, approved count, pending count, unreviewed count, missing count
 
 ## review_log.md Format (in AR)
 
@@ -140,7 +149,7 @@ Last updated: YYYY-MM-DD
 | manual-standards | unreviewed | — |
 ```
 
-Valid status values: `Approved`, `unreviewed`
+Valid status values: `Approved`, `Pending`, `unreviewed`
 
 ### Missing review log
 
