@@ -4,6 +4,12 @@
 
 ## Backlog
 
+### [ ] Write panels-turtleback-windows page (flagged by Reviewer 2026-04-17)
+
+Tom has enough information to write this page. It is a Type 1b Component page in Section 9 (Canopy and Panels). Cross-referenced from `panels-canopy-cleaning` — cleaning procedure applies to turtleback windows as well as the canopy.
+
+---
+
 ### [x] Publish Manual Standards page (Section 1) (2026-04-16)
 
 Published as a family of `manual-standards-*` pages in the WR:
