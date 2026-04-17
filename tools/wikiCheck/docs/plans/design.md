@@ -17,7 +17,9 @@ Compact plain-text summary printed to stdout:
 
 ```
 Wiki Integrity Report — YYYY-MM-DD
+Total WR pages:          47
 Broken links:            12  (pages referenced but not yet written)
+Approved pages:          36  (of 47 in log)
 Unreviewed pages:         8  (in log, never reviewed)
 Pages missing from log:   3  (in WR, not in log)
 Review log last updated: 2026-04-10 (6 days ago)
