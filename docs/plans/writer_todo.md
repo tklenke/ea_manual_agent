@@ -24,47 +24,12 @@ Migrate `docs/plans/architecture_decisions.md` into the OtterWiki as the `manual
 
 ---
 
-### [ ] Configure OtterWiki print footer and write Record of Revisions page
+### [x] Configure OtterWiki print footer and write Record of Revisions page (2026-04-16)
 
-**Prerequisite:** OtterWiki instance must be running (Tom's architect task — see architect_todo).
-
-This task has two parts that must be done in order.
-
-#### Part 1: Configure OtterWiki print footer
-
-Set up the OtterWiki instance to display version metadata on printed pages.
-
-**Goal:** Every printed page automatically shows a footer with last-edited timestamp and short git commit hash, so a printed copy can be traced back to an exact version in git.
-
-**Steps:**
-1. Test whether `page.updated` is available in the OtterWiki Jinja2 template context for the installed version
-2. Create `customBody.html` injecting a print-only footer div:
-   ```html
-   <div class="print-only-metadata">
-       Last edited: {{ page.updated.strftime('%Y-%m-%d %H:%M') }} (short-hash)
-   </div>
-   ```
-3. If `page.updated` is unavailable, use JavaScript against the history endpoint to retrieve the timestamp
-4. For the git short hash: investigate whether OtterWiki exposes commit hash in template context; if not, use JavaScript
-5. Create `custom.css` with print-only display rules (hide on screen, show fixed footer on print)
-6. Test by printing a page from the browser — verify timestamp and hash appear correctly
-7. Target format: `Last edited: YYYY-MM-DD HH:MM (short-hash)`
-
-**Reference:** `docs/plans/architecture_decisions.md` — Version and Revision Information section.
-
-#### Part 2: Write the Record of Revisions page (Section 1)
-
-Once the print footer is working, write the `Record of Revisions` page for Section 1. Note: the `[[/?do=recent|Record of Revisions]]` TOC entry links to OtterWiki's built-in recent changes view. This page is a companion that explains how to interpret and use that revision history.
-
-**This page explains to a maintainer:**
-- All changes to this manual are tracked in git — every edit has a timestamp and commit hash
-- The print footer on each page shows when the page was last edited and the short git commit hash
-- How to use that information to identify the exact version of a printed page (e.g., `git show <hash>` or `git log --all -- <page-file>`)
-- The Record of Revisions link in the TOC shows the full change history across all pages
-
-**Tone:** Written for a maintainer who may not be a git expert. Practical — focus on "how do I verify which version I have" not git internals.
-
-**Sources:** No AC 43.13 or TDS citations needed. This is procedural documentation about the manual itself.
+- Print footer implemented via `customBody.html` + `custom.css` in `~/otterwiki_system/custom/`. Uses `document.lastModified` (reliable: OtterWiki sets Last-Modified header from git commit datetime). Shows date only — no git hash.
+- `record-of-revisions.md` written and committed to WR. Explains git-based tracking, print footer, page history, and links to `/?do=recent` built-in view.
+- TOC updated: `record-of-revisions` replaces `/?do=recent` as the TOC link target. `home.md` updated to match.
+- Note: changes to volume-mounted custom files require OtterWiki server restart to take effect.
 
 ---
 

@@ -1,7 +1,7 @@
 ====== Table of Contents ======
 
 ===== 1. General Information =====
-  - [[/?do=recent|Record of Revisions]]
+  - [[Record of Revisions|record-of-revisions]]
   - [[start#disclaimer|Disclaimer]] and [[https://www.gnu.org/licenses/fdl-1.3.html|License]] Information
   - [[manual-standards|Manual Standards]]
 
