@@ -85,41 +85,11 @@ Design revisions after implementation review:
 
 ### Open
 
-- [ ] **Add `Pending` status support to wikiCheck (2026-04-17) — REOPENED 2026-04-17**
+- [x] **Add `Pending` status support to wikiCheck (2026-04-17)**
 
-  Designed and programmer tasks written. Status capitalization corrected to `Pending`
-  (matches `Approved`). See `wikiCheck/docs/plans/programmer_todo.md` Phase 8 for
-  implementation tasks covering `review_log.py`, `stats.py`, `report.py`, and
-  `wiki_check.py`.
-
-  **Required behavior (documented in design.md):**
-  - Recognize `Pending` as a valid status (alongside `Approved` and `unreviewed`)
-  - Count pending pages separately in the summary: `Pending pages: N  (reviewed, awaiting resolution)`
-  - Do NOT report pending pages under "Pages missing from log"
-  - Include pending pages in `--detail` output before "Unreviewed pages"
-
-  **Context:** A page is marked `Pending` when review found issues requiring Writer input
-  (e.g., unresolved `@@TOM:` flags) — reviewed but not yet approvable.
-
-  **BUG REPORT (2026-04-17):** Implementation does not work. Verified against live run of
-  `wiki_check.py --detail`. The review log contains 7 pages with `pending` status, but
-  wikiCheck reports:
-  - `Pending pages: 0` (should be 7)
-  - `Pages missing from log: 7` — and those 7 are exactly the pending pages
-
-  The tool is treating pending pages as if they are not in the log at all.
-
-  **Likely root cause:** Case mismatch. The review log uses lowercase `pending` (e.g.,
-  `| home | pending | 2026-04-17 |`), but the design doc and likely the implementation
-  use capitalized `Pending`. The parser is probably doing an exact-match check and missing
-  the lowercase entries. Fix should either normalize status to title-case on read, or
-  do a case-insensitive comparison. Also verify the `--detail` "Pending pages" section
-  lists pages (currently shows `(none)`).
-
-  **Verification steps (same as before):**
-  - Pending pages show under "Pending pages" summary line with correct count (7)
-  - Pending pages do NOT appear under "Pages missing from log"
-  - `--detail` output "Pending pages" section lists them by name
+  Root cause identified (case mismatch: log uses `pending`, implementation expects
+  `Pending`). Programmer tasks written in `wikiCheck/docs/plans/programmer_todo.md`
+  Phase 9.
 
 ---
 

@@ -74,3 +74,31 @@ def test_entry_count_includes_pending(tmp_path):
     log.write_text(PENDING_LOG_CONTENT)
     result = parse_review_log(log)
     assert len(result.entries) == 3
+
+
+LOWERCASE_PENDING_LOG_CONTENT = """\
+# Review Log
+Last updated: 2026-04-10
+
+| Page | Status | Last Reviewed |
+|------|--------|---------------|
+| panels-canopy | Approved | 2026-04-10 |
+| home | pending | 2026-04-17 |
+| manual-standards | unreviewed | — |
+"""
+
+
+def test_lowercase_pending_is_parsed(tmp_path):
+    log = tmp_path / "review_log.md"
+    log.write_text(LOWERCASE_PENDING_LOG_CONTENT)
+    result = parse_review_log(log)
+    pending = [e for e in result.entries if e.slug == "home"]
+    assert len(pending) == 1
+    assert pending[0].status == "Pending"
+
+
+def test_lowercase_pending_included_in_count(tmp_path):
+    log = tmp_path / "review_log.md"
+    log.write_text(LOWERCASE_PENDING_LOG_CONTENT)
+    result = parse_review_log(log)
+    assert len(result.entries) == 3

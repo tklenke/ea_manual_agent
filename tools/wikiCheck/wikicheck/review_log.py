@@ -19,12 +19,18 @@ class ReviewLog:
 
 
 _LAST_UPDATED_RE = re.compile(r'^Last updated:\s*(\S+)', re.MULTILINE)
-_ROW_RE = re.compile(r'^\|\s*([^|]+?)\s*\|\s*(Approved|Pending|unreviewed)\s*\|', re.MULTILINE)
+_ROW_RE = re.compile(r'^\|\s*([^|]+?)\s*\|\s*(Approved|[Pp]ending|unreviewed)\s*\|', re.MULTILINE)
+
+
+def _normalize_status(status: str) -> str:
+    if status.lower() == "pending":
+        return "Pending"
+    return status
 
 
 def parse_review_log(log_path: Path) -> ReviewLog:
     text = Path(log_path).read_text()
     m = _LAST_UPDATED_RE.search(text)
     last_updated = m.group(1) if m else ""
-    entries = [ReviewLogEntry(slug=m.group(1), status=m.group(2)) for m in _ROW_RE.finditer(text)]
+    entries = [ReviewLogEntry(slug=m.group(1), status=_normalize_status(m.group(2))) for m in _ROW_RE.finditer(text)]
     return ReviewLog(last_updated=last_updated, entries=entries)
