@@ -2,6 +2,20 @@
 
 ## In Progress
 
+### [~] Antenna System page — Section 17 (2026-04-18)
+
+New page `avionics-antennas` created. Open @@TOM flags requiring resolution:
+- GA 35 mounting location
+- Which stab antenna connects to GTR 20 vs. GNC 355 comm
+- Right wing ~18" antenna: confirm Amateur 2m and connected receiver
+- Left wing ~28" FM Radio: confirm connected receiver
+- Canard ~21": confirm function (2nd VOR/LOC?) and connected LRU
+- Fuselage marker beacon: confirm which LRU handles it
+
+aircraft-general-layout and aircraft-systems-overview updated with antenna cross-refs and GA 35 added to LRU table. Duplicate pitch trim entry removed from layout page.
+
+Pending Reviewer sign-off.
+
 ### [~] Section 3 — Aircraft General (2026-04-17)
 
 Three pages to write. Scope agreed with Tom — avoid duplication across pages:
