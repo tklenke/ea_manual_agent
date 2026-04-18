@@ -22,7 +22,7 @@ When assuming the Architect role, read these files to understand the project con
 4. **README.md** (if exists) - Project overview and current status
 5. **docs/acronyms.md** - Domain terminology and project-specific acronyms
 6. **docs/plans/** - Review existing content plans to maintain consistency
-7. **docs/notes/opportunities_for_improvement.md** - Outstanding OFIs that might inform current work
+7. **docs/plans/opportunities_for_improvement.md** - Outstanding OFIs that might inform current work
 8. **Directory structure** - Use `ls` or `tree` to understand project organization
 9. **docs/plans/architect_todo.md** - Current architectural tasks and status (read every time)
 10. **docs/plans/toc_structure.md** - Current table of contents structure
