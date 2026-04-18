@@ -4,15 +4,18 @@
 
 ### [~] Antenna System page — Section 17 (2026-04-18)
 
-New page `avionics-antennas` created. Open @@TOM flags requiring resolution:
-- GA 35 mounting location
-- Which stab antenna connects to GTR 20 vs. GNC 355 comm
-- Right wing ~18" antenna: confirm Amateur 2m and connected receiver
-- Left wing ~28" FM Radio: confirm connected receiver
-- Canard ~21": confirm function (2nd VOR/LOC?) and connected LRU
-- Fuselage marker beacon: confirm which LRU handles it
+New page `avionics-antennas` created. Session state (2026-04-18):
+- aircraft-general-layout: pitch trim duplicate removed; antenna cross-ref added.
+- aircraft-systems-overview: GA 35 added; GSB 15 (USB power plug) and GPS 20A (GPS source) resolved; G5 corrected to singular; Artex ELT345 added to Emergency Equipment.
+- avionics-antennas: external (TED ADS-B → GTX 45R), internal (GA 35 → GPS 20A, G5 GPS antenna, ELT whip dipole → Artex ELT345), and embedded copper foil antennas documented.
 
-aircraft-general-layout and aircraft-systems-overview updated with antenna cross-refs and GA 35 added to LRU table. Duplicate pitch trim entry removed from layout page.
+Open @@TOM flags on avionics-antennas:
+- TED ADS-B model confirmation
+- Which stab antenna → GTR 20 vs. GNC 355 comm
+- Right wing ~23" VOR/LOC → GNC 355 (confirm)
+- Canard ~21": Localizer? (confirm function and LRU)
+- Canard ~7" Glideslope → GNC 355 (confirm)
+- Fuselage Marker Beacon → GNC 355 (confirm)
 
 Pending Reviewer sign-off.
 
