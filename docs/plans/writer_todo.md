@@ -36,10 +36,6 @@ A cleaned-up SVG of the G3X system interconnect diagram (based on Garmin install
 
 **Note on SVG state:** The diagram has been partially edited (components not installed on N657CZ are struck through). Tom was mid-edit in Inkscape when this task was created — verify the SVG is in its final state before publishing. The Architect's working copy in the AR is the source of truth.
 
-### [x] Add nose-gear-tipping cross-reference to ground-handling-jacking-and-leveling (2026-04-18)
-
-`ground-handling-jacking-and-leveling` exists but does not link to `landing-gear-nose-gear-tipping`. Add a cross-reference — the jacking procedure is a context where the nose gear tipping hazard is directly relevant.
-
 ### [ ] Add nose-gear-tipping cross-reference to landing-gear-nose (when written)
 
 When `landing-gear-nose` is written, include a cross-reference to `landing-gear-nose-gear-tipping`.
