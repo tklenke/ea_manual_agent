@@ -36,6 +36,6 @@ A cleaned-up SVG of the G3X system interconnect diagram (based on Garmin install
 
 **Note on SVG state:** The diagram has been partially edited (components not installed on N657CZ are struck through). Tom was mid-edit in Inkscape when this task was created — verify the SVG is in its final state before publishing. The Architect's working copy in the AR is the source of truth.
 
-### [ ] Add nose-gear-tipping cross-reference to landing-gear-nose (when written)
+### [x] Add nose-gear-tipping cross-reference to landing-gear-nose (when written)
 
 When `landing-gear-nose` is written, include a cross-reference to `landing-gear-nose-gear-tipping`.
