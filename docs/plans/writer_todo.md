@@ -10,7 +10,7 @@ Three pages to write. Scope agreed with Tom — avoid duplication across pages:
 - **aircraft-dimensions-and-weight** — Already exists with @@TOM flags. Leave flagged for now.
 - **aircraft-systems-overview** — Inventory of major systems on N657CZ, one-sentence description each, cross-ref to section. No layout, no specs.
 
-**Session state (2026-04-17):** Tom is drafting extended response with aircraft general details. Next action: receive Tom's input and write aircraft-general-layout first.
+**Session state (2026-04-17):** aircraft-general-layout complete and committed. Next: aircraft-systems-overview (interview Tom to fill gaps). aircraft-dimensions-and-weight exists with @@TOM flags — leave for now.
 
 ### [~] Write landing-gear-nose-gear-tipping page (2026-04-17)
 
