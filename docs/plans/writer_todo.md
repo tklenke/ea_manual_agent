@@ -4,9 +4,7 @@
 
 ### [~] Write landing-gear-nose-gear-tipping page (2026-04-17)
 
-Dedicated page for the nose gear tipping hazard. Stub committed to WR. Two @@TOM flags open — additional scenarios and tipping point details. Waiting on Tom's additional details.
-
-Cross-references planned from: safety-general-shop (done), ground-handling section (pending), landing-gear-nose (pending). TOC placement pending Architect decision.
+Page complete. No open @@TOM flags. Cross-references still needed from ground-handling section and landing-gear-nose (both unwritten). TOC placement pending Architect decision. Pending Reviewer sign-off.
 
 ### [~] Write safety-fluids-and-chemicals page — Section 2 (2026-04-17)
 
