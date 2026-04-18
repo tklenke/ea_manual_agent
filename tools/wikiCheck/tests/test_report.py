@@ -19,6 +19,8 @@ def _stats(**kwargs):
         unreviewed_count=0,
         missing_from_log_count=0,
         log_age_days=0,
+        tom_flag_count=0,
+        tom_flag_pages=[],
     )
     defaults.update(kwargs)
     return Stats(**defaults)
@@ -45,6 +47,7 @@ def test_format_normal_report():
         "Broken links:            12  (pages referenced but not yet written)\n"
         "System links:             2  (Otterwiki system calls, not checked)\n"
         "Orphan pages:             5  (exist in WR, never linked to)\n"
+        "@@TOM flags:              0  (pages flagged for Tom's input)\n"
         "Structural pages:         2  (home, readme — excluded from orphans)\n"
         "Approved pages:          36  (of 47 in log)\n"
         "Pending pages:            0  (reviewed, awaiting resolution)\n"
@@ -125,6 +128,21 @@ def test_pending_line_in_report():
     assert "Pending pages:            3  (reviewed, awaiting resolution)" in output
 
 
+def test_tom_flags_line_in_report():
+    stats = _stats(tom_flag_count=5)
+    output = format_report(stats, today="2026-04-16", log_last_updated="2026-04-16")
+    assert "@@TOM flags:              5  (pages flagged for Tom's input)" in output
+
+
+def test_tom_flags_line_position():
+    stats = _stats(orphan_count=2, tom_flag_count=3)
+    output = format_report(stats, today="2026-04-16", log_last_updated="2026-04-16")
+    orphan_pos = output.index("Orphan pages:")
+    tom_pos = output.index("@@TOM flags:")
+    structural_pos = output.index("Structural pages:")
+    assert orphan_pos < tom_pos < structural_pos
+
+
 def test_pending_line_between_approved_and_unreviewed():
     stats = _stats(approved_count=5, pending_count=2, unreviewed_count=3)
     output = format_report(stats, today="2026-04-16", log_last_updated="2026-04-16")
@@ -132,6 +150,44 @@ def test_pending_line_between_approved_and_unreviewed():
     pending_pos = output.index("Pending pages:")
     unreviewed_pos = output.index("Unreviewed pages:")
     assert approved_pos < pending_pos < unreviewed_pos
+
+
+def test_tom_flags_detail_section():
+    stats = _stats(tom_flag_pages=["avionics", "fuel-system"])
+    from wikicheck.report import format_detail
+    detail = format_detail(
+        broken_links=[],
+        pending=[],
+        unreviewed=[],
+        missing_from_log=[],
+        orphan_pages=[],
+        structural_pages_found=[],
+        structural_pages_missing=[],
+        system_links=[],
+        tom_flag_pages=["avionics", "fuel-system"],
+    )
+    assert "Pages with @@TOM flags:" in detail
+    assert "  avionics" in detail
+    assert "  fuel-system" in detail
+
+
+def test_tom_flags_detail_section_position():
+    from wikicheck.report import format_detail
+    detail = format_detail(
+        broken_links=[],
+        pending=[],
+        unreviewed=[],
+        missing_from_log=[],
+        orphan_pages=["orphan-page"],
+        structural_pages_found=["home"],
+        structural_pages_missing=[],
+        system_links=[],
+        tom_flag_pages=["flagged-page"],
+    )
+    orphan_pos = detail.index("Orphan pages:")
+    tom_pos = detail.index("Pages with @@TOM flags:")
+    structural_pos = detail.index("Structural pages (excluded from orphans):")
+    assert orphan_pos < tom_pos < structural_pos
 
 
 def test_missing_log_report_structural_error_line():

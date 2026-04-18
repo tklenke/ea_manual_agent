@@ -11,6 +11,7 @@ from wikicheck.review_log import parse_review_log
 from wikicheck.seed_log import seed_review_log
 from wikicheck.stats import compute_stats
 from wikicheck.report import format_report, format_missing_log_report, format_detail
+from wikicheck.tom_flags import find_tom_flags
 
 WR_DIR = Path("/home/tom/projects/N657CZDashTwo")
 _SCRIPT_DIR = Path(__file__).parent
@@ -56,6 +57,7 @@ def main():
                 structural_pages_found=structural_found,
                 structural_pages_missing=structural_missing,
                 system_links=system,
+                tom_flag_pages=find_tom_flags(WR_DIR),
             ))
         return
 
@@ -83,6 +85,7 @@ def main():
             structural_pages_found=structural_found,
             structural_pages_missing=structural_missing,
             system_links=system,
+            tom_flag_pages=stats.tom_flag_pages,
         ))
 
 

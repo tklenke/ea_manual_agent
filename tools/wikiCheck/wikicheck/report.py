@@ -16,6 +16,7 @@ def format_report(stats: Stats, today: str, log_last_updated: str) -> str:
         f"Broken links:            {stats.broken_link_count}  (pages referenced but not yet written)",
         f"System links:            {stats.system_link_count:>2}  (Otterwiki system calls, not checked)",
         f"Orphan pages:            {stats.orphan_count:>2}  (exist in WR, never linked to)",
+        f"@@TOM flags:             {stats.tom_flag_count:>2}  (pages flagged for Tom's input)",
         structural_line,
         f"Approved pages:          {stats.approved_count}  (of {stats.total_pages} in log)",
         f"Pending pages:           {stats.pending_count:>2}  (reviewed, awaiting resolution)",
@@ -37,6 +38,7 @@ def format_detail(
     structural_pages_found: list,
     structural_pages_missing: list,
     system_links: list,
+    tom_flag_pages: list = None,
 ) -> str:
     def section(title, items):
         lines = [title]
@@ -59,6 +61,7 @@ def format_detail(
         section("Broken links:", broken_links),
         section("System links (not checked):", system_links),
         section("Orphan pages:", orphan_pages),
+        section("Pages with @@TOM flags:", tom_flag_pages or []),
         structural_section,
         section("Pending pages:", pending),
         section("Unreviewed pages:", unreviewed),
