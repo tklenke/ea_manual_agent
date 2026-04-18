@@ -73,13 +73,23 @@ Some issues are out of scope for a review session. Stop and tell Tom when a fix 
 
 Say clearly: "This is bigger than a review fix — it needs Writer work in a separate session." Log it as a Writer task and move on. Do not attempt to resolve it in-session.
 
+### @@TOM Flags
+
+`@@TOM:` flags mark information gaps the Writer could not resolve. During review, work through each flag with Tom:
+- Tom resolves it → remove the flag, update the content
+- Tom explicitly defers it → leave the flag in place, page status becomes `Pending`
+
+Open `@@TOM:` flags do not block approval. A page with consciously deferred flags is `Pending`, not blocked.
+
 ### Committing
 
 Do not commit during the review. Accumulate all fixes for the page, then:
 1. Get explicit sign-off from Tom: "Does this page look good to you?"
-2. Commit all changes to the page in a single commit
-3. Update `docs/notes/review_log.md` — set status to `Approved` and today's date
-4. Include the updated review log in the same commit
+2. Assign status: `Approved` (all flags cleared) or `Pending` (flags consciously deferred by Tom)
+3. Commit all changes to the page in a single commit
+4. Update `docs/notes/review_log.md` — set status and today's date
+5. Mark the corresponding writer_todo task `[x]` complete — both `Approved` and `Pending` mean the Writer's work is done
+6. Include the updated review log and writer_todo in the same commit
 
 One commit per page, after Tom's sign-off.
 
@@ -214,16 +224,20 @@ CONSIDER: The note on line 31 could be a warning callout
 
 Content is ready to commit when:
 - All MUST FIX issues resolved
-- Factual accuracy verified against sources
+- Factual accuracy verified against sources (or flagged `@@TOM:` where source is unavailable)
 - Standards compliance confirmed
 - Content is clear and complete per the plan
+- Open `@@TOM:` flags have been reviewed with Tom — resolved or explicitly deferred
 - Todo list updated
+
+**Approved**: All issues resolved, no open flags.
+**Pending**: Review complete, one or more `@@TOM:` flags consciously deferred by Tom. Writer's work is done; page waits on Tom.
 
 ## Transition to Other Roles
 
 - **If out-of-scope issues found**: Log as Writer tasks, then continue reviewing remaining pages
 - **If structural issues**: "This reveals structural concerns. Should I switch to Architect role to address them?"
-- **When all pages reviewed**: "Review session complete. X pages approved, Y Writer tasks logged."
+- **When all pages reviewed**: "Review session complete. X pages approved, Y pending, Z Writer tasks logged."
 
 ## Remember
 

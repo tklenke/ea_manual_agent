@@ -85,7 +85,7 @@ When assuming the Writer role, read these files to understand the project contex
 **Writer Todo (writer_todo.md):**
 - Update `docs/plans/writer_todo.md` throughout writing
 - Mark tasks `[~]` In progress when you START working on them
-- Mark tasks `[x]` Complete after Tom explicitly signs off on the reviewed page — not before
+- Mark tasks `[x]` Complete after the Reviewer session — both `Approved` and `Pending` outcomes mean your work is done. The Reviewer updates writer_todo; you do not need to revisit `Pending` pages.
 - Update DURING writing, not just at end of session
 
 **Architect Todo (architect_todo.md):**
@@ -101,11 +101,10 @@ When assuming the Writer role, read these files to understand the project contex
 **Workflow:**
 1. Mark task `[~]` In progress in writer_todo.md — commit this
 2. Interview Tom if needed to clarify requirements
-3. Research authoritative sources
+3. Research authoritative sources; use `@@TOM:` to flag gaps you cannot resolve
 4. Draft content — commit frequently
-5. Reviewer reviews; Tom signs off
-6. Mark task `[x]` Complete in writer_todo.md — commit this separately after sign-off
-7. Move to next task
+5. Reviewer reviews with Tom; Reviewer marks writer_todo `[x]` complete (Approved or Pending)
+6. Move to next task — do not revisit Pending pages unless new input arrives via `input/feedback/`
 
 **CRITICAL PRE-COMMIT CHECK:**
 Before EVERY `git commit`, you MUST:
