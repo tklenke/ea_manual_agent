@@ -2,6 +2,28 @@
 
 ## Backlog
 
+### [ ] Write nose gear actuator page — Section 13 (Landing Gear) (2026-04-18)
+
+**Component:** Wilhelmson EZ Nose Lift electric nose gear actuator. N657CZ has the Marc Zeitlin clamp modification installed.
+
+**Topics to cover (per Tom's notes in `input/writer_todo/nose_gear_actuator_pending.txt`):**
+- Description and location
+- Limit switch adjustment
+- Electrical connections inspection (relays, wiring)
+- Actuator function check (on jacks)
+- Manual backup functionality testing
+- Mechanical inspection (alignment, fasteners, gear teeth)
+- Lubrication
+- Marc Zeitlin EZ Nose Lift clamp — what it is and why it's installed
+
+**Source requirements:** Tom's notes are background only — no authoritative citations. Research needed:
+- Wilhelmson installation/maintenance documentation (ask Tom if available)
+- Marc Zeitlin's write-up or SB for the clamp (ask Tom for source)
+- AC 43.13 for applicable general maintenance procedures
+- Flag anything without a source with `@@TOM:`
+
+
+
 ### [ ] Publish G3X system interconnect diagram to WR — Section 17 (2026-04-18)
 
 A cleaned-up SVG of the G3X system interconnect diagram (based on Garmin installation manual Figure 2-1, edited for N657CZ) is in the AR at:
