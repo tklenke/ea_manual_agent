@@ -24,7 +24,7 @@
 
 
 
-### [ ] Create avionics-g3x-system page and publish G3X diagram — Section 17 (2026-04-18)
+### [~] Create avionics-g3x-system page and publish G3X diagram — Section 17 (2026-04-18)
 
 **Decision (Architect, 2026-04-18):** The G3X system interconnect diagram belongs on a new Type 1a System Page, `avionics-g3x-system` ("G3X System Overview"), added to the top of Section 17 in the TOC. This is the section entry point for the G3X avionics suite.
 
