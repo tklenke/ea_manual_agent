@@ -4,6 +4,12 @@
 
 ## Backlog
 
+### [ ] Add landing-gear-nose-gear-actuator to TOC under Section 13 (2026-04-18)
+
+Writer created `landing-gear-nose-gear-actuator` as a standalone component page. It is not currently listed in `docs/plans/toc_structure.md`. Add it as a sub-page under Section 13 `landing-gear-nose` or at the same level — your call on how to structure the nose gear section.
+
+
+
 ### [ ] Decide where to embed the G3X system interconnect diagram in Section 17 (2026-04-18)
 
 The SVG (`docs/references/diagrams/g3x-system-architecture.svg`) is finished and ready to publish to the WR as `assets/diagrams/sec17-g3x-system-interconnect.svg`. The Writer needs a home page for it.
