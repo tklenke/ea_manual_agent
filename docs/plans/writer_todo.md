@@ -2,7 +2,7 @@
 
 ## In Progress
 
-### [~] Antenna System page — Section 17 (2026-04-18)
+### [x] Antenna System page — Section 17 (2026-04-18)
 
 New page `avionics-antennas` created. Session state (2026-04-18):
 - aircraft-general-layout: pitch trim duplicate removed; antenna cross-ref added.
@@ -19,7 +19,7 @@ Open @@TOM flags on avionics-antennas:
 
 Pending Reviewer sign-off.
 
-### [~] Section 3 — Aircraft General (2026-04-17)
+### [x] Section 3 — Aircraft General (2026-04-17)
 
 Three pages to write. Scope agreed with Tom — avoid duplication across pages:
 
@@ -37,7 +37,7 @@ Three pages to write. Scope agreed with Tom — avoid duplication across pages:
 - Ventilation arrangement
 - Survival equipment (if any)
 
-### [~] Write landing-gear-nose-gear-tipping page (2026-04-17)
+### [x] Write landing-gear-nose-gear-tipping page (2026-04-17)
 
 Page complete. No open @@TOM flags. Not a TOC-level entry — accessed through `landing-gear-nose` (Architect decision 2026-04-18). Pending Reviewer sign-off.
 
@@ -46,23 +46,23 @@ Cross-reference status:
 - `ground-handling-jacking-and-leveling` — link missing (see task below)
 - `landing-gear-nose` — not yet written; link required when written
 
-### [~] Write safety-fluids-and-chemicals page — Section 2 (2026-04-17)
+### [x] Write safety-fluids-and-chemicals page — Section 2 (2026-04-17)
 
 Type 4 Reference page in Section 2. Covers AeroShell W100+, MIL-H-5606A, IPA, brake cleaner, Simple Green, Permatex thread sealant, LPS aerosols. No open @@TOM flags. Ready for Reviewer sign-off.
 
-### [~] Write safety-fire-and-fuel page — Section 2 (2026-04-17)
+### [x] Write safety-fire-and-fuel page — Section 2 (2026-04-17)
 
 Type 4 Reference page in Section 2 (Safety Precautions). Covers 100LL fire hazards, ignition source elimination, grounding (cross-ref to Section 15), and fuel system work precautions.
 
 **Status:** Draft complete and committed to WR. No open @@TOM flags. Pending Reviewer sign-off.
 
-### [~] Write safety-electrical page — Section 2 (2026-04-17)
+### [x] Write safety-electrical page — Section 2 (2026-04-17)
 
 Type 4 Reference page in Section 2 (Safety Precautions). Covers electrical hazards: de-energization procedure, short circuit hazards, LiFePO4 battery chemistry, and pre-energization checks.
 
 **Status:** Ready for Reviewer sign-off. All @@TOM flags resolved.
 
-### [~] Write safety-composite-materials page — Section 2 (2026-04-17)
+### [x] Write safety-composite-materials page — Section 2 (2026-04-17)
 
 Type 4 Reference page in Section 2 (Safety Precautions). Covers hazards from composite materials encountered during maintenance and inspection of N657CZ.
 
@@ -97,7 +97,7 @@ A cleaned-up SVG of the G3X system interconnect diagram (based on Garmin install
 
 `ground-handling-jacking-and-leveling` exists but does not link to `landing-gear-nose-gear-tipping`. Add a cross-reference — the jacking procedure is a context where the nose gear tipping hazard is directly relevant.
 
-### [~] Write powerplant-cooling-system page — Section 14 (2026-04-18)
+### [x] Write powerplant-cooling-system page — Section 14 (2026-04-18)
 
 Page drafted. Open @@TOM flags:
 - Oil cooler model confirmation (expected: AeroClassic 8000216, 17-row drawn cup)

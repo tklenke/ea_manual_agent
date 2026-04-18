@@ -1,5 +1,5 @@
 # Review Log
-Last updated: 2026-04-17
+Last updated: 2026-04-18
 
 | Page | Status | Last Reviewed |
 |------|--------|---------------|
@@ -29,3 +29,4 @@ Last updated: 2026-04-17
 | avionics-antennas | pending | 2026-04-18 |
 | safety-electrical | Approved | 2026-04-18 |
 | wb-weighing-procedures | pending | 2026-04-17 |
+| powerplant-cooling-system | pending | 2026-04-18 |
