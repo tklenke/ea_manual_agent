@@ -2,6 +2,10 @@
 
 ## In Progress
 
+### [~] Write safety-fluids-and-chemicals page — Section 2 (2026-04-17)
+
+Type 4 Reference page in Section 2. Covers AeroShell W100+, MIL-H-5606A, IPA, brake cleaner, Simple Green, Permatex thread sealant, LPS aerosols. No open @@TOM flags. Pending Reviewer sign-off.
+
 ### [~] Write safety-fire-and-fuel page — Section 2 (2026-04-17)
 
 Type 4 Reference page in Section 2 (Safety Precautions). Covers 100LL fire hazards, ignition source elimination, grounding (cross-ref to Section 15), and fuel system work precautions.
