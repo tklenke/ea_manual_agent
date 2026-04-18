@@ -97,6 +97,17 @@ A cleaned-up SVG of the G3X system interconnect diagram (based on Garmin install
 
 `ground-handling-jacking-and-leveling` exists but does not link to `landing-gear-nose-gear-tipping`. Add a cross-reference — the jacking procedure is a context where the nose gear tipping hazard is directly relevant.
 
+### [~] Write powerplant-cooling-system page — Section 14 (2026-04-18)
+
+Page drafted. Open @@TOM flags:
+- Oil cooler model confirmation (expected: AeroClassic 8000216, 17-row drawn cup)
+- Cockpit control location for louver cable
+- Target oil temperature range for Lycon-upgraded O-360
+- Lubrication spec for cable and louver pivots
+- Cable adjustment procedure
+
+Pending Reviewer sign-off.
+
 ### [ ] Add nose-gear-tipping cross-reference to landing-gear-nose (when written)
 
 When `landing-gear-nose` is written, include a cross-reference to `landing-gear-nose-gear-tipping`.
