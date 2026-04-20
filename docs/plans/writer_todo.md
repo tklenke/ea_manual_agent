@@ -2,6 +2,21 @@
 
 ## Backlog
 
+### [ ] Write avionics-arinc-429-adapter page — Section 17 (2026-04-19)
+
+**Component:** Garmin GAD 29 ARINC 429 data concentrator. Confirmed installed (LRU24 in engineering report). Type 1b Component Page.
+
+**Topics to cover:**
+- Description and location on the aircraft
+- Role in the G3X system — what ARINC 429 sources it bridges to the G3X (likely GNC 355)
+- Inspection: connectors, mounting, indicator lights if any
+- Procedures: none anticipated beyond inspection, but verify with Garmin G3X Installation Manual
+
+**Source requirements:**
+- Garmin G3X Installation Manual (`docs/references/tds/GarminG3XInstallationManual_az.pdf`) — primary source for GAD 29 specs, wiring, and installation
+- Engineering report (`docs/references/electrical/engineering_report.md`) — confirms installation, LRU24
+- Flag anything without a source with `@@TOM:`
+
 ### [ ] Re-publish formatting standards page — manual-standards-formatting (2026-04-19)
 
 `docs/plans/formatting.md` was updated to add the Page Status Block section. Re-publish by updating `manual-standards-formatting.md` in the WR to match.
