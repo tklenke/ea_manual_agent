@@ -1,5 +1,5 @@
 # Review Log
-Last updated: 2026-04-18
+Last updated: 2026-04-19
 
 | Page | Status | Last Reviewed |
 |------|--------|---------------|
@@ -30,3 +30,7 @@ Last updated: 2026-04-18
 | safety-electrical | Approved | 2026-04-18 |
 | wb-weighing-procedures | pending | 2026-04-17 |
 | powerplant-cooling-system | pending | 2026-04-18 |
+| avionics-arinc-429-adapter | Approved | 2026-04-19 |
+| avionics-system-overview | unreviewed | — |
+| landing-gear-nose | unreviewed | — |
+| landing-gear-nose-gear-actuator | unreviewed | — |
