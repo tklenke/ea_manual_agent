@@ -75,3 +75,8 @@ When asked to do something, just do it - including obvious follow-up actions nee
 
 It is CRITICAL that the output be factually accurate. LIVES DEPEND ON THIS. If you don't know a specific value don't make it up. Ask for clarification.
 
+## Shell Commands
+- Avoid using compound commands with `&&`
+- Ideally run commands as separate, individual steps
+- Use `git -C /path/to/repo <command>` instead of `cd && git`
+
