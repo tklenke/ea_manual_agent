@@ -2,7 +2,7 @@
 
 ## Backlog
 
-### [ ] Write avionics-arinc-429-adapter page — Section 17 (2026-04-19)
+### [~] Write avionics-arinc-429-adapter page — Section 17 (2026-04-19)
 
 **Component:** Garmin GAD 29 ARINC 429 data concentrator. Confirmed installed (LRU24 in engineering report). Type 1b Component Page.
 
