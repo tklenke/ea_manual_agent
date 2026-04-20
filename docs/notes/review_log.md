@@ -33,4 +33,4 @@ Last updated: 2026-04-19
 | avionics-arinc-429-adapter | Approved | 2026-04-19 |
 | avionics-system-overview | Approved | 2026-04-19 |
 | landing-gear-nose | pending | 2026-04-19 |
-| landing-gear-nose-gear-actuator | unreviewed | — |
+| landing-gear-nose-gear-actuator | pending | 2026-04-19 |

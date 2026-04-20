@@ -17,7 +17,7 @@
 - Engineering report (`docs/references/electrical/engineering_report.md`) — confirms installation, LRU24
 - Flag anything without a source with `@@TOM:`
 
-### [~] Write nose gear actuator page — Section 13 (Landing Gear) (2026-04-18)
+### [x] Write nose gear actuator page — Section 13 (Landing Gear) (2026-04-18)
 
 **Component:** Wilhelmson EZ Nose Lift electric nose gear actuator. N657CZ has the Marc Zeitlin clamp modification installed.
 
