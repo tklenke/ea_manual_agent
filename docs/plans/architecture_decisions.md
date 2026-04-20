@@ -232,6 +232,16 @@ When in doubt whether something belongs here: if a future Architect or Writer wo
 
 ---
 
+## Annual Condition Inspection Page Structure
+
+**Decision:** The `inspection-annual-condition` page has two parts: (1) the inspection checklist, and (2) an annual servicing addendum — a cross-reference list of servicing tasks typically completed at annual time, with links to their home section pages.
+
+**Reasoning:** Consumable specifications and servicing procedures belong on their component/section pages (single source of truth). The addendum gives a maintainer doing an annual one place to see what servicing is also due, without duplicating content that is maintained elsewhere.
+
+**Effect:** Consumables list from the Zeitlin source is NOT reproduced on the ACI page. Procedure content is NOT duplicated — only cross-references with task name, interval, and link.
+
+---
+
 ## Section 6: Servicing Index Contents
 
 **Decision:** The following tasks are indexed in Section 6 (each with interval and pointer to home section):
