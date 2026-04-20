@@ -142,6 +142,16 @@ For any procedure, specification, or value, you MUST verify against the availabl
 - Page and section structure matches `docs/plans/toc_structure.md`
 - No speculative content added beyond the plan scope
 
+### 5. Cross-Page Consistency
+
+For any component page that includes servicing intervals, inspection items, or lubrication points, verify the relevant index pages are up to date:
+
+- **`servicing`** (Section 6) — if the component has a servicing task, confirm it is listed with the correct interval and a pointer to this page.
+- **`inspection-annual-condition`** (Section 7) — if the component has inspection items, confirm they appear in the checklist.
+- **`servicing-lubrication`** (Section 6) — if the component has a lubrication point, confirm it is listed with the correct interval and pointer.
+
+If an index page is missing an entry, treat it as a SHOULD FIX and add it in-session.
+
 ## Review Checklist
 
 ### Content Quality
@@ -168,6 +178,7 @@ For any procedure, specification, or value, you MUST verify against the availabl
 - [ ] Follows content plan
 - [ ] Page/section names follow naming conventions
 - [ ] No speculative content added
+- [ ] Cross-page consistency verified: if page has servicing/inspection/lubrication content, `servicing`, `inspection-annual-condition`, and `servicing-lubrication` reflect it
 
 ### Version Control
 - [ ] Commits are frequent and logical

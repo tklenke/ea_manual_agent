@@ -4,9 +4,9 @@
 
 ## Backlog
 
-### [ ] Document cross-page consistency requirement for servicing and inspection content
+### [x] Document cross-page consistency requirement for servicing and inspection content
 
-**NOTE FROM WRITER (2026-04-19):** Tom directed that when a new component page is written, if it mentions a servicing or inspection requirement, the Writer and Reviewer should: (1) include it on the component page, AND (2) check `inspection-annual-condition` and `servicing` to see whether a line item needs to be added or updated. Architect should consider codifying this as a standard step in the Writer and/or Reviewer role definitions.
+Added "Cross-Page Consistency" section to both Writer and Reviewer role definitions. Rule: after writing/reviewing any component page with servicing, inspection, or lubrication content, verify `servicing`, `inspection-annual-condition`, and `servicing-lubrication` index pages are up to date. Reviewer checklist updated with corresponding checkbox.
 
 ### [ ] Consider documenting WR branching convention
 

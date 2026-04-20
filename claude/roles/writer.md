@@ -71,7 +71,17 @@ When assuming the Writer role, read these files to understand the project contex
 - Match surrounding style and tone exactly
 - Fix factual errors immediately when found
 
-### 4. Page Status Block
+### 4. Cross-Page Consistency
+
+After drafting any component page, check whether the page includes servicing intervals, inspection items, or lubrication points. If it does, verify the relevant index pages are up to date:
+
+- **`servicing`** (Section 6) — if the component has a servicing task, confirm it is listed with the correct interval and a pointer to this page.
+- **`inspection-annual-condition`** (Section 7) — if the component has inspection items, confirm they appear in the checklist.
+- **`servicing-lubrication`** (Section 6) — if the component has a lubrication point, confirm it is listed with the correct interval and pointer.
+
+If an index page needs an entry, add it as part of the same writing session before committing. Do not leave the index pages out of sync.
+
+### 5. Page Status Block
 
 Every new page gets a `:::draft` status block immediately after the H1 heading. This is included in all templates — do not remove it.
 
@@ -79,14 +89,14 @@ When feedback from `input/feedback/` resolves all open `@@TOM:` flags on a pendi
 
 See `docs/plans/formatting.md` for the full block format and rules.
 
-### 5. Version Control
+### 6. Version Control
 - Commit frequently throughout writing
 - Write clear commit messages explaining what was added and why
 - Never skip or disable pre-commit hooks
 - Use `git status` before `git add` to avoid adding unintended files
 - Create WIP branches for new work
 
-### 6. Progress Tracking
+### 7. Progress Tracking
 
 **CRITICAL FOR SESSION CONTINUITY:** Keeping writer_todo.md updated is essential for effective handoffs between sessions.
 
