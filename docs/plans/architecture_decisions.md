@@ -123,6 +123,20 @@ When in doubt whether something belongs here: if a future Architect or Writer wo
 
 ---
 
+## Page Status Block
+
+**Decision:** Every content page includes a status block immediately after the H1 heading, before the first `##` section. Three states: `:::draft`, `:::pending`, `:::approved`. Each includes a date (except draft, which has no review date yet).
+
+**Reasoning:** Readers need an immediate visual cue about whether a page has been reviewed. A status block in the page content is visible without navigating to any external system, works in OtterWiki's rendered view, and is tracked in git history.
+
+**Implementation:** Custom CSS in `_otterwiki_system/custom/custom.css` defines the three alert types. Block format and rules are in `docs/plans/formatting.md`. All templates include the `:::draft` block.
+
+**Exemptions:** `readme.md` and `home.md` are exempt — they are not content pages.
+
+**Workflow:** Writer adds `:::draft` on page creation (via template). Reviewer changes to `:::approved` or `:::pending` at sign-off. Writer upgrades `:::pending` to `:::approved` when feedback resolves all deferred flags.
+
+---
+
 ## Weight and Balance as Standalone Section
 
 **Decision:** Weight and Balance is its own top-level section, not a sub-section of Section 3 (Aircraft General).

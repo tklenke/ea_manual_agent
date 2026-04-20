@@ -25,6 +25,40 @@ This document defines formatting conventions for the ea_mxmanual maintenance man
 
 ---
 
+## Page Status Block
+
+Every content page includes a status block immediately after the H1 heading. This gives the reader an immediate visual indication of whether the page has been reviewed.
+
+**Placement:** After `# Page Title`, before the first `##` section.
+
+**Three states:**
+
+```markdown
+::: draft
+**DRAFT** — Not yet reviewed.
+:::
+```
+
+```markdown
+::: pending
+**PENDING** — YYYY-MM-DD
+:::
+```
+
+```markdown
+::: approved
+**APPROVED** — YYYY-MM-DD
+:::
+```
+
+**Rules:**
+- Writer adds `:::draft` when creating a page (included in all templates).
+- Reviewer changes the block at sign-off: `:::approved` if all issues resolved, `:::pending` if flags consciously deferred by Tom. The date is the date of the review session.
+- If feedback from `input/feedback/` resolves all pending flags, Writer upgrades `:::pending` to `:::approved` with today's date.
+- `readme.md` and `home.md` are exempt — they are not content pages.
+
+---
+
 ## NOTE Callouts
 
 ### General Note

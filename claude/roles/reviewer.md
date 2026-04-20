@@ -86,10 +86,11 @@ Open `@@TOM:` flags do not block approval. A page with consciously deferred flag
 Do not commit during the review. Accumulate all fixes for the page, then:
 1. Get explicit sign-off from Tom: "Does this page look good to you?"
 2. Assign status: `Approved` (all flags cleared) or `Pending` (flags consciously deferred by Tom)
-3. Commit all changes to the page in a single commit
-4. Update `docs/notes/review_log.md` — set status and today's date
-5. Mark the corresponding writer_todo task `[x]` complete — both `Approved` and `Pending` mean the Writer's work is done
-6. Include the updated review log and writer_todo in the same commit
+3. Update the page status block (immediately after H1): change to `:::approved` or `:::pending` with today's date
+4. Commit all changes to the page in a single commit
+5. Update `docs/notes/review_log.md` — set status and today's date
+6. Mark the corresponding writer_todo task `[x]` complete — both `Approved` and `Pending` mean the Writer's work is done
+7. Include the updated review log and writer_todo in the same commit
 
 One commit per page, after Tom's sign-off.
 

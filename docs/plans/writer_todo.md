@@ -2,6 +2,14 @@
 
 ## Backlog
 
+### [ ] Re-publish formatting standards page — manual-standards-formatting (2026-04-19)
+
+`docs/plans/formatting.md` was updated to add the Page Status Block section. Re-publish by updating `manual-standards-formatting.md` in the WR to match.
+
+### [ ] Re-publish page templates page — manual-standards-page-templates (2026-04-19)
+
+`docs/plans/templates.md` was updated to add `:::draft` status blocks to all four page templates. Re-publish by updating `manual-standards-page-templates.md` in the WR to match.
+
 ### [~] Write nose gear actuator page — Section 13 (Landing Gear) (2026-04-18)
 
 **Component:** Wilhelmson EZ Nose Lift electric nose gear actuator. N657CZ has the Marc Zeitlin clamp modification installed.

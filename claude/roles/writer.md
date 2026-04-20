@@ -71,14 +71,22 @@ When assuming the Writer role, read these files to understand the project contex
 - Match surrounding style and tone exactly
 - Fix factual errors immediately when found
 
-### 4. Version Control
+### 4. Page Status Block
+
+Every new page gets a `:::draft` status block immediately after the H1 heading. This is included in all templates — do not remove it.
+
+When feedback from `input/feedback/` resolves all open `@@TOM:` flags on a pending page, upgrade the block from `:::pending` to `:::approved` and update the date to today. The Reviewer sets `:::pending` and `:::approved` at sign-off; the Writer only upgrades from pending to approved when feedback resolves the outstanding flags.
+
+See `docs/plans/formatting.md` for the full block format and rules.
+
+### 5. Version Control
 - Commit frequently throughout writing
 - Write clear commit messages explaining what was added and why
 - Never skip or disable pre-commit hooks
 - Use `git status` before `git add` to avoid adding unintended files
 - Create WIP branches for new work
 
-### 5. Progress Tracking
+### 6. Progress Tracking
 
 **CRITICAL FOR SESSION CONTINUITY:** Keeping writer_todo.md updated is essential for effective handoffs between sessions.
 
