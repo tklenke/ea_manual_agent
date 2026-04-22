@@ -1,0 +1,163 @@
+## Simplified Wire Marking System for Piston GA Aircraft (Revised)
+
+This simplified wire marking system is designed for piston general aviation (GA) aircraft to provide clear, traceable, and standardized identification for maintenance and troubleshooting, with a focus on maximizing information density in a compact format.
+
+### 1. Standard Marking Format
+
+The primary wire marker label uses a compact, three-part structure to identify the wire's **system, specific circuit/function, and physical segment**.
+
+| **Segment** | **Description** | **Length** | **Example** |
+| :--- | :--- | :--- | :--- |
+| **System Code** | Identifies the major system or zone the wire belongs to. | 1 Character | `A` |
+| **Circuit ID** | The unique number or name of the electrical circuit (e.g., matching a schematic line number). | 3-5 Characters | `105` |
+| **Segment ID** | A sequential letter for wire segments (A, B, C...) connecting multiple components within the same circuit net. | 1 Character (Optional) | `A` |
+
+**Full Format Example:** `L105A`
+
+* **L:** Lighting System
+* **105:** Circuit 105 (e.g., Landing Light Power net)
+* **A:** First physical segment of that net run
+
+#### Complete Wire Marking Example
+
+Consider a landing light circuit that runs from the main bus through a circuit breaker, to a switch, and finally to the landing light:
+
+**Circuit Net 105: Landing Light**
+
+| Wire Segment | Label | Description | Endpoints |
+| :--- | :--- | :--- | :--- |
+| Bus to Circuit Breaker | `L105A` | First segment of lighting circuit 105 | Main Bus → CB-105 |
+| Circuit Breaker to Switch | `L105B` | Second segment after circuit protection | CB-105 → SW-105 |
+| Switch to Landing Light | `L105C` | Final segment to load | SW-105 → Landing Light |
+| Landing Light to Ground | `L105D` | Ground return path | Landing Light → Ground Point |
+
+**Practical Marking (per Aeroelectric Connection 8:1021-1024):**
+- Mark each wire segment at both termination points
+- Use adhesive number tape (e.g., Digi-Key digit tape) or heat-shrink sleeves with printed markings
+- Ensure markings are visible and readable after installation
+
+***
+
+### 2. System and Circuit Identification Codes
+
+#### Single-Character System Codes
+
+See MIL-W-5088L Appendix B for complete circuit function letters (A-Z). Common examples for piston GA aircraft:
+
+- **A** - Avionics
+- **D** - Data (bus and point-to-point data wiring — see Section 4)
+- **E** - Engine Instrument
+- **F** - Flight Instrument
+- **K** - Engine Control
+- **L** - Lighting (Illumination)
+- **M** - Miscellaneous (Electrical)
+- **P** - DC Power (Generation, Distribution, Battery)
+- **R** - Radio (Navigational and Communication)
+- **U** - Miscellaneous (Electronic) - Common leads, antenna, power circuits
+- **V** - AC Power
+- **W** - Warning and Emergency
+
+#### Circuit ID and Segment ID
+
+* **Circuit ID (e.g., `105`):** Should directly correspond to a unique net name or line number on the master schematic. This links the physical wire back to the design document.
+* **Segment ID (e.g., `A`):** Differentiates physical wires that belong to the same electrical net (Circuit ID). For example, a net that runs from the bus, through a fuse, to a component would use `...A` for the bus-to-fuse segment and `...B` for the fuse-to-component segment.
+
+***
+
+### 3. Wire Characteristics (Notes)
+
+The wire's physical properties are not included in the main code but must be recorded in the accompanying wiring notes/log.
+
+| Characteristic | Note Location | Example |
+| :--- | :--- | :--- |
+| **Wire Gauge** | Wiring Log / Schematic Notes | **20 AWG** (must be noted for proper current rating) |
+| **Insulation Type** | Wiring Log / Installation Standard | e.g., **Teflon/Tefzel (MIL-W-22759)** |
+| **Primary Wire Color** | System Code Convention (see below) / Schematic | Red (power system), White (lighting), etc. |
+| **Endpoints** | Derived from Schematic | **Main Bus** to **ANL Fuse** (for segment A) |
+
+#### Standard Wire Color by System Code
+
+To aid in visual identification and reduce installation errors, wire colors should follow system code conventions where practical:
+
+| System Code | System Type | Standard Wire Color |
+| :--- | :--- | :--- |
+| **L** | Lighting | White |
+| **P** | Power (DC) | Red |
+| **G** | Ground | Black |
+| **R** | Radio/Nav | Gray |
+| **A** | Avionics | Blue |
+
+**Notes:**
+- These color conventions are recommendations for primary insulation color
+- Color coding supplements but does not replace wire marking labels
+- Multi-conductor bundles or harnesses may use different colors for individual wires
+- Always verify connections against schematic - color coding is a visual aid, not the primary identification method
+
+***
+
+### 4. Data Bus Wire Identification (System Code D)
+
+Data bus wiring uses system code **D** to distinguish it from avionics power and signal wiring. The circuit ID encodes the bus type and link; the segment letter identifies individual wire runs within a chain topology.
+
+#### Circuit ID Ranges
+
+| Range | Bus Type | Description |
+| :--- | :--- | :--- |
+| D001–D009 | CAN Bus | Reserved for CAN bus wiring |
+| D010–D099 | ARINC 429 | Point-to-point ARINC 429 links |
+| D100+ | Non-bus | RS-232, RS-422, and discrete data wires |
+
+#### CAN Bus Wiring (D001–D009)
+
+CAN bus uses a daisy-chain topology through each LRU's connector. Two circuit IDs are reserved:
+
+- **D001** — CAN_L (low-side differential wire)
+- **D002** — CAN_H (high-side differential wire)
+
+The segment letter identifies each physical hop in the chain:
+
+| Segment | CAN_L Label | CAN_H Label | Wire Run |
+| :--- | :--- | :--- | :--- |
+| First hop | `D001A` | `D002A` | LRU 1 → LRU 2 |
+| Second hop | `D001B` | `D002B` | LRU 2 → LRU 3 |
+| Third hop | `D001C` | `D002C` | LRU 3 → LRU 4 |
+
+Both wires of a CAN pair for the same physical hop carry the same segment letter. If more than 26 hops are needed, extend with two-letter suffixes: AA, AB, AC, etc.
+
+#### ARINC 429 Wiring (D010–D099)
+
+ARINC 429 is a unidirectional, point-to-point differential bus. Each link uses two consecutive circuit IDs for its differential pair — even for the A wire (positive), odd for the B wire (negative):
+
+| Link | A Wire Label | B Wire Label |
+| :--- | :--- | :--- |
+| Link 1 | `D010` | `D011` |
+| Link 2 | `D012` | `D013` |
+| Link N | `D010 + (N−1)×2` | `D011 + (N−1)×2` |
+
+The range D010–D099 supports up to 45 point-to-point ARINC 429 links. Since ARINC 429 connections are direct point-to-point with no intermediate junctions, a segment letter is not normally required. If a physical connector is installed mid-run, the segment letter applies as normal.
+
+#### Non-Bus Data Wiring (D100+)
+
+Point-to-point data wires not part of a shared bus (RS-232, RS-422, discrete signals) are numbered sequentially starting at D100. Each individual wire receives its own circuit ID. Related wires in a multi-conductor interface (e.g., TX, RX, and GND of an RS-232 link) are assigned consecutive numbers.
+
+#### Cable Type and Color
+
+Data bus wires do not follow the single-wire color convention used for power and avionics wiring. Cable type and color are determined by the applicable bus standard:
+
+- **CAN bus**: Shielded twisted pair per ISO 11898 or equipment manufacturer specification
+- **ARINC 429**: Shielded twisted pair per ARINC 429 Part 1 specification
+- **RS-232 / RS-422**: Per equipment interface specification
+
+Cable type must be recorded in the wiring log alongside the circuit ID.
+
+***
+
+## References
+
+The principles used in this system are derived from established industry and military practices to ensure traceability and reliability.
+
+| Document | Description | Relevance to Marking |
+| :--- | :--- | :--- |
+| **MIL-STD-681E** | *Identification Coding and Application of Hookup and Lead Wire.* Systems III and IV apply to this standard. | Defines differentiation/functional coding by printed markings (System III) and coding of interconnecting wiring (System IV). |
+| **MIL-W-5088L** | *Wiring, Aerospace Vehicle.* Appendix B defines circuit function letters. | Master aerospace wiring specification covering wire selection, installation, and identification. |
+| **FAA Advisory Circular (AC) 43.13-1B** | *Acceptable Methods, Techniques, and Practices - Aircraft Inspection and Repair.* (Specifically Chapter 11, Electrical Systems) | Provides FAA-approved methods for wiring, including routing, clamping, and identification. |

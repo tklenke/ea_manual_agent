@@ -242,6 +242,22 @@ When in doubt whether something belongs here: if a future Architect or Writer wo
 
 ---
 
+## Wire Marking Convention
+
+**Decision:** All wiring on N657CZ uses the EA wire marking standard documented in `docs/references/electrical/ea_wire_marking_standard.md`.
+
+**Label format:** System Code (1 char) + Circuit ID (3–5 chars) + Segment ID (1 optional char). Example: `L105A` = Lighting system, circuit 105, first physical segment.
+
+**System codes** follow MIL-W-5088L Appendix B. Common codes for this aircraft: A (Avionics), D (Data bus), E (Engine Instrument), K (Engine Control), L (Lighting), P (DC Power), R (Radio/Nav), W (Warning/Emergency).
+
+**Data bus wiring** uses system code D with structured circuit ID ranges: D001–D009 for CAN bus, D010–D099 for ARINC 429, D100+ for RS-232/RS-422 and discrete data wires.
+
+**Effect on content:** The `electrical-wiring` page (Section 16) must describe this marking convention. Avionics pages that discuss data bus wiring (Section 17) must reference the D-code ranges for CAN and ARINC 429 connections. Wire labels mentioned anywhere in the manual must follow this format.
+
+**References:** MIL-STD-681E, MIL-W-5088L, AC 43.13-1B Chapter 11.
+
+---
+
 ## Section 6: Servicing Index Contents
 
 **Decision:** The following tasks are indexed in Section 6 (each with interval and pointer to home section):
