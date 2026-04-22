@@ -2,27 +2,6 @@
 
 ## Backlog
 
-### [x] Add connector pinouts to `avionics-arinc-429-adapter` (GAD 29)
-
-Created `avionics-arinc-429-adapter-pinouts` sub-page (J291, J292 tables). Component page updated to link to it; both pages are draft. Needs Reviewer.
-
-**Pattern established:** connector pinouts live on a dedicated `*-pinouts` sub-page, linked from the component page Specifications section. Use this pattern for all avionics component pages.
-
-### [x] Add connector pinout sub-pages for remaining avionics LRUs (Section 17)
-
-Created all 9 pinout sub-pages as orphans (no component pages exist yet to link from). @@TOM: flags on each page for source manual confirmation. Pages need Reviewer once citations are resolved. Input files consumed (renamed `_pending`):
-
-- `avionics-primary-flight-display` (GDU 460) — GDU460_conn.md: P4X01 (DE9), P4X02 (DB50), P4X03 (DE9)
-- `avionics-engine-data-acquisition` (GEA 24) — GEA24_conn.md: J241 (DE9), J242 (DB25), J243 (DB37), J244 (DB50)
-- `avionics-audio-panel` (GMA 245) — GMA245_conn.md: J2401 (DB44), J2402 (DB44)
-- `avionics-gps-and-navigation` (GNC 355) — GNC355_conn.md: J3551 (DB62), J3552 (DB44)
-- `avionics-autopilot` (GMC 507 + GSA 28) — GSA28_conn.md: J7001/GMC507 (DE15), J281P/J281R/GSA28 (DA15)
-- `avionics-adahrs` (GSU 25C) — GSU25_conn.md: J251 (DE9), J252 (15-pin)
-- `avionics-backup-instrument` (G5) — GTP59GMU11G5_conn.md: J51 (DE9)
-- `avionics-magnetometer` (GMU 11) — GTP59GMU11G5_conn.md: J111 (DE9)
-- `avionics-vhf-communication` (GTR 20) — GTR20_conn.md: J2001 (DB37)
-- `avionics-transponder-adsb` (GTX 45R) — GTX45R_conn.md: P3251 (DB62), P3252 (DE15)
-
 ### [ ] Wire marking convention — `electrical-wiring` and avionics data bus pages
 
 Reference `docs/references/electrical/ea_wire_marking_standard.md` when drafting content that involves wire identification:
