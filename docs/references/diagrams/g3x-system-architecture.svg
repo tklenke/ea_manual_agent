@@ -1653,6 +1653,7 @@
      transform="matrix(.9741566 0 -0 1.026529 0 792)"
      font-size="6.406054"
      font-family="ArialMT"
+     text-decoration="line-through"
      id="text180"><tspan
        y="-389.92686"
        x="402.79148 407.78309 412.0636 416.34413 418.1301 421.69956 425.269"
@@ -1665,7 +1666,7 @@
        id="tspan179">Source</tspan><tspan
        y="-366.86506"
        x="402.0804"
-       id="tspan180">(?Optional?)</tspan></text>
+       id="tspan180">(Optional)</tspan></text>
   <path
      transform="matrix(1,0,0,-1,412.311,385.042)"
      d="M0 0-3.004 6.082C-1.126 5.142 1.032 5.192 2.815 6.18L0 0"
@@ -2193,14 +2194,11 @@
      font-family="ArialMT"
      id="text235"><tspan
        y="-531.29946"
-       x="392.1557 397.14347 402.48356 406.76026 408.53987 412.10545 415.67106 419.23664 421.0214 424.58699 428.1526 431.71818"
-       id="tspan233">GMA 245/245R</tspan><tspan
+       x="406.76026"
+       id="tspan233">GMA 245</tspan><tspan
        y="-523.61227"
        x="396.97306 401.24653 404.8089 408.3713 409.7941 413.3565 415.1361 419.40959 422.972 426.53437 430.09678"
-       id="tspan234">Audio Panel</tspan><tspan
-       y="-515.925"
-       x="400.1825"
-       id="tspan235">(?Optional?)</tspan></text>
+       id="tspan234">Audio Panel</tspan></text>
   <path
      transform="matrix(.97416,0,0,1.0265,453.18608,226.0105)"
      stroke-width="1.003"
@@ -2429,6 +2427,7 @@
      transform="matrix(.9741566 0 -0 1.026529 0 792)"
      font-size="6.406054"
      font-family="ArialMT"
+     text-decoration="line-through"
      id="text258"><tspan
        y="-454.06883"
        x="425.8042 430.08409 431.51329 433.3012 436.51127 440.08009 441.86613 445.78727 447.92756 449.35673"
@@ -2489,6 +2488,7 @@
      transform="matrix(.9741566 0 -0 1.026529 0 792)"
      font-size="6.406054"
      font-family="ArialMT"
+     text-decoration="line-through"
      id="text263"><tspan
        y="-454.06883"
        x="459.52015 464.1517 467.71989 469.1484 470.57698 472.36299 476.28349 478.42308 479.85163"
