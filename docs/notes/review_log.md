@@ -53,6 +53,6 @@ Last updated: 2026-04-23
 | electrical-wire-marking | Approved | 2026-04-23 |
 | electrical-wire-reference | unreviewed | |
 | electrical-wiring | unreviewed | |
-| inspection-annual-condition | unreviewed | |
+| inspection-annual-condition | pending | 2026-04-23 |
 | servicing | unreviewed | |
 | wb-equipment-list | unreviewed | |
