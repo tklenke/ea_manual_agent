@@ -20,7 +20,7 @@ Source: `docs/references/electrical/wire_bom.csv`. Format the entire wire BOM as
 
 **Maintenance note (include as a comment in the source, not published content):** This table is generated from `wire_bom.csv` rev 4 (2026-04-23). When the schematic is revised, regenerate from the updated CSV.
 
-### [ ] Write `electrical-wire-marking` — Wire Marking Standard (Section 16)
+### [~] Write `electrical-wire-marking` — Wire Marking Standard (Section 16)
 
 New TOC page. Source: `docs/references/electrical/ea_wire_marking_standard.md` — publish this into manual page format. The content is complete and authoritative; the task is adaptation to our style and format (status block, headings, citations, NOTE format).
 
@@ -40,7 +40,7 @@ Hub page for the electrical system. Two parts:
 
 **2. Schematic index:** Links to all four schematic sub-pages with a one-line description of each sheet.
 
-### [~] Publish electrical schematic sub-pages (Section 16)
+### [x] Publish electrical schematic sub-pages (Section 16)
 
 Four sub-pages, each with a one-sentence description and a full-width embedded SVG. Not in TOC — accessed from `electrical-bus-architecture`.
 
