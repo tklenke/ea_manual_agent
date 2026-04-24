@@ -4,7 +4,7 @@
 
 ## Backlog
 
-### [ ] Document connector pinout sub-page pattern in `architecture_decisions.md`
+### [x] Document connector pinout sub-page pattern in `architecture_decisions.md`
 
 ### [ ] Plan avionics pinout pages: N657CZ-specific connector wiring
 

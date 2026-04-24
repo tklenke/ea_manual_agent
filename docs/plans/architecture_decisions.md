@@ -258,6 +258,30 @@ When in doubt whether something belongs here: if a future Architect or Writer wo
 
 ---
 
+## Connector Pinout Sub-Pages
+
+**Decision:** Connector pinout tables for avionics LRUs are written on dedicated sub-pages (`[component-slug]-pinouts`) rather than inline on the component page. The component page links to the pinout sub-page from the Specifications section.
+
+**Reasoning:** Pinout tables for multi-connector LRUs are large and break the flow of the component page. Keeping them on a dedicated sub-page makes both pages more readable. The component page remains the primary entry point; the pinout page is one click away.
+
+**Slug pattern:** `[component-slug]-pinouts`. Example: `avionics-arinc-429-adapter-pinouts` for the GAD 29.
+
+**TOC:** Pinout sub-pages are not listed in the TOC — they are accessed through their parent component page. (See: TOC Depth decision.)
+
+**Link from parent page:** In the Specifications section, after the specs table: "For full connector pin assignments, see [[Connector Pinouts|[component-slug]-pinouts]]."
+
+**Pinout sub-page structure:**
+- H1: "[Component Name] Connector Pinouts ([Model])"
+- Status block `:::draft` (as with all content pages)
+- Intro paragraph: cite the source document and section; state the connector-to-harness mating relationship (e.g., "Harness connector P291 mates to unit connector J291")
+- One `##` section per connector: designation and connector type (e.g., `## J291 — 9-pin D-sub`)
+- Optional italicized viewing orientation note where orientation is ambiguous: "*Viewed looking at connector on unit.*"
+- Table: `Pin | Function | I/O` with pin column right-aligned (`|----:|`)
+
+**In use on:** `avionics-arinc-429-adapter` / `avionics-arinc-429-adapter-pinouts`, and all avionics LRU pinout sub-pages added 2026-04.
+
+---
+
 ## Section 6: Servicing Index Contents
 
 **Decision:** The following tasks are indexed in Section 6 (each with interval and pointer to home section):

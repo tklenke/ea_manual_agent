@@ -2,6 +2,10 @@
 
 ## Backlog
 
+### [ ] Re-publish `manual-standards.md` to WR
+
+`docs/plans/architecture_decisions.md` was updated (2026-04-23) to add the Connector Pinout Sub-Pages decision. Re-publish by updating `manual-standards.md` in the WR to match. Copy in the new decision section.
+
 ### [ ] Wire marking convention — `electrical-wiring` and avionics data bus pages
 
 Reference `docs/references/electrical/ea_wire_marking_standard.md` when drafting content that involves wire identification:
