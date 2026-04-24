@@ -1,0 +1,100 @@
+# Project: Cozy MKIV N657CZ Electrical Schematic
+# Issue Date: 1/7/14
+# Revision: 4
+#
+Reference,Value,Description,Datasheet,Type,Amps,FS,WL,BL
+A1,val A,"Alternator, Alt",SD8,S,8.0,138.9,13.0,3.5
+A2,val A,"Alternator, Main",LX60,S,60.0,167.2,15.1,8.3
+B1,2A,Gnd Pwr Switch Breaker,11-03936,R,5.0,41.3,19.6,15.6
+B3,5A,ALT FLD,CB5,R,5.0,41.3,24.9,-5.2
+B4,val A,Pitot Heat,Switch Breaker,R,9.9,41.3,22.9,-3.5
+B6,3A,AP Servo,CB3,R,3.0,41.3,23.9,-7.2
+B7,3A,AP Servo,CB3,R,3.0,41.3,24.9,-7.2
+BT1,12,Brownout Battery,EXT104/EBBS,S,12.0,44.0,4.2,-5.9
+BT2,Main Battery,Main Battery,ETX900-VNT,S,840.0,121.1,27.2,1.4
+C1,~,Gnd Power Contactor,S701-1,R,60.0,123.4,31.0,-7.6
+C2,Desc,Battery Contactor,S701-1,L,1.0,123.4,28.0,-9.6
+C3,20-50kFd/15-40V,Filter Capacitor,S8007-3,R,40.0,122.6,23.3,8.8
+C4,Starter Contactor,S702-1,Contactor 3 Terminal with Spike Catcher Diode,L,1.0,123.4,28.0,-5.6
+CON1,~,Gnd Receptacle,,R,100.0,118.0,18.9,17.5
+D1,D_Small,"Diode, small symbol",~,R,20.0,123.0,31.0,-8.0
+D2,1N5400,"Diode, small symbol",1N5400,R,20.0,123.4,28.0,-9.6
+D3,NOTE 12,Diode,~,R,30.0,47.0,1.0,-6.0
+D5,LV EBUS WARN,Light emitting diode,"LED, RED",L,1.0,41.3,22.9,6.0
+D7,RED,Light emitting diode,"LED, RED",R,10.0,123.0,34.4,-2.0
+F1,20A,Inline Fuse,IFH-2,R,10.0,47.0,2.0,-10.0
+F2,20A,Inline Fuse,IFH-2,R,30.0,123.3,27.4,-0.9
+F3,22AWG,FUSELINK,Fuse,R,5.0,48.0,1.0,9.0
+F4,24AWG,Fuse Link,FLK-1,R,3.0,123.0,29.0,-1.0
+F5,24AWG,Fuse Link,FLK-1,R,3.0,123.0,29.0,-2.0
+F6,60A,ANL Current Limiter,C905-60/C903-2,R,60.0,123.2,30.4,0.6
+F7,1A,Inline Fuse,IFH-2,R,10.0,123.0,34.4,-2.0
+FH1,60A,Battery Bus,FH6,R,60.0,123.2,22.8,11.0
+FH2,60A,Endurance Bus,FH10,R,60.0,47.3,1.2,-5.9
+FH3,60A,Main Bus,FH-20,R,60.0,48.3,1.2,9.4
+FH6,G3X Bus,,FH8,R,40.0,35.0,20.0,-4.0
+GND1,GND1,Eng,,,,140.7,18.0,9.7
+GND2,GND2,Fwl,,,,122.3,29.1,-2.9
+GND3,GND3,Pnl,,,,39.6,4.8,-3.8
+L23,INTR LGHT LED FWD,Interior Lights,,L,2.0,41.0,19.0,20.0
+L6,INTR LED AFT,Interior Lights,,L,2.0,124.0,21.0,-19.0
+L7,~,Landing Light,,L,4.0,3.9,11.3,2.3
+L9,~,Taxi Light,,L,4.0,3.9,11.3,-2.3
+LRU1,val A,Crowbar Overvoltage Module,OTM-OVPD-2019/OVM-14,R,20.0,123.4,32.0,-7.6
+LRU10-C,val A,VHF Comm2,GNC 355 Comm,L,6.0,30.3,19.7,0.4
+LRU10-N,val A,GPS Navigator,GNC 355 Nav,L,0.6,32.4,16.2,0.9
+LRU11,val A,AutoPilot Panel,GMC 507,L,0.2,37.7,22.0,1.9
+LRU12,val A,Elec Prime Valve,Elec Prime Valve,L,9.9,122.0,10.0,4.0
+LRU13,val A,Pitot Probe,Space Age Pitot,L,9.9,3.9,11.3,2.3
+LRU14,val A,Canopy Actuator,"Linear Actuator, Canopy",L,9.9,88.7,23.0,-1.5
+LRU15,val A,Landing Brake Actuator,"Linear Actuator, Lndg Brake",L,9.9,81.6,14.7,-1.5
+LRU16,val A,Nose Gear Actuator,"Linear Actuator, Nose Gear",L,9.9,30.6,14.5,0.8
+LRU17,val A,Fuel Boost Pump,PN 2090255 Aux Pump,L,10.0,122.2,9.6,2.0
+LRU18,val A,Pitch Servo,GSA 28,L,2.8,34.8,8.0,-18.7
+LRU19,val A,Roll Servo,GSA 28,L,2.8,162.2,13.8,59.5
+LRU2,~,Voltage Regulator,PMR1D,R,10.0,122.6,22.3,8.8
+LRU20,val A,Seat Heater,TBD,L,9.9,75.0,9.0,-1.0
+LRU21,val A,VHF Comm1,GTR 20,L,7.5,30.2,18.9,-17.4
+LRU22,val A,Audio Pnl w/ USB,GMA 245,L,2.31,30.25,19.7,0.35
+LRU23,val A,Panel Fan,Computer Case Fan with Roll Own controller,L,1.0,33.9,21.8,8.4
+LRU24,val A,Nav Intrfce,GAD 29,L,0.2,35.3,1.3,12.2
+LRU25,val A,Magnetometer,GMU 11,L,0.1,166.0,16.0,-62.0
+LRU26,val A,Backup ASI,G5,L,0.25,37.5,21.0,-6.0
+LRU27,val A,ADAHRS,GSU 25,L,0.2,24.3,3.4,5.0
+LRU28,val A,Xponder,GTX 45R,L,1.3,32.0,20.0,-5.0
+LRU3,val A,Shunt 2,GEA 24,L,1.0,121.8,26.9,10.0
+LRU32,val A,EIS,GEA 24,L,0.43,121.8,29.8,10.0
+LRU33,val A,PFD 10in,GDU 460,L,2.0,38.5,18.9,6.0
+LRU4,val A,Auto Retract,TBD,R,20.0,40.0,10.0,-1.0
+LRU5,val A,Shunt 2,GEA 24,L,0.1,121.8,26.9,10.0
+LRU6,val A,ELEC IGNITION,Plasma III,L,5.0,122.5,25.8,-5.5
+LRU60,val A,USB Charger,GSB 15,L,5.0,40.0,21.0,-16.0
+LRU61,val A,Low Voltage Monitor Module,BC207/AEC9005-101,L,1.0,40.0,23.0,6.0
+LRU7,val A,Non-Impulse Magnito,"Magneto, Non-Imulse",L,10.0,130.8,24.5,-6.2
+LRU8,~,Voltage Regulator,LRE1B-14,L,5.0,123.0,34.4,-1.0
+LRU81,~,Lighting Controller Powersupply,,L,4.0,40.0,23.0,-5.0
+LRU85,val A,,BLAZE 1R,L,3.0,163.1,17.7,168.8
+LRU89,val A,,Blaze 1G,L,3.0,163.1,17.7,-168.8
+M2,Starter,STARTER,BCS206-149-12,L,200.0,166.7,10.0,-5.3
+PWR_FLAG,PWR_FLAG,Special symbol for telling ERC where power comes from,~,,,0.0,0.0,0.0
+R1,Alt Feed Relay,"Relay, SPDT 12V 20A with Diode","S704-1, 1N4005",R,20.0,46.6,1.5,-10.4
+R2,Brownout Battery Relay,"Relay, SPDT 12V 20A",S704-1,R,20.0,48.6,1.5,-10.4
+R4,50MV/10A,Shunt,S870-20,R,20.0,123.3,29.4,-0.9
+R5,~,Shunt,TBD,R,60.0,123.3,29.4,0.6
+R7,INTR LGHT DIM,Potentiometer Switch,POT SWITCH TBD,R,4.0,41.3,22.9,-4.6
+SW1,E-Bus Alt Feed,ON-none-ON,S700-1-3,R,15.0,41.3,22.9,-3.9
+SW10,Nose Gear,(ON)-OFF-(ON),S700-1-7,R,20.0,41.3,10.3,-1.7
+SW11,G3X,OFF-none-ON,S700-1-2,R,20.0,41.3,21.6,-17.9
+SW12,AP SERVOS,OFF-none-ON,S700-2-2,R,20.0,41.3,12.3,0.3
+SW13,E IGN,(ON)-ON-ON,S700-2-50,R,20.0,41.3,22.9,0.8
+SW14,M IGN,ON-none-ON,S700-2-3,R,20.0,41.3,22.9,1.8
+SW2,Aux Alt Off/On,ON-none-ON,S700-1-3,R,20.0,41.3,22.9,3.9
+SW23,LANDING LIGHT TAXI,ON-ON-ON,S700-2-10,R,20.0,41.3,24.9,-1.3
+SW24,NAV+STRB,ON-ON-ON,S700-2-10,R,20.0,41.3,24.9,-0.3
+SW5,BATT/ALT DC POWER,ON-none-ON,S700-2-3,R,20.0,41.3,22.9,5.9
+SW6,Heater,OFF-none-ON,S700-1-2,R,20.0,41.0,20.0,-17.0
+SW7,Fuel Boost,(ON)-ON-ON,S700-2-50,R,20.0,41.3,24.9,-2.4
+SW8,Canopy,(ON)-OFF-(ON),S700-1-7,R,20.0,41.3,19.6,15.7
+SW9,Lnd Brake,(ON)-OFF-(ON),S700-1-7,R,20.0,41.3,10.3,-0.7
+W1,~,Connection to Shield of Shielded Wire,,R,20.0,41.0,23.0,2.0
+W2,~,Connection to Shield of Shielded Wire,,R,20.0,131.0,25.0,-6.0

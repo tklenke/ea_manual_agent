@@ -5,7 +5,7 @@ kicad2wireBOM Wire Harness Analysis
 
 ## Project Information
 - **Project**: Cozy MKIV N657CZ Electrical Schematic
-- **Revision**: 3
+- **Revision**: 4
 - **Issue Date**: 1/7/14
 - **Company**: Tiberius Rex Aviation LLC
 
@@ -13,8 +13,8 @@ kicad2wireBOM Wire Harness Analysis
 
 ## Overall Summary
 - **Total Components**: 95
-- **Total Wires**: 158
-- **Total Wire Length**: nan inches (nan feet)
+- **Total Wires**: 159
+- **Total Wire Length**: 11480.1 inches (956.7 feet)
 
 ---
 
@@ -23,102 +23,108 @@ Total wire length needed by gauge and type for procurement.
 
 | Wire Gauge | Wire Type | Total Length (in) | Total Length (ft) |
 | ---------- | --------- | ----------------: | ----------------: |
-| -99 AWG    | M22759/16 |               nan |               nan |
-| 2 AWG      | M22759/16 |               nan |               nan |
-| 6 AWG      | M22759/16 |             120.0 |              10.0 |
-| 16 AWG     | M22759/16 |               nan |               nan |
-| 18 AWG     | M22759/16 |               nan |               nan |
-| 20 AWG     | M22759/16 |               nan |               nan |
-| 22 AWG     | M22759/16 |               nan |               nan |
-| 24 AWG     | M22759/16 |               nan |               nan |
-| **Total**  |           |           **nan** |           **nan** |
+| -99 AWG    | M22759/16 |            1389.9 |             115.8 |
+| 2 AWG      | M22759/16 |              31.4 |               2.6 |
+| 6 AWG      | M22759/16 |             381.4 |              31.8 |
+| 14 AWG     | M22759/16 |             361.6 |              30.1 |
+| 16 AWG     | M22759/16 |            1692.7 |             141.1 |
+| 18 AWG     | M22759/16 |            2948.8 |             245.7 |
+| 20 AWG     | M22759/16 |            1137.9 |              94.8 |
+| 22 AWG     | M22759/16 |             967.2 |              80.6 |
+| 24 AWG     | M22759/16 |            2569.2 |             214.1 |
+| **Total**  |           |       **11480.1** |         **956.7** |
 
 ---
 
 ## Component Purchasing Summary
 Component counts by value and datasheet for procurement.
 
-| Value                  | Datasheet                                     | Quantity | Example Refs                         |
-| ---------------------- | --------------------------------------------- | -------: | ------------------------------------ |
-| 12                     | EXT104/EBBS                                   |        1 | BT1                                  |
-| 1A                     | IFH-2                                         |        1 | F7                                   |
-| 1N5400                 | 1N5400                                        |        1 | D2                                   |
-| 20-50kFd/15-40V        | S8007-3                                       |        1 | C3                                   |
-| 20A                    | IFH-2                                         |        2 | F1, F2                               |
-| 22AWG                  | Fuse                                          |        1 | F3                                   |
-| 24AWG                  | FLK-1                                         |        2 | F4, F5                               |
-| 2A                     | 11-03936                                      |        1 | B1                                   |
-| 3A                     | CB3                                           |        2 | B6, B7                               |
-| 50MV/10A               | S870-20                                       |        1 | R4                                   |
-| 5A                     | CB5                                           |        1 | B3                                   |
-| 60A                    | C905-60/C903-2                                |        1 | F6                                   |
-| 60A                    | FH-20                                         |        1 | FH3                                  |
-| 60A                    | FH10                                          |        1 | FH2                                  |
-| 60A                    | FH6                                           |        1 | FH1                                  |
-| AP SERVOS              | S700-2-2                                      |        1 | SW12                                 |
-| Alt Feed Relay         | S704-1, 1N4005                                |        1 | R1                                   |
-| Aux Alt Off/On         | S700-1-3                                      |        1 | SW2                                  |
-| BATT/ALT DC POWER      | S700-2-3                                      |        1 | SW5                                  |
-| Brownout Battery Relay | S704-1                                        |        1 | R2                                   |
-| Canopy                 | S700-1-7                                      |        1 | SW8                                  |
-| D_Small                | ~                                             |        1 | D1                                   |
-| Desc                   | S700-2-10                                     |        1 | SW24                                 |
-| Desc                   | S701-1                                        |        1 | C2                                   |
-| E IGN                  | S700-2-50                                     |        1 | SW13                                 |
-| E-Bus Alt Feed         | S700-1-3                                      |        1 | SW1                                  |
-| Fuel Boost             | S700-2-50                                     |        1 | SW7                                  |
-| G3X                    | S700-1-2                                      |        1 | SW11                                 |
-| G3X Bus                | FH8                                           |        1 | FH6                                  |
-| GND1                   |                                               |        1 | GND1                                 |
-| GND2                   |                                               |        1 | GND2                                 |
-| GND3                   |                                               |        1 | GND3                                 |
-| Heater                 | S700-1-2                                      |        1 | SW6                                  |
-| LANDING LIGHT TAXI     | S700-2-10                                     |        1 | SW23                                 |
-| Lnd Brake              | S700-1-7                                      |        1 | SW9                                  |
-| M IGN                  | S700-2-3                                      |        1 | SW14                                 |
-| Main Battery           | ETX900-VNT                                    |        1 | BT2                                  |
-| NOTE 12                | ~                                             |        1 | D3                                   |
-| Nose Gear              | S700-1-7                                      |        1 | SW10                                 |
-| PWR_FLAG               | ~                                             |        1 | PWR_FLAG                             |
-| RED                    | LED, RED                                      |        2 | D5, D7                               |
-| R_Variable_US          | POT SWITCH TBD                                |        1 | R7                                   |
-| Starter                | BCS206-149-12                                 |        1 | M2                                   |
-| Starter Contactor      | Contactor 3 Terminal with Spike Catcher Diode |        1 | C4                                   |
-| val A                  | BC207/AEC9005-101                             |        1 | LRU61                                |
-| val A                  | BLAZE 1R                                      |        1 | LRU85                                |
-| val A                  | Blaze 1G                                      |        1 | LRU89                                |
-| val A                  | Computer Case Fan with Roll Own controller    |        1 | LRU23                                |
-| val A                  | Elec Prime Valve                              |        1 | LRU12                                |
-| val A                  | G5                                            |        2 | LRU26, LRU29                         |
-| val A                  | GDU 460                                       |        1 | LRU33                                |
-| val A                  | GEA 24                                        |        3 | LRU3, LRU32, LRU5                    |
-| val A                  | GMA 245R (maybe)                              |        1 | LRU22                                |
-| val A                  | GMC 507                                       |        1 | LRU11                                |
-| val A                  | GMU 11                                        |        1 | LRU25                                |
-| val A                  | GNC 355                                       |        1 | LRU28                                |
-| val A                  | GSA 28                                        |        2 | LRU18, LRU19                         |
-| val A                  | GSB 15                                        |        1 | LRU60                                |
-| val A                  | GSU 25C                                       |        1 | LRU27                                |
-| val A                  | GTR 20                                        |        2 | LRU10, LRU21                         |
-| val A                  | GPS 20A                                       |        1 | LRUTBD1                              |
-| val A                  | GTX 45R                                       |        1 | LRUTBD2                              |
-| val A                  | LX60                                          |        1 | A2                                   |
-| val A                  | Linear Actuator, Canopy                       |        1 | LRU14                                |
-| val A                  | Linear Actuator, Lndg Brake                   |        1 | LRU15                                |
-| val A                  | Linear Actuator, Nose Gear                    |        1 | LRU16                                |
-| val A                  | Magneto, Non-Imulse                           |        1 | LRU7                                 |
-| val A                  | OTM-OVPD-2019/OVM-14                          |        1 | LRU1                                 |
-| val A                  | PN 2090255 Aux Pump                           |        1 | LRU17                                |
-| val A                  | Plasma III                                    |        1 | LRU6                                 |
-| val A                  | SD8                                           |        1 | A1                                   |
-| val A                  | Switch Breaker                                |        1 | B4                                   |
-| val A                  | TBD                                           |        3 | LRU13, LRU20, LRU4                   |
-| ~                      |                                               |        8 | CON1, L23, L6, L7, L9, ... (8 total) |
-| ~                      | LRE1B-14                                      |        1 | LRU8                                 |
-| ~                      | PMR1D                                         |        1 | LRU2                                 |
-| ~                      | S701-1                                        |        1 | C1                                   |
-| ~                      | TBD                                           |        1 | R5                                   |
-| **Total**              |                                               |   **95** |                                      |
+| Value                  | Datasheet                                     | Quantity | Example Refs                           |
+| ---------------------- | --------------------------------------------- | -------: | -------------------------------------- |
+| 12                     | EXT104/EBBS                                   |        1 | BT1                                    |
+| 1A                     | IFH-2                                         |        1 | F7                                     |
+| 1N5400                 | 1N5400                                        |        1 | D2                                     |
+| 20-50kFd/15-40V        | S8007-3                                       |        1 | C3                                     |
+| 20A                    | IFH-2                                         |        2 | F1, F2                                 |
+| 22AWG                  | Fuse                                          |        1 | F3                                     |
+| 24AWG                  | FLK-1                                         |        2 | F4, F5                                 |
+| 2A                     | 11-03936                                      |        1 | B1                                     |
+| 3A                     | CB3                                           |        2 | B6, B7                                 |
+| 50MV/10A               | S870-20                                       |        1 | R4                                     |
+| 5A                     | CB5                                           |        1 | B3                                     |
+| 60A                    | C905-60/C903-2                                |        1 | F6                                     |
+| 60A                    | FH-20                                         |        1 | FH3                                    |
+| 60A                    | FH10                                          |        1 | FH2                                    |
+| 60A                    | FH6                                           |        1 | FH1                                    |
+| AP SERVOS              | S700-2-2                                      |        1 | SW12                                   |
+| Alt Feed Relay         | S704-1, 1N4005                                |        1 | R1                                     |
+| Aux Alt Off/On         | S700-1-3                                      |        1 | SW2                                    |
+| BATT/ALT DC POWER      | S700-2-3                                      |        1 | SW5                                    |
+| Brownout Battery Relay | S704-1                                        |        1 | R2                                     |
+| Canopy                 | S700-1-7                                      |        1 | SW8                                    |
+| D_Small                | ~                                             |        1 | D1                                     |
+| Desc                   | S701-1                                        |        1 | C2                                     |
+| E IGN                  | S700-2-50                                     |        1 | SW13                                   |
+| E-Bus Alt Feed         | S700-1-3                                      |        1 | SW1                                    |
+| Fuel Boost             | S700-2-50                                     |        1 | SW7                                    |
+| G3X                    | S700-1-2                                      |        1 | SW11                                   |
+| G3X Bus                | FH8                                           |        1 | FH6                                    |
+| GND1                   |                                               |        1 | GND1                                   |
+| GND2                   |                                               |        1 | GND2                                   |
+| GND3                   |                                               |        1 | GND3                                   |
+| Heater                 | S700-1-2                                      |        1 | SW6                                    |
+| INTR LED AFT           |                                               |        1 | L6                                     |
+| INTR LGHT DIM          | POT SWITCH TBD                                |        1 | R7                                     |
+| INTR LGHT LED FWD      |                                               |        1 | L23                                    |
+| LANDING LIGHT TAXI     | S700-2-10                                     |        1 | SW23                                   |
+| LV EBUS WARN           | LED, RED                                      |        1 | D5                                     |
+| Lnd Brake              | S700-1-7                                      |        1 | SW9                                    |
+| M IGN                  | S700-2-3                                      |        1 | SW14                                   |
+| Main Battery           | ETX900-VNT                                    |        1 | BT2                                    |
+| NAV+STRB               | S700-2-10                                     |        1 | SW24                                   |
+| NOTE 12                | ~                                             |        1 | D3                                     |
+| Nose Gear              | S700-1-7                                      |        1 | SW10                                   |
+| PWR_FLAG               | ~                                             |        1 | PWR_FLAG                               |
+| RED                    | LED, RED                                      |        1 | D7                                     |
+| Starter                | BCS206-149-12                                 |        1 | M2                                     |
+| Starter Contactor      | Contactor 3 Terminal with Spike Catcher Diode |        1 | C4                                     |
+| val A                  | BC207/AEC9005-101                             |        1 | LRU61                                  |
+| val A                  | BLAZE 1R                                      |        1 | LRU85                                  |
+| val A                  | Blaze 1G                                      |        1 | LRU89                                  |
+| val A                  | Computer Case Fan with Roll Own controller    |        1 | LRU23                                  |
+| val A                  | Elec Prime Valve                              |        1 | LRU12                                  |
+| val A                  | G5                                            |        1 | LRU26                                  |
+| val A                  | GAD 29                                        |        1 | LRU24                                  |
+| val A                  | GDU 460                                       |        1 | LRU33                                  |
+| val A                  | GEA 24                                        |        3 | LRU3, LRU32, LRU5                      |
+| val A                  | GMA 245                                       |        1 | LRU22                                  |
+| val A                  | GMC 507                                       |        1 | LRU11                                  |
+| val A                  | GMU 11                                        |        1 | LRU25                                  |
+| val A                  | GNC 355 Comm                                  |        1 | LRU10-C                                |
+| val A                  | GNC 355 Nav                                   |        1 | LRU10-N                                |
+| val A                  | GSA 28                                        |        2 | LRU18, LRU19                           |
+| val A                  | GSB 15                                        |        1 | LRU60                                  |
+| val A                  | GSU 25                                        |        1 | LRU27                                  |
+| val A                  | GTR 20                                        |        1 | LRU21                                  |
+| val A                  | GTX 45R                                       |        1 | LRU28                                  |
+| val A                  | LX60                                          |        1 | A2                                     |
+| val A                  | Linear Actuator, Canopy                       |        1 | LRU14                                  |
+| val A                  | Linear Actuator, Lndg Brake                   |        1 | LRU15                                  |
+| val A                  | Linear Actuator, Nose Gear                    |        1 | LRU16                                  |
+| val A                  | Magneto, Non-Imulse                           |        1 | LRU7                                   |
+| val A                  | OTM-OVPD-2019/OVM-14                          |        1 | LRU1                                   |
+| val A                  | PN 2090255 Aux Pump                           |        1 | LRU17                                  |
+| val A                  | Plasma III                                    |        1 | LRU6                                   |
+| val A                  | SD8                                           |        1 | A1                                     |
+| val A                  | Space Age Pitot                               |        1 | LRU13                                  |
+| val A                  | Switch Breaker                                |        1 | B4                                     |
+| val A                  | TBD                                           |        2 | LRU20, LRU4                            |
+| ~                      |                                               |        6 | CON1, L7, L9, LRU81, W1, ... (6 total) |
+| ~                      | LRE1B-14                                      |        1 | LRU8                                   |
+| ~                      | PMR1D                                         |        1 | LRU2                                   |
+| ~                      | S701-1                                        |        1 | C1                                     |
+| ~                      | TBD                                           |        1 | R5                                     |
+| **Total**              |                                               |   **95** |                                        |
 
 ---
 
@@ -127,141 +133,141 @@ Electrical calculations for voltage drop, ampacity utilization, and power loss.
 
 | Wire Label | Current (A) | Gauge | Length (in) | Voltage Drop (V) | Vdrop % | Ampacity (A) | Utilization % | Resistance (Ω) | Power Loss (W) |
 | ---------- | ----------: | ----: | ----------: | ---------------: | ------: | -----------: | ------------: | -------------: | -------------: |
-| A11A       |         0.2 |    24 |        24.0 |             0.01 |    0.1% |          2.0 |         10.0% |         0.0513 |           0.00 |
-| A12A       |         0.2 |    24 |        24.0 |             0.01 |    0.1% |          2.0 |         10.0% |         0.0513 |           0.00 |
-| A15A       |        12.0 |    16 |        24.0 |             0.10 |    0.7% |         12.5 |         96.0% |         0.0080 |           1.16 |
-| A20A       |         7.5 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         75.0% |         0.0128 |           0.72 |
-| A30A       |         2.3 |    22 |        24.0 |             0.07 |    0.5% |          5.0 |         46.2% |         0.0323 |           0.17 |
-| A40A       |         1.8 |    24 |        24.0 |             0.09 |    0.7% |          2.0 |         90.0% |         0.0513 |           0.17 |
-| A50A       |         0.1 |    24 |        24.0 |             0.01 |    0.0% |          2.0 |          5.0% |         0.0513 |           0.00 |
-| A60A       |         0.2 |    24 |        24.0 |             0.01 |    0.1% |          2.0 |         12.5% |         0.0513 |           0.00 |
-| A70A       |         7.5 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         75.0% |         0.0128 |           0.72 |
-| A80A       |         0.2 |    24 |        24.0 |             0.01 |    0.1% |          2.0 |         10.0% |         0.0513 |           0.00 |
-| E22A       |         0.1 |    24 |        24.0 |             0.01 |    0.0% |          2.0 |          5.0% |         0.0513 |           0.00 |
-| E23A       |         0.1 |    24 |        24.0 |             0.01 |    0.0% |          2.0 |          5.0% |         0.0513 |           0.00 |
-| E31A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| E32A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| E40A       |         2.0 |    24 |        24.0 |             0.10 |    0.7% |          2.0 |        100.0% |         0.0513 |           0.21 |
-| E40B       |         2.0 |    24 |        24.0 |             0.10 |    0.7% |          2.0 |        100.0% |         0.0513 |           0.21 |
-| E41A       |         5.0 |    22 |        24.0 |             0.16 |    1.2% |          5.0 |        100.0% |         0.0323 |           0.81 |
-| E41B       |         5.0 |    22 |        24.0 |             0.16 |    1.2% |          5.0 |        100.0% |         0.0323 |           0.81 |
-| E44A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| E45A       |        10.0 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |        100.0% |         0.0128 |           1.28 |
-| E992A      |        10.0 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |        100.0% |         0.0128 |           1.28 |
-| G1010A     |         0.2 |    24 |         nan |              nan |    nan% |          2.0 |         12.5% |            nan |            nan |
-| G1011A     |         0.2 |    24 |         nan |              nan |    nan% |          2.0 |         10.0% |            nan |            nan |
-| G1012A     |         7.5 |    18 |         nan |              nan |    nan% |         10.0 |         75.0% |            nan |            nan |
-| G101A      |         1.8 |    24 |         nan |              nan |    nan% |          2.0 |         90.0% |            nan |            nan |
-| G102A      |         0.1 |    24 |         nan |              nan |    nan% |          2.0 |          5.0% |            nan |            nan |
-| G103A      |         0.2 |    24 |         nan |              nan |    nan% |          2.0 |         12.5% |            nan |            nan |
-| G104A      |         2.3 |    22 |         nan |              nan |    nan% |          5.0 |         46.2% |            nan |            nan |
-| G105A      |         7.5 |    18 |         nan |              nan |    nan% |         10.0 |         75.0% |            nan |            nan |
-| G106A      |         0.2 |    24 |         nan |              nan |    nan% |          2.0 |         10.0% |            nan |            nan |
-| G107A      |         0.2 |    24 |         nan |              nan |    nan% |          2.0 |         10.0% |            nan |            nan |
-| G108A      |         0.4 |    24 |         nan |              nan |    nan% |          2.0 |         21.5% |            nan |            nan |
-| G109A      |         2.0 |    24 |         nan |              nan |    nan% |          2.0 |        100.0% |            nan |            nan |
-| G10A       |       840.0 |     2 |         nan |              nan |    nan% |        100.0 |        840.0% |            nan |            nan |
-| G110A      |         2.0 |    24 |         nan |              nan |    nan% |          2.0 |        100.0% |            nan |            nan |
-| G111A      |         2.0 |    24 |         nan |              nan |    nan% |          2.0 |        100.0% |            nan |            nan |
-| G112A      |         4.0 |    22 |         nan |              nan |    nan% |          5.0 |         80.0% |            nan |            nan |
-| G113A      |         4.0 |    22 |         nan |              nan |    nan% |          5.0 |         80.0% |            nan |            nan |
-| G114A      |         4.0 |    22 |         nan |              nan |    nan% |          5.0 |         80.0% |            nan |            nan |
-| G115A      |         3.0 |    22 |         nan |              nan |    nan% |          5.0 |         60.0% |            nan |            nan |
-| G116A      |         3.0 |    22 |         nan |              nan |    nan% |          5.0 |         60.0% |            nan |            nan |
-| G117A      |         5.0 |    22 |         nan |              nan |    nan% |          5.0 |        100.0% |            nan |            nan |
-| G121A      |        10.0 |    18 |         nan |              nan |    nan% |         10.0 |        100.0% |            nan |            nan |
-| G122A      |         9.9 |    18 |         nan |              nan |    nan% |         10.0 |         99.0% |            nan |            nan |
-| G123A      |         9.9 |    18 |         nan |              nan |    nan% |         10.0 |         99.0% |            nan |            nan |
-| G124A      |         9.9 |    18 |         nan |              nan |    nan% |         10.0 |         99.0% |            nan |            nan |
-| G125A      |         9.9 |    18 |         nan |              nan |    nan% |         10.0 |         99.0% |            nan |            nan |
-| G126A      |         9.9 |    18 |         nan |              nan |    nan% |         10.0 |         99.0% |            nan |            nan |
-| G127A      |         9.9 |    18 |         nan |              nan |    nan% |         10.0 |         99.0% |            nan |            nan |
-| G129A      |         2.8 |    22 |         nan |              nan |    nan% |          5.0 |         56.0% |            nan |            nan |
-| G130A      |         1.0 |    24 |         nan |              nan |    nan% |          2.0 |         50.0% |            nan |            nan |
-| G22A       |        60.0 |     6 |        24.0 |             0.05 |    0.3% |        540.0 |         11.1% |         0.0008 |           2.84 |
-| G23A       |         5.0 |    22 |         nan |              nan |    nan% |          5.0 |        100.0% |            nan |            nan |
-| G41A       |       200.0 |     6 |        24.0 |             0.16 |    1.1% |        540.0 |         37.0% |         0.0008 |          31.60 |
-| G42A       |         1.0 |    24 |         nan |              nan |    nan% |          2.0 |         50.0% |            nan |            nan |
-| G43A       |         5.0 |    22 |         nan |              nan |    nan% |          5.0 |        100.0% |            nan |            nan |
-| G50A       |        12.0 |    16 |         nan |              nan |    nan% |         12.5 |         96.0% |            nan |            nan |
-| G54A       |         1.0 |    24 |         nan |              nan |    nan% |          2.0 |         50.0% |            nan |            nan |
-| L10A       |         8.0 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         80.0% |         0.0128 |           0.82 |
-| L10B       |         8.0 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         80.0% |         0.0128 |           0.82 |
-| L10C       |         8.0 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         80.0% |         0.0128 |           0.82 |
-| L20A       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| L20B       |         6.0 |    20 |         nan |              nan |    nan% |          7.0 |         85.7% |            nan |            nan |
-| L20C       |         6.0 |    20 |         nan |              nan |    nan% |          7.0 |         85.7% |            nan |            nan |
-| L21A       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| L30A       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| L30B       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| L30C       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| L40A       |         5.0 |    22 |        24.0 |             0.16 |    1.2% |          5.0 |        100.0% |         0.0323 |           0.81 |
-| L50A       |         4.0 |    22 |        24.0 |             0.13 |    0.9% |          5.0 |         80.0% |         0.0323 |           0.52 |
-| L52A       |         4.0 |    22 |        24.0 |             0.13 |    0.9% |          5.0 |         80.0% |         0.0323 |           0.52 |
-| L53A       |         4.0 |    22 |        24.0 |             0.13 |    0.9% |          5.0 |         80.0% |         0.0323 |           0.52 |
-| L54A       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| L55A       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| M10A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M10B       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M11A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M20A       |        10.0 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |        100.0% |         0.0128 |           1.28 |
-| M20B       |        10.0 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |        100.0% |         0.0128 |           1.28 |
-| M21A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M30A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M30B       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M30C       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M31A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M40A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M40B       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M41A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M50A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M50B       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M60A       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M60B       |         9.9 |    18 |        24.0 |             0.13 |    0.9% |         10.0 |         99.0% |         0.0128 |           1.25 |
-| M71A       |         2.8 |    22 |        24.0 |             0.09 |    0.6% |          5.0 |         56.0% |         0.0323 |           0.25 |
-| M71B       |         2.8 |    22 |        24.0 |             0.09 |    0.6% |          5.0 |         56.0% |         0.0323 |           0.25 |
-| M71C       |         2.8 |    22 |        24.0 |             0.09 |    0.6% |          5.0 |         56.0% |         0.0323 |           0.25 |
-| M72A       |         2.8 |    22 |        24.0 |             0.09 |    0.6% |          5.0 |         56.0% |         0.0323 |           0.25 |
-| M72B       |         2.8 |    22 |        24.0 |             0.09 |    0.6% |          5.0 |         56.0% |         0.0323 |           0.25 |
-| M72C       |         2.8 |    22 |        24.0 |             0.09 |    0.6% |          5.0 |         56.0% |         0.0323 |           0.25 |
-| M80A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P10A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
+| A11A       |         0.2 |    24 |        59.2 |             0.03 |    0.2% |          2.0 |         10.0% |         0.1266 |           0.01 |
+| A12A       |         0.2 |    24 |        60.3 |             0.03 |    0.2% |          2.0 |         10.0% |         0.1290 |           0.01 |
+| A13A       |         0.4 |    24 |       134.6 |             0.12 |    0.9% |          2.0 |         21.5% |         0.2879 |           0.05 |
+| A14A       |         2.0 |    24 |        38.6 |             0.17 |    1.2% |          2.0 |        100.0% |         0.0826 |           0.33 |
+| A20A       |         7.5 |    18 |        70.3 |             0.28 |    2.0% |         10.0 |         75.0% |         0.0374 |           2.10 |
+| A30A       |         2.3 |    22 |        65.8 |             0.20 |    1.5% |          5.0 |         46.2% |         0.0885 |           0.47 |
+| A40A       |         1.3 |    24 |        59.0 |             0.16 |    1.2% |          2.0 |         65.0% |         0.1262 |           0.21 |
+| A50A       |         0.1 |    24 |       213.6 |             0.05 |    0.3% |          2.0 |          5.0% |         0.4569 |           0.00 |
+| A60A       |         0.2 |    24 |        53.7 |             0.03 |    0.2% |          2.0 |         12.5% |         0.1149 |           0.01 |
+| A70A       |         6.0 |    20 |        69.5 |             0.35 |    2.5% |          7.0 |         85.7% |         0.0588 |           2.12 |
+| A71A       |         0.6 |    24 |        60.7 |             0.08 |    0.6% |          2.0 |         30.0% |         0.1298 |           0.05 |
+| A80A       |         0.2 |    24 |        62.9 |             0.03 |    0.2% |          2.0 |         10.0% |         0.1346 |           0.01 |
+| E22A       |         0.1 |    24 |        37.4 |             0.01 |    0.1% |          2.0 |          5.0% |         0.0800 |           0.00 |
+| E23A       |         0.1 |    24 |        37.4 |             0.01 |    0.1% |          2.0 |          5.0% |         0.0800 |           0.00 |
+| E31A       |         1.0 |    24 |        38.3 |             0.08 |    0.6% |          2.0 |         50.0% |         0.0819 |           0.08 |
+| E32A       |         1.0 |    24 |        39.3 |             0.08 |    0.6% |          2.0 |         50.0% |         0.0841 |           0.08 |
+| E40A       |       201.0 |     6 |        34.4 |             0.23 |    1.6% |        540.0 |         37.2% |         0.0011 |          45.75 |
+| E40B       |       201.0 |     6 |        85.6 |             0.57 |    4.0% |        540.0 |         37.2% |         0.0028 |         113.84 |
+| E41A       |         5.0 |    20 |        61.3 |             0.26 |    1.9% |          7.0 |         71.4% |         0.0518 |           1.30 |
+| E41B       |         5.0 |    20 |       114.4 |             0.48 |    3.5% |          7.0 |         71.4% |         0.0968 |           2.42 |
+| E44A       |         1.0 |    24 |       118.6 |             0.25 |    1.8% |          2.0 |         50.0% |         0.2537 |           0.25 |
+| E45A       |        10.0 |    18 |       123.1 |             0.65 |    4.7% |         10.0 |        100.0% |         0.0655 |           6.55 |
+| E992A      |        10.0 |    18 |        24.9 |             0.13 |    0.9% |         10.0 |        100.0% |         0.0132 |           1.32 |
+| G1010A     |         0.6 |    24 |        47.3 |             0.06 |    0.4% |          2.0 |         30.0% |         0.1012 |           0.04 |
+| G1011A     |         0.2 |    24 |        48.8 |             0.02 |    0.1% |          2.0 |         10.0% |         0.1044 |           0.00 |
+| G1012A     |         6.0 |    20 |        52.4 |             0.27 |    1.9% |          7.0 |         85.7% |         0.0443 |           1.60 |
+| G101A      |         1.3 |    24 |        48.0 |             0.13 |    1.0% |          2.0 |         65.0% |         0.1027 |           0.17 |
+| G102A      |         0.1 |    24 |       219.8 |             0.05 |    0.3% |          2.0 |          5.0% |         0.4702 |           0.00 |
+| G103A      |         0.2 |    24 |        44.5 |             0.02 |    0.2% |          2.0 |         12.5% |         0.0952 |           0.01 |
+| G104A      |         2.3 |    22 |        52.4 |             0.16 |    1.2% |          5.0 |         46.2% |         0.0705 |           0.38 |
+| G105A      |         7.5 |    18 |        61.1 |             0.24 |    1.7% |         10.0 |         75.0% |         0.0325 |           1.83 |
+| G106A      |         1.0 |    24 |        38.4 |             0.08 |    0.6% |          2.0 |         50.0% |         0.0821 |           0.08 |
+| G107A      |         0.2 |    24 |        49.5 |             0.02 |    0.2% |          2.0 |         10.0% |         0.1059 |           0.00 |
+| G108A      |         1.0 |    24 |       126.7 |             0.27 |    1.9% |          2.0 |         50.0% |         0.2710 |           0.27 |
+| G109A      |         2.0 |    24 |        49.0 |             0.21 |    1.5% |          2.0 |        100.0% |         0.1048 |           0.42 |
+| G10A       |       840.0 |     2 |        31.4 |             0.34 |    2.4% |        100.0 |        840.0% |         0.0004 |         288.03 |
+| G110A      |         2.0 |    24 |        63.4 |             0.27 |    1.9% |          2.0 |        100.0% |         0.1356 |           0.54 |
+| G111A      |         2.0 |    24 |       139.8 |             0.60 |    4.3% |          2.0 |        100.0% |         0.2991 |           1.20 |
+| G112A      |         4.0 |    22 |        43.8 |             0.24 |    1.7% |          5.0 |         80.0% |         0.0589 |           0.94 |
+| G113A      |         4.0 |    22 |        72.3 |             0.39 |    2.8% |          5.0 |         80.0% |         0.0972 |           1.56 |
+| G114A      |         4.0 |    22 |        67.7 |             0.36 |    2.6% |          5.0 |         80.0% |         0.0911 |           1.46 |
+| G115A      |         3.0 |    18 |       333.0 |             0.53 |    3.8% |         10.0 |         30.0% |         0.1772 |           1.59 |
+| G116A      |         3.0 |    18 |       325.4 |             0.52 |    3.7% |         10.0 |         30.0% |         0.1731 |           1.56 |
+| G117A      |         5.0 |    22 |        52.8 |             0.36 |    2.5% |          5.0 |        100.0% |         0.0710 |           1.78 |
+| G121A      |        10.0 |    18 |        48.5 |             0.26 |    1.8% |         10.0 |        100.0% |         0.0258 |           2.58 |
+| G122A      |         9.9 |    18 |        50.3 |             0.26 |    1.9% |         10.0 |         99.0% |         0.0268 |           2.62 |
+| G123A      |         9.9 |    18 |        65.1 |             0.34 |    2.4% |         10.0 |         99.0% |         0.0346 |           3.39 |
+| G124A      |         9.9 |    18 |        80.5 |             0.42 |    3.0% |         10.0 |         99.0% |         0.0428 |           4.20 |
+| G125A      |         9.9 |    16 |       134.0 |             0.44 |    3.2% |         12.5 |         79.2% |         0.0448 |           4.40 |
+| G126A      |         9.9 |    18 |        93.3 |             0.49 |    3.5% |         10.0 |         99.0% |         0.0496 |           4.87 |
+| G127A      |         9.9 |    18 |        72.3 |             0.38 |    2.7% |         10.0 |         99.0% |         0.0385 |           3.77 |
+| G129A      |         2.8 |    22 |        46.9 |             0.18 |    1.3% |          5.0 |         56.0% |         0.0631 |           0.49 |
+| G130A      |         1.0 |    24 |        58.9 |             0.13 |    0.9% |          2.0 |         50.0% |         0.1260 |           0.13 |
+| G22A       |        60.0 |     6 |        54.8 |             0.11 |    0.8% |        540.0 |         11.1% |         0.0018 |           6.49 |
+| G23A       |         5.0 |    22 |        31.9 |             0.21 |    1.5% |          5.0 |        100.0% |         0.0429 |           1.07 |
+| G41A       |       200.0 |     6 |        73.0 |             0.48 |    3.4% |        540.0 |         37.0% |         0.0024 |          96.12 |
+| G42A       |         1.0 |    24 |        28.9 |             0.06 |    0.4% |          2.0 |         50.0% |         0.0618 |           0.06 |
+| G43A       |         5.0 |    22 |        30.1 |             0.20 |    1.4% |          5.0 |        100.0% |         0.0405 |           1.01 |
+| G50A       |        12.0 |    16 |        31.1 |             0.12 |    0.9% |         12.5 |         96.0% |         0.0104 |           1.50 |
+| G54A       |         1.0 |    24 |        52.4 |             0.11 |    0.8% |          2.0 |         50.0% |         0.1121 |           0.11 |
+| L10A       |         8.0 |    18 |        65.4 |             0.28 |    2.0% |         10.0 |         80.0% |         0.0348 |           2.23 |
+| L10B       |         8.0 |    18 |        78.6 |             0.33 |    2.4% |         10.0 |         80.0% |         0.0418 |           2.68 |
+| L10C       |         8.0 |    18 |        76.0 |             0.32 |    2.3% |         10.0 |         80.0% |         0.0404 |           2.59 |
+| L20A       |         6.0 |    16 |        64.4 |             0.13 |    0.9% |         12.5 |         48.0% |         0.0216 |           0.78 |
+| L20B       |         6.0 |    16 |       247.9 |             0.50 |    3.6% |         12.5 |         48.0% |         0.0830 |           2.99 |
+| L20C       |         6.0 |    16 |       242.1 |             0.49 |    3.5% |         12.5 |         48.0% |         0.0810 |           2.92 |
+| L21A       |         6.0 |    14 |       361.6 |             0.46 |    3.3% |         15.0 |         40.0% |         0.0761 |           2.74 |
+| L30A       |         6.0 |    16 |        64.4 |             0.13 |    0.9% |         12.5 |         48.0% |         0.0216 |           0.78 |
+| L30B       |         6.0 |    16 |       322.1 |             0.65 |    4.6% |         12.5 |         48.0% |         0.1078 |           3.88 |
+| L30C       |         6.0 |    16 |       321.5 |             0.65 |    4.6% |         12.5 |         48.0% |         0.1076 |           3.87 |
+| L40A       |         5.0 |    22 |        77.5 |             0.52 |    3.7% |          5.0 |        100.0% |         0.1042 |           2.61 |
+| L50A       |         4.0 |    22 |       123.4 |             0.66 |    4.7% |          5.0 |         80.0% |         0.1660 |           2.66 |
+| L52A       |         4.0 |    22 |        25.8 |             0.14 |    1.0% |          5.0 |         80.0% |         0.0347 |           0.56 |
+| L53A       |         4.0 |    22 |        25.8 |             0.14 |    1.0% |          5.0 |         80.0% |         0.0347 |           0.56 |
+| L54A       |         6.0 |    20 |       124.0 |             0.63 |    4.5% |          7.0 |         85.7% |         0.1049 |           3.78 |
+| L55A       |         6.0 |    20 |        54.0 |             0.27 |    2.0% |          7.0 |         85.7% |         0.0457 |           1.64 |
+| M10A       |         9.9 |    18 |       113.8 |             0.60 |    4.3% |         10.0 |         99.0% |         0.0606 |           5.93 |
+| M10B       |         9.9 |    18 |        92.0 |             0.48 |    3.5% |         10.0 |         99.0% |         0.0490 |           4.80 |
+| M11A       |         9.9 |    18 |        92.0 |             0.48 |    3.5% |         10.0 |         99.0% |         0.0490 |           4.80 |
+| M20A       |        10.0 |    18 |        66.5 |             0.35 |    2.5% |         10.0 |        100.0% |         0.0354 |           3.54 |
+| M20B       |        10.0 |    18 |       124.6 |             0.66 |    4.7% |         10.0 |        100.0% |         0.0663 |           6.63 |
+| M21A       |         9.9 |    18 |       126.0 |             0.66 |    4.7% |         10.0 |         99.0% |         0.0670 |           6.57 |
+| M30A       |         9.9 |    18 |        50.2 |             0.26 |    1.9% |         10.0 |         99.0% |         0.0267 |           2.62 |
+| M30B       |         9.9 |    18 |        25.9 |             0.14 |    1.0% |         10.0 |         99.0% |         0.0138 |           1.35 |
+| M30C       |         9.9 |    18 |        70.8 |             0.37 |    2.7% |         10.0 |         99.0% |         0.0377 |           3.69 |
+| M31A       |         9.9 |    18 |        69.5 |             0.37 |    2.6% |         10.0 |         99.0% |         0.0370 |           3.62 |
+| M40A       |         9.9 |    18 |        51.2 |             0.27 |    1.9% |         10.0 |         99.0% |         0.0272 |           2.67 |
+| M40B       |         9.9 |    18 |        41.4 |             0.22 |    1.6% |         10.0 |         99.0% |         0.0220 |           2.16 |
+| M41A       |         9.9 |    18 |        41.4 |             0.22 |    1.6% |         10.0 |         99.0% |         0.0220 |           2.16 |
+| M50A       |         9.9 |    18 |        76.5 |             0.40 |    2.9% |         10.0 |         99.0% |         0.0407 |           3.99 |
+| M50B       |         9.9 |    18 |        85.0 |             0.45 |    3.2% |         10.0 |         99.0% |         0.0452 |           4.43 |
+| M60A       |         9.9 |    18 |        65.6 |             0.35 |    2.5% |         10.0 |         99.0% |         0.0349 |           3.42 |
+| M60B       |         9.9 |    18 |        78.8 |             0.42 |    3.0% |         10.0 |         99.0% |         0.0419 |           4.11 |
+| M71A       |         2.8 |    20 |        51.2 |             0.12 |    0.9% |          7.0 |         40.0% |         0.0433 |           0.34 |
+| M71B       |         2.8 |    20 |        43.1 |             0.10 |    0.7% |          7.0 |         40.0% |         0.0365 |           0.29 |
+| M71C       |         2.8 |    20 |       221.7 |             0.53 |    3.8% |          7.0 |         40.0% |         0.1875 |           1.47 |
+| M72A       |         2.8 |    22 |        51.2 |             0.19 |    1.4% |          5.0 |         56.0% |         0.0689 |           0.54 |
+| M72B       |         2.8 |    22 |        44.1 |             0.17 |    1.2% |          5.0 |         56.0% |         0.0593 |           0.47 |
+| M72C       |         2.8 |    22 |        58.9 |             0.22 |    1.6% |          5.0 |         56.0% |         0.0792 |           0.62 |
+| M80A       |         1.0 |    24 |        60.0 |             0.13 |    0.9% |          2.0 |         50.0% |         0.1283 |           0.13 |
+| P10A       |         1.0 |    24 |        38.1 |             0.08 |    0.6% |          2.0 |         50.0% |         0.0815 |           0.08 |
 | P11A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P11B       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P13A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P14A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P20A       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| P20B       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| P20D       |         6.0 |    20 |        24.0 |             0.12 |    0.9% |          7.0 |         85.7% |         0.0203 |           0.73 |
-| P22A       |         7.0 |    20 |        24.0 |             0.14 |    1.0% |          7.0 |        100.0% |         0.0203 |           0.99 |
-| P22B       |         7.0 |    20 |        24.0 |             0.14 |    1.0% |          7.0 |        100.0% |         0.0203 |           0.99 |
-| P22C       |         7.0 |    20 |        24.0 |             0.14 |    1.0% |          7.0 |        100.0% |         0.0203 |           0.99 |
-| P22D       |         7.0 |    20 |        24.0 |             0.14 |    1.0% |          7.0 |        100.0% |         0.0203 |           0.99 |
-| P23A       |         5.0 |    22 |        24.0 |             0.16 |    1.2% |          5.0 |        100.0% |         0.0323 |           0.81 |
-| P24A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P24B       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P24C       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P30A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P30B       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P30C       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P31A       |         8.0 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         80.0% |         0.0128 |           0.82 |
-| P32A       |         8.0 |    18 |        24.0 |             0.10 |    0.7% |         10.0 |         80.0% |         0.0128 |           0.82 |
-| P52A       |        12.0 |    16 |        24.0 |             0.10 |    0.7% |         12.5 |         96.0% |         0.0080 |           1.16 |
-| P52B       |        12.0 |    16 |        24.0 |             0.10 |    0.7% |         12.5 |         96.0% |         0.0080 |           1.16 |
-| P52C       |        12.0 |    16 |        24.0 |             0.10 |    0.7% |         12.5 |         96.0% |         0.0080 |           1.16 |
-| P54A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P54B       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P55A       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
-| P57A       |         2.0 |    24 |        24.0 |             0.10 |    0.7% |          2.0 |        100.0% |         0.0513 |           0.21 |
-| P61B       |         1.0 |    24 |        24.0 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0513 |           0.05 |
+| P14A       |         1.0 |    24 |        50.0 |             0.11 |    0.8% |          2.0 |         50.0% |         0.1070 |           0.11 |
+| P20A       |         5.0 |    20 |        40.0 |             0.17 |    1.2% |          7.0 |         71.4% |         0.0338 |           0.85 |
+| P20B       |         5.0 |    20 |        68.8 |             0.29 |    2.1% |          7.0 |         71.4% |         0.0582 |           1.45 |
+| P20D       |         5.0 |    20 |       124.1 |             0.52 |    3.7% |          7.0 |         71.4% |         0.1050 |           2.62 |
+| P22A       |         6.0 |    20 |        25.0 |             0.13 |    0.9% |          7.0 |         85.7% |         0.0211 |           0.76 |
+| P22B       |         6.0 |    20 |        25.0 |             0.13 |    0.9% |          7.0 |         85.7% |         0.0211 |           0.76 |
+| P22C       |         6.0 |    20 |        25.0 |             0.13 |    0.9% |          7.0 |         85.7% |         0.0211 |           0.76 |
+| P22D       |         6.0 |    20 |        38.4 |             0.19 |    1.4% |          7.0 |         85.7% |         0.0325 |           1.17 |
+| P23A       |         5.0 |    22 |        96.8 |             0.65 |    4.6% |          5.0 |        100.0% |         0.1302 |           3.25 |
+| P24A       |         1.0 |    24 |        89.9 |             0.19 |    1.4% |          2.0 |         50.0% |         0.1923 |           0.19 |
+| P24B       |         1.0 |    24 |        25.1 |             0.05 |    0.4% |          2.0 |         50.0% |         0.0537 |           0.05 |
+| P24C       |         1.0 |    24 |        32.8 |             0.07 |    0.5% |          2.0 |         50.0% |         0.0702 |           0.07 |
+| P30A       |         1.0 |    24 |        33.4 |             0.07 |    0.5% |          2.0 |         50.0% |         0.0714 |           0.07 |
+| P30B       |         1.0 |    24 |        26.0 |             0.06 |    0.4% |          2.0 |         50.0% |         0.0556 |           0.06 |
+| P30C       |         1.0 |    24 |        41.5 |             0.09 |    0.6% |          2.0 |         50.0% |         0.0888 |           0.09 |
+| P31A       |         8.0 |    18 |        54.9 |             0.23 |    1.7% |         10.0 |         80.0% |         0.0292 |           1.87 |
+| P32A       |         8.0 |    18 |        54.9 |             0.23 |    1.7% |         10.0 |         80.0% |         0.0292 |           1.87 |
+| P51A       |        12.0 |    16 |       141.3 |             0.57 |    4.1% |         12.5 |         96.0% |         0.0473 |           6.81 |
+| P51B       |        12.0 |    16 |        35.8 |             0.14 |    1.0% |         12.5 |         96.0% |         0.0120 |           1.73 |
+| P52A       |        12.0 |    16 |        33.3 |             0.13 |    1.0% |         12.5 |         96.0% |         0.0111 |           1.60 |
+| P52B       |        12.0 |    16 |        25.3 |             0.10 |    0.7% |         12.5 |         96.0% |         0.0085 |           1.22 |
+| P52C       |        12.0 |    16 |        29.5 |             0.12 |    0.8% |         12.5 |         96.0% |         0.0099 |           1.42 |
+| P55A       |         1.0 |    24 |        65.0 |             0.14 |    1.0% |          2.0 |         50.0% |         0.1390 |           0.14 |
+| P57A       |         2.0 |    24 |        25.4 |             0.11 |    0.8% |          2.0 |        100.0% |         0.0543 |           0.22 |
+| P61B       |         1.0 |    24 |        29.0 |             0.06 |    0.4% |          2.0 |         50.0% |         0.0620 |           0.06 |
 | P99A       |       202.0 |     6 |        24.0 |             0.16 |    1.1% |        540.0 |         37.4% |         0.0008 |          32.24 |
 | P99B       |       202.0 |     6 |        24.0 |             0.16 |    1.1% |        540.0 |         37.4% |         0.0008 |          32.24 |
-| P99C       |       202.0 |     6 |        24.0 |             0.16 |    1.1% |        540.0 |         37.4% |         0.0008 |          32.24 |
-| **Total**  |             |       |     **nan** |          **nan** |         |              |               |                |        **nan** |
+| P99C       |       202.0 |     6 |        85.6 |             0.57 |    4.1% |        540.0 |         37.4% |         0.0028 |         114.97 |
+| **Total**  |             |       | **10090.2** |        **33.82** |         |              |               |                |     **929.59** |
 
 **Summary**:
-- **Total Power Loss**: nan W (heat dissipated in wire harness)
-- **Worst Voltage Drop**: E41A at 1.2%
+- **Total Power Loss**: 929.59 W (heat dissipated in wire harness)
+- **Worst Voltage Drop**: L50A at 4.7%
 - **Safety Warnings**: 1 wire exceed ampacity rating
   - G10A at 840% utilization
 
@@ -277,269 +283,268 @@ Complete wire bill of materials with all connections.
 
 | Wire Label | From Component | From Pin | To Component | To Pin | Gauge | Color  | Length (in) | Type      | Notes          | Warnings                                                    |
 | ---------- | -------------- | -------- | ------------ | ------ | ----- | ------ | ----------: | --------- | -------------- | ----------------------------------------------------------- |
-| A10A       | SW11           | 2        | FH2          | 2      | -99   | Blue   |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| A10B       | SW11           | 1        | FH6          | 1      | -99   | Blue   |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| A11A       | FH6            | Val_A    | LRU24        | 2      | 24    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A12A       | FH6            | Val_A    | LRU27        | 2      | 24    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A13A       | F1             | 2        | R2           | 1      | -99   | Blue   |        24.0 | M22759/16 | 14AWG          | Cannot determine circuit current - missing load/source data |
-| A15A       | F1             | 2        | BT1          | 1      | 16    | Blue   |        24.0 | M22759/16 | 14AWG          |                                                             |
-| A20A       | LRU21          | 2        | FH2          | 3      | 18    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A30A       | LRU22          | 2        | FH2          | 4      | 22    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A40A       | LRU28          | 2        | FH2          | 5      | 24    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A50A       | LRU25          | 2        | FH2          | 6      | 24    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A60A       | LRU26          | 2        | FH2          | 7      | 24    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A70A       | LRU10          | 2        | FH3          | Val_A  | 18    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| A80A       | LRU11          | 2        | FH3          | Val_A  | 24    | Blue   |        24.0 | M22759/16 |                |                                                             |
-| E22A       | LRU5           | 1        | R5           | 3      | 24    | Brown  |        24.0 | M22759/16 |                |                                                             |
-| E23A       | R5             | 4        | LRU5         | 2      | 24    | Brown  |        24.0 | M22759/16 |                |                                                             |
-| E31A       | F4             | 1        | LRU3         | 1      | 24    | Brown  |        24.0 | M22759/16 | 20AWG          |                                                             |
-| E32A       | LRU3           | 2        | F5           | 1      | 24    | Brown  |        24.0 | M22759/16 |                |                                                             |
-| E40A       | F6             | 1        | C4           |        | 24    | Brown  |        24.0 | M22759/16 | > 6in 4AWG     |                                                             |
-| E40B       | C4             |          | C2           | 4      | 24    | Brown  |        24.0 | M22759/16 | 4AWG           |                                                             |
-| E41A       | FH3            | Val_A    | SW13         | 1      | 22    | Brown  |        24.0 | M22759/16 |                |                                                             |
-| E41B       | SW13           | 2        | LRU6         | 1      | 22    | Brown  |        24.0 | M22759/16 | 20AWG          |                                                             |
-| E42A       | FH3            | Val_A    | SW13         | 4      | -99   | Brown  |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| E42B       | SW13           | 5        | SW14         | 3      | -99   | Brown  |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| E44A       | C4             |          | SW14         | 2      | 24    | Brown  |        24.0 | M22759/16 | 4AWG           |                                                             |
-| E45A       | SW14           | 5        | LRU7         | 1      | 18    | Brown  |        24.0 | M22759/16 | 20AWG SHIELDED |                                                             |
-| E991A      | SW14           | 6        | W1           | 1      | -99   | Brown  |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| E992A      | LRU7           | 2        | W2           | 1      | 18    | Brown  |        24.0 | M22759/16 |                |                                                             |
-| G1010A     | LRU29          | 1        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G1011A     | GND3           | 1        | LRU11        | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G1012A     | GND3           | 1        | LRU10        | 1      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G101A      | GND3           | 1        | LRU28        | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G102A      | GND3           | 1        | LRU25        | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G103A      | GND3           | 1        | LRU26        | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G104A      | GND3           | 1        | LRU22        | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G105A      | GND3           | 1        | LRU21        | 1      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G106A      | LRU24          | 1        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G107A      | LRU27          | 1        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G108A      | LRU32          | 1        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G109A      | LRU33          | 1        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G10A       | BT2            | 2        | GND2         | 1      | 2     | Black  |         nan | M22759/16 | 4AWG           |                                                             |
-| G110A      | L23            | 2        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G111A      | L6             | 2        | GND3         | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G112A      | LRU81          | 1        | GND3         | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G113A      | L7             | 2        | GND3         | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G114A      | L9             | 2        | GND3         | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G115A      | LRU85          | 2        | GND3         | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G116A      | LRU89          | 2        | GND3         | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G117A      | GND3           | 1        | LRU60        | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G11A       | SW5            | 1        | GND3         | 1      | -99   | Black  |         nan | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| G121A      | LRU17          | 2        | GND2         | 1      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G122A      | LRU12          | 2        | GND2         | 1      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G123A      | GND2           | 1        | LRU14        | 4      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G124A      | GND2           | 1        | LRU15        | 4      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G125A      | GND2           | 1        | LRU16        | 4      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G126A      | GND2           | 1        | LRU20        | 1      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G127A      | GND3           | 1        | LRU13        | 1      | 18    | Black  |         nan | M22759/16 |                |                                                             |
-| G128A      | R4             | 2        | LRU2         | 3      | -99   | Black  |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| G129A      | GND3           | 1        | LRU18        | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G130A      | GND3           | 1        | LRU23        | 1      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G21A       | SW2            | 1        | GND3         | 1      | -99   | Black  |         nan | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| G22A       | GND1           | 1        | A2           | 2      | 6     | Black  |        24.0 | M22759/16 |                |                                                             |
-| G23A       | LRU8           | 7        | GND2         | 1      | 22    | Black  |         nan | M22759/16 | 20AWG          |                                                             |
-| G31A       | LRU2           | 6        | GND2         | 1      | -99   | Black  |         nan | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| G32A       | C3             | 2        | GND2         | 1      | -99   | Black  |         nan | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| G41A       | M2             | 1        | GND1         | 1      | 6     | Black  |        24.0 | M22759/16 |                |                                                             |
-| G42A       | C4             |          | GND2         | 1      | 24    | Black  |         nan | M22759/16 | 4AWG           |                                                             |
-| G43A       | LRU6           | 2        | GND2         | 1      | 22    | Black  |         nan | M22759/16 |                |                                                             |
-| G50A       | GND3           | 1        | BT1          | 2      | 16    | Black  |         nan | M22759/16 |                |                                                             |
-| G52A       | SW1            | 2        | GND3         | 1      | -99   | Black  |         nan | M22759/16 | 22AWG          | Cannot determine circuit current - missing load/source data |
-| G53A       | R2             | 3        | GND3         | 1      | -99   | Black  |         nan | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| G54A       | GND3           | 1        | LRU61        | 6      | 24    | Black  |         nan | M22759/16 |                |                                                             |
-| G61A       | CON1           | 2        | GND2         | 1      | -99   | Black  |         nan | M22759/16 | 4AWG           | Cannot determine circuit current - missing load/source data |
-| G62A       | GND3           | 1        | B1           | 1      | -99   | Black  |         nan | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| L10A       | FH3            | Val_A    | SW23         | 1      | 18    | White  |        24.0 | M22759/16 |                |                                                             |
-| L10B       | SW23           | 4        | L7           | 1      | 18    | White  |        24.0 | M22759/16 |                |                                                             |
-| L10C       | SW23           | 6        | L9           | 1      | 18    | White  |        24.0 | M22759/16 |                |                                                             |
-| L20A       | SW24           | 2        | FH3          | Val_A  | 20    | White  |        24.0 | M22759/16 |                |                                                             |
-| L20B       | LRU85          | 1        | GND2         | 1      | 20    | White  |         nan | M22759/16 |                |                                                             |
-| L20C       | LRU89          | 1        | GND2         | 1      | 20    | White  |         nan | M22759/16 |                |                                                             |
-| L21A       | LRU85          | 3        | LRU89        | 3      | 20    | White  |        24.0 | M22759/16 |                |                                                             |
-| L30A       | SW24           | 5        | FH3          | Val_A  | 20    | White  |        24.0 | M22759/16 |                |                                                             |
-| L30B       | LRU85          | 4        | SW24         | 4      | 20    | White  |        24.0 | M22759/16 |                |                                                             |
-| L30C       | LRU89          | 4        | SW24         | 4      | 20    | White  |        24.0 | M22759/16 |                |                                                             |
-| L40A       | LRU60          | 2        | FH3          | Val_A  | 22    | White  |        24.0 | M22759/16 |                |                                                             |
-| L50A       | LRU81          | 2        | FH1          | Val_A  | 22    | White  |        24.0 | M22759/16 |                |                                                             |
-| L52A       | LRU81          | 3        | R7           | 2      | 22    | White  |        24.0 | M22759/16 |                |                                                             |
-| L53A       | R7             | 1        | LRU81        | 4      | 22    | White  |        24.0 | M22759/16 |                |                                                             |
-| L54A       | LRU81          | 6        | L6           | 1      | 20    | White  |        24.0 | M22759/16 |                |                                                             |
-| L55A       | LRU81          | 5        | L23          | 1      | 20    | White  |        24.0 | M22759/16 |                |                                                             |
+| A10A       | SW11           | 2        | FH2          | 2      | -99   | Blue   |        62.4 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| A10B       | SW11           | 1        | FH6          | 1      | -99   | Blue   |        45.8 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| A11A       | LRU24          | 2        | FH6          | Val_A  | 24    | Blue   |        59.2 | M22759/16 |                |                                                             |
+| A12A       | LRU27          | 2        | FH6          | Val_A  | 24    | Blue   |        60.3 | M22759/16 |                |                                                             |
+| A13A       | LRU32          | 2        | FH6          | Val_A  | 24    | Blue   |       134.6 | M22759/16 |                |                                                             |
+| A14A       | LRU33          | 2        | FH6          | Val_A  | 24    | Blue   |        38.6 | M22759/16 |                |                                                             |
+| A20A       | LRU21          | 2        | FH2          | 3      | 18    | Blue   |        70.3 | M22759/16 |                |                                                             |
+| A30A       | FH2            | 4        | LRU22        | 2      | 22    | Blue   |        65.8 | M22759/16 |                |                                                             |
+| A40A       | FH2            | 5        | LRU28        | 2      | 24    | Blue   |        59.0 | M22759/16 |                |                                                             |
+| A50A       | LRU25          | 2        | FH2          | 6      | 24    | Blue   |       213.6 | M22759/16 |                |                                                             |
+| A60A       | LRU26          | 2        | FH2          | 7      | 24    | Blue   |        53.7 | M22759/16 |                |                                                             |
+| A70A       | FH3            | Val_A    | LRU10-C      | 2      | 20    | Blue   |        69.5 | M22759/16 |                |                                                             |
+| A71A       | FH2            | 8        | LRU10-N      | 2      | 24    | Blue   |        60.7 | M22759/16 |                |                                                             |
+| A80A       | FH3            | Val_A    | LRU11        | 2      | 24    | Blue   |        62.9 | M22759/16 |                |                                                             |
+| E22A       | LRU5           | 1        | R5           | 3      | 24    | Brown  |        37.4 | M22759/16 |                |                                                             |
+| E23A       | LRU5           | 2        | R5           | 4      | 24    | Brown  |        37.4 | M22759/16 |                |                                                             |
+| E31A       | LRU3           | 1        | F4           | 1      | 24    | Brown  |        38.3 | M22759/16 | 20AWG          |                                                             |
+| E32A       | LRU3           | 2        | F5           | 1      | 24    | Brown  |        39.3 | M22759/16 |                |                                                             |
+| E40A       | C4             |          | F7           | 2      | 6     | Brown  |        34.4 | M22759/16 | 4AWG > 6in     |                                                             |
+| E40B       | C4             |          | M2           | 2      | 6     | Brown  |        85.6 | M22759/16 | 4AWG           |                                                             |
+| E41A       | FH3            | Val_A    | SW13         | 1      | 20    | Brown  |        61.3 | M22759/16 |                |                                                             |
+| E41B       | LRU6           | 1        | SW13         | 2      | 20    | Brown  |       114.4 | M22759/16 | 20AWG          |                                                             |
+| E42A       | FH3            | Val_A    | SW13         | 4      | -99   | Brown  |        61.3 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| E42B       | SW14           | 3        | SW13         | 5      | -99   | Brown  |        25.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| E44A       | C4             |          | SW14         | 2      | 24    | Brown  |       118.6 | M22759/16 | 4AWG           |                                                             |
+| E45A       | LRU7           | 1        | SW14         | 5      | 18    | Brown  |       123.1 | M22759/16 | 20AWG SHIELDED |                                                             |
+| E991A      | W1             | 1        | SW14         | 6      | -99   | Brown  |        24.6 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| E992A      | LRU7           | 2        | W2           | 1      | 18    | Brown  |        24.9 | M22759/16 |                |                                                             |
+| G1010A     | GND3           | 1        | LRU10-N      | 1      | 24    | Black  |        47.3 | M22759/16 |                |                                                             |
+| G1011A     | GND3           | 1        | LRU11        | 1      | 24    | Black  |        48.8 | M22759/16 |                |                                                             |
+| G1012A     | GND3           | 1        | LRU10-C      | 1      | 20    | Black  |        52.4 | M22759/16 |                |                                                             |
+| G101A      | LRU28          | 1        | GND3         | 1      | 24    | Black  |        48.0 | M22759/16 |                |                                                             |
+| G102A      | LRU25          | 1        | GND3         | 1      | 24    | Black  |       219.8 | M22759/16 |                |                                                             |
+| G103A      | LRU26          | 1        | GND3         | 1      | 24    | Black  |        44.5 | M22759/16 |                |                                                             |
+| G104A      | GND3           | 1        | LRU22        | 1      | 22    | Black  |        52.4 | M22759/16 |                |                                                             |
+| G105A      | LRU21          | 1        | GND3         | 1      | 18    | Black  |        61.1 | M22759/16 |                |                                                             |
+| G106A      | C2             | 4        | F7           | 2      | 24    | Black  |        38.4 | M22759/16 | 4AWG > 6in     |                                                             |
+| G107A      | LRU27          | 1        | GND3         | 1      | 24    | Black  |        49.5 | M22759/16 |                |                                                             |
+| G108A      | C2             | 3        | SW5          | 2      | 24    | Black  |       126.7 | M22759/16 | 22AWG          |                                                             |
+| G109A      | LRU33          | 1        | GND3         | 1      | 24    | Black  |        49.0 | M22759/16 |                |                                                             |
+| G10A       | GND2           | 1        | BT2          | 2      | 2     | Black  |        31.4 | M22759/16 | 4AWG           |                                                             |
+| G110A      | L23            | 2        | GND3         | 1      | 24    | Black  |        63.4 | M22759/16 |                |                                                             |
+| G111A      | L6             | 2        | GND3         | 1      | 24    | Black  |       139.8 | M22759/16 |                |                                                             |
+| G112A      | LRU81          | 1        | GND3         | 1      | 22    | Black  |        43.8 | M22759/16 |                |                                                             |
+| G113A      | GND3           | 1        | L7           | 2      | 22    | Black  |        72.3 | M22759/16 |                |                                                             |
+| G114A      | GND3           | 1        | L9           | 2      | 22    | Black  |        67.7 | M22759/16 |                |                                                             |
+| G115A      | LRU85          | 2        | GND3         | 1      | 18    | Black  |       333.0 | M22759/16 |                |                                                             |
+| G116A      | LRU89          | 2        | GND3         | 1      | 18    | Black  |       325.4 | M22759/16 |                |                                                             |
+| G117A      | LRU60          | 1        | GND3         | 1      | 22    | Black  |        52.8 | M22759/16 |                |                                                             |
+| G11A       | SW5            | 1        | GND3         | 1      | -99   | Black  |        53.5 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| G121A      | GND2           | 1        | LRU17        | 2      | 18    | Black  |        48.5 | M22759/16 |                |                                                             |
+| G122A      | LRU12          | 2        | GND2         | 1      | 18    | Black  |        50.3 | M22759/16 |                |                                                             |
+| G123A      | GND2           | 1        | LRU14        | 4      | 18    | Black  |        65.1 | M22759/16 |                |                                                             |
+| G124A      | GND2           | 1        | LRU15        | 4      | 18    | Black  |        80.5 | M22759/16 |                |                                                             |
+| G125A      | GND2           | 1        | LRU16        | 4      | 16    | Black  |       134.0 | M22759/16 |                |                                                             |
+| G126A      | GND2           | 1        | LRU20        | 1      | 18    | Black  |        93.3 | M22759/16 |                |                                                             |
+| G127A      | GND3           | 1        | LRU13        | 1      | 18    | Black  |        72.3 | M22759/16 |                |                                                             |
+| G128A      | LRU2           | 3        | R4           | 2      | -99   | Black  |        41.5 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| G129A      | LRU18          | 1        | GND3         | 1      | 22    | Black  |        46.9 | M22759/16 |                |                                                             |
+| G130A      | LRU23          | 1        | GND3         | 1      | 24    | Black  |        58.9 | M22759/16 |                |                                                             |
+| G21A       | SW2            | 1        | GND3         | 1      | -99   | Black  |        51.5 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| G22A       | GND1           | 1        | A2           | 2      | 6     | Black  |        54.8 | M22759/16 |                |                                                             |
+| G23A       | GND2           | 1        | LRU8         | 7      | 22    | Black  |        31.9 | M22759/16 | 20AWG          |                                                             |
+| G31A       | LRU2           | 6        | GND2         | 1      | -99   | Black  |        42.8 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| G32A       | C3             | 2        | GND2         | 1      | -99   | Black  |        41.8 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| G41A       | GND1           | 1        | M2           | 1      | 6     | Black  |        73.0 | M22759/16 |                |                                                             |
+| G42A       | C4             |          | GND2         | 1      | 24    | Black  |        28.9 | M22759/16 | 4AWG           |                                                             |
+| G43A       | LRU6           | 2        | GND2         | 1      | 22    | Black  |        30.1 | M22759/16 |                |                                                             |
+| G50A       | BT1            | 2        | GND3         | 1      | 16    | Black  |        31.1 | M22759/16 |                |                                                             |
+| G52A       | SW1            | 2        | GND3         | 1      | -99   | Black  |        43.9 | M22759/16 | 22AWG          | Cannot determine circuit current - missing load/source data |
+| G53A       | R2             | 3        | GND3         | 1      | -99   | Black  |        42.9 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| G54A       | LRU61          | 6        | GND3         | 1      | 24    | Black  |        52.4 | M22759/16 |                |                                                             |
+| G61A       | CON1           | 2        | GND2         | 1      | -99   | Black  |        58.9 | M22759/16 | 4AWG           | Cannot determine circuit current - missing load/source data |
+| G62A       | B1             | 1        | GND3         | 1      | -99   | Black  |        59.9 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| L10A       | FH3            | Val_A    | SW23         | 1      | 18    | White  |        65.4 | M22759/16 |                |                                                             |
+| L10B       | L7             | 1        | SW23         | 4      | 18    | White  |        78.6 | M22759/16 |                |                                                             |
+| L10C       | L9             | 1        | SW23         | 6      | 18    | White  |        76.0 | M22759/16 |                |                                                             |
+| L20A       | FH3            | Val_A    | SW24         | 2      | 16    | White  |        64.4 | M22759/16 |                |                                                             |
+| L20B       | LRU85          | 1        | GND2         | 1      | 16    | White  |       247.9 | M22759/16 |                |                                                             |
+| L20C       | LRU89          | 1        | GND2         | 1      | 16    | White  |       242.1 | M22759/16 |                |                                                             |
+| L21A       | LRU85          | 3        | LRU89        | 3      | 14    | White  |       361.6 | M22759/16 |                |                                                             |
+| L30A       | FH3            | Val_A    | SW24         | 5      | 16    | White  |        64.4 | M22759/16 |                |                                                             |
+| L30B       | LRU85          | 4        | SW24         | 4      | 16    | White  |       322.1 | M22759/16 |                |                                                             |
+| L30C       | LRU89          | 4        | SW24         | 4      | 16    | White  |       321.5 | M22759/16 |                |                                                             |
+| L40A       | LRU60          | 2        | FH3          | Val_A  | 22    | White  |        77.5 | M22759/16 |                |                                                             |
+| L50A       | FH1            | Val_A    | LRU81        | 2      | 22    | White  |       123.4 | M22759/16 |                |                                                             |
+| L52A       | LRU81          | 3        | R7           | 2      | 22    | White  |        25.8 | M22759/16 |                |                                                             |
+| L53A       | LRU81          | 4        | R7           | 1      | 22    | White  |        25.8 | M22759/16 |                |                                                             |
+| L54A       | L6             | 1        | LRU81        | 6      | 20    | White  |       124.0 | M22759/16 |                |                                                             |
+| L55A       | L23            | 1        | LRU81        | 5      | 20    | White  |        54.0 | M22759/16 |                |                                                             |
 | L99A       | SW23           | 2        | SW23         | 5      | -99   | White  |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| M10A       | SW8            | 2        | FH1          | Val_A  | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M10B       | SW8            | 1        | LRU14        | 1      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M11A       | SW8            | 3        | LRU14        | 3      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M20A       | SW7            | 2        | FH3          | Val_A  | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M20B       | SW7            | 1        | LRU17        | 1      | 18    | Yellow |        24.0 | M22759/16 | 22AWG          |                                                             |
-| M21A       | SW7            | 4        | LRU12        | 1      | 18    | Yellow |        24.0 | M22759/16 | 22AWG          |                                                             |
-| M30A       | SW9            | 2        | FH3          | Val_A  | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M30B       | SW9            | 1        | LRU4         | 2      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M30C       | LRU4           | 1        | LRU15        | 1      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M31A       | SW9            | 3        | LRU15        | 3      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M40A       | SW10           | 2        | FH3          | Val_A  | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M40B       | SW10           | 1        | LRU16        | 1      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M41A       | SW10           | 3        | LRU16        | 3      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M50A       | SW6            | 2        | FH3          | Val_A  | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M50B       | SW6            | 1        | LRU20        | 2      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M60A       | B4             | 1        | FH3          | Val_A  | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M60B       | B4             | 2        | LRU13        | 2      | 18    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M71A       | SW12           | 2        | FH3          | Val_A  | 22    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M71B       | SW12           | 3        | B6           | 1      | 22    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M71C       | B6             | 2        | LRU19        | 2      | 22    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M72A       | SW12           | 5        | FH3          | Val_A  | 22    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M72B       | B7             | 1        | SW12         | 6      | 22    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M72C       | B7             | 2        | LRU18        | 2      | 22    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M80A       | LRU23          | 2        | FH3          | Val_A  | 24    | Yellow |        24.0 | M22759/16 |                |                                                             |
-| M99A       | FH3            | Val_A    | SW7          | 2      | -99   | Yellow |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P10A       | BT2            | 1        | C2           | 1      | 24    | Red    |        24.0 | M22759/16 | 4AWG           |                                                             |
+| M10A       | SW8            | 2        | FH1          | Val_A  | 18    | Yellow |       113.8 | M22759/16 |                |                                                             |
+| M10B       | SW8            | 1        | LRU14        | 1      | 18    | Yellow |        92.0 | M22759/16 |                |                                                             |
+| M11A       | SW8            | 3        | LRU14        | 3      | 18    | Yellow |        92.0 | M22759/16 |                |                                                             |
+| M20A       | FH3            | Val_A    | SW7          | 2      | 18    | Yellow |        66.5 | M22759/16 |                |                                                             |
+| M20B       | SW7            | 1        | LRU17        | 1      | 18    | Yellow |       124.6 | M22759/16 | 22AWG          |                                                             |
+| M21A       | LRU12          | 1        | SW7          | 4      | 18    | Yellow |       126.0 | M22759/16 | 22AWG          |                                                             |
+| M30A       | FH3            | Val_A    | SW9          | 2      | 18    | Yellow |        50.2 | M22759/16 |                |                                                             |
+| M30B       | LRU4           | 2        | SW9          | 1      | 18    | Yellow |        25.9 | M22759/16 |                |                                                             |
+| M30C       | LRU15          | 1        | LRU4         | 1      | 18    | Yellow |        70.8 | M22759/16 |                |                                                             |
+| M31A       | LRU15          | 3        | SW9          | 3      | 18    | Yellow |        69.5 | M22759/16 |                |                                                             |
+| M40A       | FH3            | Val_A    | SW10         | 2      | 18    | Yellow |        51.2 | M22759/16 |                |                                                             |
+| M40B       | SW10           | 1        | LRU16        | 1      | 18    | Yellow |        41.4 | M22759/16 |                |                                                             |
+| M41A       | SW10           | 3        | LRU16        | 3      | 18    | Yellow |        41.4 | M22759/16 |                |                                                             |
+| M50A       | SW6            | 2        | FH3          | Val_A  | 18    | Yellow |        76.5 | M22759/16 |                |                                                             |
+| M50B       | SW6            | 1        | LRU20        | 2      | 18    | Yellow |        85.0 | M22759/16 |                |                                                             |
+| M60A       | FH3            | Val_A    | B4           | 1      | 18    | Yellow |        65.6 | M22759/16 |                |                                                             |
+| M60B       | B4             | 2        | LRU13        | 2      | 18    | Yellow |        78.8 | M22759/16 |                |                                                             |
+| M71A       | FH3            | Val_A    | SW12         | 2      | 20    | Yellow |        51.2 | M22759/16 |                |                                                             |
+| M71B       | B6             | 1        | SW12         | 3      | 20    | Yellow |        43.1 | M22759/16 |                |                                                             |
+| M71C       | LRU19          | 2        | B6           | 2      | 20    | Yellow |       221.7 | M22759/16 |                |                                                             |
+| M72A       | FH3            | Val_A    | SW12         | 5      | 22    | Yellow |        51.2 | M22759/16 |                |                                                             |
+| M72B       | B7             | 1        | SW12         | 6      | 22    | Yellow |        44.1 | M22759/16 |                |                                                             |
+| M72C       | LRU18          | 2        | B7           | 2      | 22    | Yellow |        58.9 | M22759/16 |                |                                                             |
+| M80A       | FH3            | Val_A    | LRU23        | 2      | 24    | Yellow |        60.0 | M22759/16 |                |                                                             |
+| M99A       | FH3            | Val_A    | SW7          | 2      | -99   | Yellow |        66.5 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P10A       | C2             | 1        | BT2          | 1      | 24    | Red    |        38.1 | M22759/16 | 4AWG           |                                                             |
 | P11A       | C2             | 2        | C2           | 1      | 24    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P11B       | SW5            | 2        | C2           | 3      | 24    | Red    |        24.0 | M22759/16 | 22AWG          |                                                             |
-| P13A       | FH3            | 1        | C2           | 4      | 24    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P14A       | FH1            | 1        | C2           | 1      | 24    | Red    |        24.0 | M22759/16 | 14 AWG (>6 in) |                                                             |
-| P20A       | F3             | 1        | C2           | 4      | 20    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P20B       | F3             | 2        | B3           | 1      | 20    | Red    |        24.0 | M22759/16 | 18AWG          |                                                             |
-| P20D       | SW5            | 4        | LRU8         | 6      | 20    | Red    |        24.0 | M22759/16 | 20AWG          |                                                             |
-| P22A       | LRU8           | 5        | D7           | 1      | 20    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P22B       | D7             | 2        | LRU8         | 3      | 20    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P22C       | F7             | 1        | LRU8         | 3      | 20    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P22D       | F7             | 2        | C2           | 4      | 20    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P23A       | A2             | 1        | LRU8         | 4      | 22    | Red    |        24.0 | M22759/16 | 20AWG          |                                                             |
-| P24A       | R5             | 2        | A2           | 3      | 24    | Red    |        24.0 | M22759/16 | 4AWG           |                                                             |
-| P24B       | F6             | 2        | R5           | 1      | 24    | Red    |        24.0 | M22759/16 | 4AWG           |                                                             |
-| P24C       | F6             | 1        | C2           | 4      | 24    | Red    |        24.0 | M22759/16 | > 6in          |                                                             |
-| P30A       | F2             | 1        | C2           | 1      | 24    | Red    |        24.0 | M22759/16 | 14 AWG (>6 in) |                                                             |
-| P30B       | F2             | 2        | R4           | 1      | 24    | Red    |        24.0 | M22759/16 | 14AWG          |                                                             |
-| P30C       | R4             | 2        | LRU2         | 3      | 24    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P31A       | A1             | 2        | LRU2         | 2      | 18    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P32A       | LRU2           | 5        | A1           | 1      | 18    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P33A       | SW2            | 2        | LRU2         | 1      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P34A       | LRU2           | 4        | C3           | 1      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P51A       | FH1            | Val_A    | R2           | 5      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P52A       | BT1            | 1        | F1           | 2      | 16    | Red    |        24.0 | M22759/16 | 14AWG          |                                                             |
-| P52B       | F1             | 1        | R1           | 5      | 16    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P52C       | R1             | 2        | FH2          | 11     | 16    | Red    |        24.0 | M22759/16 | 14AWG          |                                                             |
+| P13A       | FH3            | 1        | D3           | 2      | -99   | Red    |        40.9 | M22759/16 | 4AWG > 6in     | Cannot determine circuit current - missing load/source data |
+| P14A       | FH1            | 1        | C2           | 1      | 24    | Red    |        50.0 | M22759/16 | 14 AWG (>6 in) |                                                             |
+| P20A       | F3             | 1        | D3           | 2      | 20    | Red    |        40.0 | M22759/16 | 4AWG > 6in     |                                                             |
+| P20B       | F3             | 2        | B3           | 1      | 20    | Red    |        68.8 | M22759/16 | 18AWG          |                                                             |
+| P20D       | SW5            | 4        | LRU8         | 6      | 20    | Red    |       124.1 | M22759/16 | 20AWG          |                                                             |
+| P22A       | D7             | 1        | LRU8         | 5      | 20    | Red    |        25.0 | M22759/16 |                |                                                             |
+| P22B       | D7             | 2        | LRU8         | 3      | 20    | Red    |        25.0 | M22759/16 |                |                                                             |
+| P22C       | F7             | 1        | LRU8         | 3      | 20    | Red    |        25.0 | M22759/16 |                |                                                             |
+| P22D       | C2             | 4        | F7           | 2      | 20    | Red    |        38.4 | M22759/16 | 4AWG > 6in     |                                                             |
+| P23A       | A2             | 1        | LRU8         | 4      | 22    | Red    |        96.8 | M22759/16 | 20AWG          |                                                             |
+| P24A       | A2             | 3        | R5           | 2      | 24    | Red    |        89.9 | M22759/16 | 4AWG           |                                                             |
+| P24B       | R5             | 1        | F6           | 2      | 24    | Red    |        25.1 | M22759/16 | 4AWG           |                                                             |
+| P24C       | C4             |          | F6           | 1      | 24    | Red    |        32.8 | M22759/16 | > 6in 4AWG     |                                                             |
+| P30A       | C2             | 1        | F2           | 1      | 24    | Red    |        33.4 | M22759/16 | 14 AWG (>6 in) |                                                             |
+| P30B       | R4             | 1        | F2           | 2      | 24    | Red    |        26.0 | M22759/16 | 14AWG          |                                                             |
+| P30C       | LRU2           | 3        | R4           | 2      | 24    | Red    |        41.5 | M22759/16 |                |                                                             |
+| P31A       | LRU2           | 2        | A1           | 2      | 18    | Red    |        54.9 | M22759/16 |                |                                                             |
+| P32A       | LRU2           | 5        | A1           | 1      | 18    | Red    |        54.9 | M22759/16 |                |                                                             |
+| P33A       | LRU2           | 1        | SW2          | 2      | -99   | Red    |       110.8 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P34A       | C3             | 1        | LRU2         | 4      | -99   | Red    |        25.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P51A       | FH1            | Val_A    | R2           | 5      | 16    | Red    |       141.3 | M22759/16 |                |                                                             |
+| P51B       | R2             | 1        | BT1          | 1      | 16    | Red    |        35.8 | M22759/16 | 14AWG          |                                                             |
+| P52A       | F1             | 2        | BT1          | 1      | 16    | Red    |        33.3 | M22759/16 |                |                                                             |
+| P52B       | R1             | 5        | F1           | 1      | 16    | Red    |        25.3 | M22759/16 |                |                                                             |
+| P52C       | R1             | 2        | FH2          | 11     | 16    | Red    |        29.5 | M22759/16 | 14AWG          |                                                             |
 | P53A       | R1             | 3        | R1           | 5      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P53B       | R1             | 4        | SW1          | 1      | -99   | Red    |        24.0 | M22759/16 | 22AWG          | Cannot determine circuit current - missing load/source data |
-| P54A       | D3             | 2        | C2           | 4      | 24    | Red    |        24.0 | M22759/16 |                |                                                             |
-| P54B       | D3             | 1        | FH2          | 1      | 24    | Red    |        24.0 | M22759/16 | 20AWG >6 IN    |                                                             |
-| P55A       | LRU61          | 4        | FH2          | 1      | 24    | Red    |        24.0 | M22759/16 | 20AWG          |                                                             |
-| P56A       | B3             | 2        | SW5          | 5      | -99   | Red    |        24.0 | M22759/16 | 20AWG 22AWG    | Cannot determine circuit current - missing load/source data |
-| P57A       | D5             | 1        | LRU61        | 3      | 24    | Red    |        24.0 | M22759/16 | 22AWG          |                                                             |
-| P61B       | C1             | 1        | C2           | 1      | 24    | Red    |        24.0 | M22759/16 | 4AWG           |                                                             |
-| P62A       | C1             | 4        | CON1         | 2      | -99   | Red    |        24.0 | M22759/16 | 4AWG           | Cannot determine circuit current - missing load/source data |
-| P62B       | D1             | 2        | C1           | 2      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P62C       | B1             | 2        | LRU1         | 2      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P63A       | C1             | 3        | LRU1         | 2      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
-| P64A       | LRU1           | 1        | C1           | 2      | -99   | Red    |        24.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P53B       | R1             | 4        | SW1          | 1      | -99   | Red    |        57.2 | M22759/16 | 22AWG          | Cannot determine circuit current - missing load/source data |
+| P54A       | FH3            | 1        | D3           | 2      | -99   | Red    |        40.9 | M22759/16 | 4AWG > 6in     | Cannot determine circuit current - missing load/source data |
+| P54B       | D3             | 1        | FH2          | 1      | -99   | Red    |        24.6 | M22759/16 | 20AWG >6 IN    | Cannot determine circuit current - missing load/source data |
+| P55A       | LRU61          | 4        | FH2          | 1      | 24    | Red    |        65.0 | M22759/16 | 20AWG          |                                                             |
+| P56A       | SW5            | 5        | B3           | 2      | -99   | Red    |        37.1 | M22759/16 | 20AWG 22AWG    | Cannot determine circuit current - missing load/source data |
+| P57A       | D5             | 1        | LRU61        | 3      | 24    | Red    |        25.4 | M22759/16 | 22AWG          |                                                             |
+| P61B       | C2             | 1        | C1           | 1      | 24    | Red    |        29.0 | M22759/16 | 4AWG           |                                                             |
+| P62A       | CON1           | 2        | C1           | 4      | -99   | Red    |        66.6 | M22759/16 | 4AWG           | Cannot determine circuit current - missing load/source data |
+| P62B       | D1             | 2        | C1           | 2      | -99   | Red    |        24.8 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P62C       | B1             | 2        | LRU1         | 2      | -99   | Red    |       141.7 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P63A       | LRU1           | 2        | C1           | 3      | -99   | Red    |        25.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
+| P64A       | LRU1           | 1        | C1           | 2      | -99   | Red    |        25.0 | M22759/16 |                | Cannot determine circuit current - missing load/source data |
 | P99A       | D2             | 2        | C2           | 3      | 6     | Red    |        24.0 | M22759/16 |                |                                                             |
 | P99B       | D2             | 1        | C2           | 1      | 6     | Red    |        24.0 | M22759/16 |                |                                                             |
-| P99C       | C4             |          | M2           | 2      | 6     | Red    |        24.0 | M22759/16 | 4AWG           |                                                             |
+| P99C       | C4             |          | M2           | 2      | 6     | Red    |        85.6 | M22759/16 | 4AWG           |                                                             |
 
 ---
 
 ## Component BOM
 Complete component bill of materials with electrical specifications.
 
-| Reference | Value                  | Description                                           | Datasheet                                     | Type | Amps  | FS  | WL  | BL  |
-| --------- | ---------------------- | ----------------------------------------------------- | --------------------------------------------- | ---- | ----: | --: | --: | --: |
-| A1        | val A                  | Alternator, Alt                                       | SD8                                           | S    |   8.0 | 0.0 | 0.0 | 0.0 |
-| A2        | val A                  | Alternator, Main                                      | LX60                                          | S    |  60.0 | 0.0 | 0.0 | 0.0 |
-| B1        | 2A                     | Gnd Pwr Switch Breaker                                | 11-03936                                      | R    |   5.0 | 0.0 | 0.0 | 0.0 |
-| B3        | 5A                     | ALT FLD                                               | CB5                                           | R    |   5.0 | 0.0 | 0.0 | 0.0 |
-| B4        | val A                  | Pitot Heat                                            | Switch Breaker                                | R    |   9.9 | 0.0 | 0.0 | 0.0 |
-| B6        | 3A                     | AP Servo                                              | CB3                                           | R    |   3.0 | 0.0 | 0.0 | 0.0 |
-| B7        | 3A                     | AP Servo                                              | CB3                                           | R    |   3.0 | 0.0 | 0.0 | 0.0 |
-| BT1       | 12                     | Brownout Battery                                      | EXT104/EBBS                                   | S    |  12.0 | 0.0 | 0.0 | 0.0 |
-| BT2       | Main Battery           | Main Battery                                          | ETX900-VNT                                    | S    | 840.0 | 0.0 | 0.0 | 0.0 |
-| C1        | ~                      | Gnd Power Contactor                                   | S701-1                                        | R    |  60.0 | 0.0 | 0.0 | 0.0 |
-| C2        | Desc                   | Battery Contactor                                     | S701-1                                        | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| C3        | 20-50kFd/15-40V        | Filter Capacitor                                      | S8007-3                                       | R    |  40.0 | 0.0 | 0.0 | 0.0 |
-| C4        | Starter Contactor      | S702-1                                                | Contactor 3 Terminal with Spike Catcher Diode | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| CON1      | ~                      | Gnd Receptacle                                        |                                               | R    | 100.0 | 0.0 | 0.0 | 0.0 |
-| D1        | D_Small                | Diode, small symbol                                   | ~                                             | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| D2        | 1N5400                 | Diode, small symbol                                   | 1N5400                                        | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| D3        | NOTE 12                | Diode                                                 | ~                                             | R    |  30.0 | 0.0 | 0.0 | 0.0 |
-| D5        | RED                    | Light emitting diode                                  | LED, RED                                      | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| D7        | RED                    | Light emitting diode                                  | LED, RED                                      | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| F1        | 20A                    | Inline Fuse                                           | IFH-2                                         | R    |  10.0 | 0.0 | 0.0 | 0.0 |
-| F2        | 20A                    | Inline Fuse                                           | IFH-2                                         | R    |  30.0 | 0.0 | 0.0 | 0.0 |
-| F3        | 22AWG                  | FUSELINK                                              | Fuse                                          | R    |   5.0 | 0.0 | 0.0 | 0.0 |
-| F4        | 24AWG                  | Fuse Link                                             | FLK-1                                         | R    |   3.0 | 0.0 | 0.0 | 0.0 |
-| F5        | 24AWG                  | Fuse Link                                             | FLK-1                                         | R    |   3.0 | 0.0 | 0.0 | 0.0 |
-| F6        | 60A                    | ANL Current Limiter                                   | C905-60/C903-2                                | R    |  60.0 | 0.0 | 0.0 | 0.0 |
-| F7        | 1A                     | Inline Fuse                                           | IFH-2                                         | R    |  10.0 | 0.0 | 0.0 | 0.0 |
-| FH1       | 60A                    | Battery Bus                                           | FH6                                           | R    |  60.0 | 0.0 | 0.0 | 0.0 |
-| FH2       | 60A                    | Endurance Bus                                         | FH10                                          | R    |  60.0 | 0.0 | 0.0 | 0.0 |
-| FH3       | 60A                    | Main Bus                                              | FH-20                                         | R    |  60.0 | 0.0 | 0.0 | 0.0 |
-| FH6       | G3X Bus                |                                                       | FH8                                           | R    |  40.0 | 0.0 | 0.0 | 0.0 |
-| GND1      | GND1                   | Eng                                                   |                                               |      |       | 0.0 | 0.0 | 0.0 |
-| GND2      | GND2                   | Fwl                                                   |                                               |      |       | 0.0 | 0.0 | 0.0 |
-| GND3      | GND3                   | Pnl                                                   |                                               |      |       | 0.0 | 0.0 | 0.0 |
-| L23       | ~                      | Interior Lights                                       |                                               | L    |   2.0 | 0.0 | 0.0 | 0.0 |
-| L6        | ~                      | Interior Lights                                       |                                               | L    |   2.0 | 0.0 | 0.0 | 0.0 |
-| L7        | ~                      | Landing Light                                         |                                               | L    |   4.0 | 0.0 | 0.0 | 0.0 |
-| L9        | ~                      | Taxi Light                                            |                                               | L    |   4.0 | 0.0 | 0.0 | 0.0 |
-| LRU1      | val A                  | Crowbar Overvoltage Module                            | OTM-OVPD-2019/OVM-14                          | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| LRU10     | val A                  | VHF Comm2                                             | GTR 20                                        | L    |   7.5 | 0.0 | 0.0 | 0.0 |
-| LRU11     | val A                  | AutoPilot Panel                                       | GMC 507                                       | L    |   0.2 | 0.0 | 0.0 | 0.0 |
-| LRU12     | val A                  | Elec Prime Valve                                      | Elec Prime Valve                              | L    |   9.9 | 0.0 | 0.0 | 0.0 |
-| LRU13     | val A                  | Pitot Probe                                           | TBD                                           | L    |   9.9 | 0.0 | 0.0 | 0.0 |
-| LRU14     | val A                  | Canopy Actuator                                       | Linear Actuator, Canopy                       | L    |   9.9 | 0.0 | 0.0 | 0.0 |
-| LRU15     | val A                  | Landing Brake Actuator                                | Linear Actuator, Lndg Brake                   | L    |   9.9 | 0.0 | 0.0 | 0.0 |
-| LRU16     | val A                  | Nose Gear Actuator                                    | Linear Actuator, Nose Gear                    | L    |   9.9 | 0.0 | 0.0 | 0.0 |
-| LRU17     | val A                  | Fuel Boost Pump                                       | PN 2090255 Aux Pump                           | L    |  10.0 | 0.0 | 0.0 | 0.0 |
-| LRU18     | val A                  | Pitch Servo                                           | GSA 28                                        | L    |   2.8 | 0.0 | 0.0 | 0.0 |
-| LRU19     | val A                  | Roll Servo                                            | GSA 28                                        | L    |   2.8 | 0.0 | 0.0 | 0.0 |
-| LRU2      | ~                      | Voltage Regulator                                     | PMR1D                                         | R    |  10.0 | 0.0 | 0.0 | 0.0 |
-| LRU20     | val A                  | Seat Heater                                           | TBD                                           | L    |   9.9 | 0.0 | 0.0 | 0.0 |
-| LRU21     | val A                  | VHF Comm1                                             | GTR 20                                        | L    |   7.5 | 0.0 | 0.0 | 0.0 |
-| LRU22     | val A                  | Audio Pnl w/ USB                                      | GMA 245R (maybe)                              | L    |   2.3 | 0.0 | 0.0 | 0.0 |
-| LRU23     | val A                  | Panel Fan                                             | Computer Case Fan with Roll Own controller    | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| LRU24     | val A                  | Nav Intrfce                                           | GAD 29                                        | L    |   0.2 | 0.0 | 0.0 | 0.0 |
-| LRU25     | val A                  | Magnetometer                                          | GMU 11                                        | L    |   0.1 | 0.0 | 0.0 | 0.0 |
-| LRU26     | val A                  | ASI                                                   | G5                                            | L    |   0.2 | 0.0 | 0.0 | 0.0 |
-| LRU27     | val A                  | ADAHRS                                                | GSU 25C                                       | L    |   0.2 | 0.0 | 0.0 | 0.0 |
-| LRU28     | val A                  | GPS Nav / COM                                         | GNC 355                                       | L    |   1.8 | 0.0 | 0.0 | 0.0 |
-| LRU29     | val A                  | HSI                                                   | G5                                            | L    |   0.2 | 0.0 | 0.0 | 0.0 |
-| LRU3      | val A                  | Shunt 2                                               | GEA 24                                        | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| LRU32     | val A                  | EIS                                                   | GEA 24                                        | L    |   0.4 | 0.0 | 0.0 | 0.0 |
-| LRU33     | val A                  | PFD 10in                                              | GDU 460                                       | L    |   2.0 | 0.0 | 0.0 | 0.0 |
-| LRU4      | val A                  | Auto Retract                                          | TBD                                           | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| LRU5      | val A                  | Shunt 2                                               | GEA 24                                        | L    |   0.1 | 0.0 | 0.0 | 0.0 |
-| LRU6      | val A                  | ELEC IGNITION                                         | Plasma III                                    | L    |   5.0 | 0.0 | 0.0 | 0.0 |
-| LRU60     | val A                  | USB Charger                                           | GSB 15                                        | L    |   5.0 | 0.0 | 0.0 | 0.0 |
-| LRU61     | val A                  | Low Voltage Monitor Module                            | BC207/AEC9005-101                             | L    |   1.0 | 0.0 | 0.0 | 0.0 |
-| LRU7      | val A                  | Non-Impulse Magnito                                   | Magneto, Non-Imulse                           | L    |  10.0 | 0.0 | 0.0 | 0.0 |
-| LRU8      | ~                      | Voltage Regulator                                     | LRE1B-14                                      | L    |   5.0 | 0.0 | 0.0 | 0.0 |
-| LRU81     | ~                      | Lighting Controller Powersupply                       |                                               | L    |   4.0 | 0.0 | 0.0 | 0.0 |
-| LRU85     | val A                  |                                                       | BLAZE 1R                                      | L    |   3.0 | 0.0 | 0.0 | 0.0 |
-| LRU89     | val A                  |                                                       | Blaze 1G                                      | L    |   3.0 | 0.0 | 0.0 | 0.0 |
-| LRUTBD1   | val A                  | GPS Rcvr/Antenna                                      | GPS 20A                                       | L    |   TBD | 0.0 | 0.0 | 0.0 |
-| LRUTBD2   | val A                  | ADS-B Transponder                                     | GTX 45R                                       | L    |   TBD | 0.0 | 0.0 | 0.0 |
-| M2        | Starter                | STARTER                                               | BCS206-149-12                                 | L    | 200.0 | 0.0 | 0.0 | 0.0 |
-| PWR_FLAG  | PWR_FLAG               | Special symbol for telling ERC where power comes from | ~                                             |      |       | 0.0 | 0.0 | 0.0 |
-| R1        | Alt Feed Relay         | Relay, SPDT 12V 20A with Diode                        | S704-1, 1N4005                                | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| R2        | Brownout Battery Relay | Relay, SPDT 12V 20A                                   | S704-1                                        | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| R4        | 50MV/10A               | Shunt                                                 | S870-20                                       | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| R5        | ~                      | Shunt                                                 | TBD                                           | R    |  60.0 | 0.0 | 0.0 | 0.0 |
-| R7        | R_Variable_US          | Potentiometer Switch                                  | POT SWITCH TBD                                | R    |   4.0 | 0.0 | 0.0 | 0.0 |
-| SW1       | E-Bus Alt Feed         | ON-none-ON                                            | S700-1-3                                      | R    |  15.0 | 0.0 | 0.0 | 0.0 |
-| SW10      | Nose Gear              | (ON)-OFF-(ON)                                         | S700-1-7                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW11      | G3X                    | OFF-none-ON                                           | S700-1-2                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW12      | AP SERVOS              | OFF-none-ON                                           | S700-2-2                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW13      | E IGN                  | (ON)-ON-ON                                            | S700-2-50                                     | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW14      | M IGN                  | ON-none-ON                                            | S700-2-3                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW2       | Aux Alt Off/On         | ON-none-ON                                            | S700-1-3                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW23      | LANDING LIGHT TAXI     | ON-ON-ON                                              | S700-2-10                                     | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW24      | Desc                   | ON-ON-ON                                              | S700-2-10                                     | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW5       | BATT/ALT DC POWER      | ON-none-ON                                            | S700-2-3                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW6       | Heater                 | OFF-none-ON                                           | S700-1-2                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW7       | Fuel Boost             | (ON)-ON-ON                                            | S700-2-50                                     | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW8       | Canopy                 | (ON)-OFF-(ON)                                         | S700-1-7                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| SW9       | Lnd Brake              | (ON)-OFF-(ON)                                         | S700-1-7                                      | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| W1        | ~                      | Connection to Shield of Shielded Wire                 |                                               | R    |  20.0 | 0.0 | 0.0 | 0.0 |
-| W2        | ~                      | Connection to Shield of Shielded Wire                 |                                               | R    |  20.0 | 0.0 | 0.0 | 0.0 |
+| Reference | Value                  | Description                                           | Datasheet                                     | Type | Amps  | FS    | WL   | BL     |
+| --------- | ---------------------- | ----------------------------------------------------- | --------------------------------------------- | ---- | ----: | ----: | ---: | -----: |
+| A1        | val A                  | Alternator, Alt                                       | SD8                                           | S    |   8.0 | 138.9 | 13.0 |    3.5 |
+| A2        | val A                  | Alternator, Main                                      | LX60                                          | S    |  60.0 | 167.2 | 15.1 |    8.3 |
+| B1        | 2A                     | Gnd Pwr Switch Breaker                                | 11-03936                                      | R    |   5.0 |  41.3 | 19.6 |   15.6 |
+| B3        | 5A                     | ALT FLD                                               | CB5                                           | R    |   5.0 |  41.3 | 24.9 |   -5.2 |
+| B4        | val A                  | Pitot Heat                                            | Switch Breaker                                | R    |   9.9 |  41.3 | 22.9 |   -3.5 |
+| B6        | 3A                     | AP Servo                                              | CB3                                           | R    |   3.0 |  41.3 | 23.9 |   -7.2 |
+| B7        | 3A                     | AP Servo                                              | CB3                                           | R    |   3.0 |  41.3 | 24.9 |   -7.2 |
+| BT1       | 12                     | Brownout Battery                                      | EXT104/EBBS                                   | S    |  12.0 |  44.0 |  4.2 |   -5.9 |
+| BT2       | Main Battery           | Main Battery                                          | ETX900-VNT                                    | S    | 840.0 | 121.1 | 27.2 |    1.4 |
+| C1        | ~                      | Gnd Power Contactor                                   | S701-1                                        | R    |  60.0 | 123.4 | 31.0 |   -7.6 |
+| C2        | Desc                   | Battery Contactor                                     | S701-1                                        | L    |   1.0 | 123.4 | 28.0 |   -9.6 |
+| C3        | 20-50kFd/15-40V        | Filter Capacitor                                      | S8007-3                                       | R    |  40.0 | 122.6 | 23.3 |    8.8 |
+| C4        | Starter Contactor      | S702-1                                                | Contactor 3 Terminal with Spike Catcher Diode | L    |   1.0 | 123.4 | 28.0 |   -5.6 |
+| CON1      | ~                      | Gnd Receptacle                                        |                                               | R    | 100.0 | 118.0 | 18.9 |   17.5 |
+| D1        | D_Small                | Diode, small symbol                                   | ~                                             | R    |  20.0 | 123.0 | 31.0 |   -8.0 |
+| D2        | 1N5400                 | Diode, small symbol                                   | 1N5400                                        | R    |  20.0 | 123.4 | 28.0 |   -9.6 |
+| D3        | NOTE 12                | Diode                                                 | ~                                             | R    |  30.0 |  47.0 |  1.0 |   -6.0 |
+| D5        | LV EBUS WARN           | Light emitting diode                                  | LED, RED                                      | L    |   1.0 |  41.3 | 22.9 |    6.0 |
+| D7        | RED                    | Light emitting diode                                  | LED, RED                                      | R    |  10.0 | 123.0 | 34.4 |   -2.0 |
+| F1        | 20A                    | Inline Fuse                                           | IFH-2                                         | R    |  10.0 |  47.0 |  2.0 |  -10.0 |
+| F2        | 20A                    | Inline Fuse                                           | IFH-2                                         | R    |  30.0 | 123.3 | 27.4 |   -0.9 |
+| F3        | 22AWG                  | FUSELINK                                              | Fuse                                          | R    |   5.0 |  48.0 |  1.0 |    9.0 |
+| F4        | 24AWG                  | Fuse Link                                             | FLK-1                                         | R    |   3.0 | 123.0 | 29.0 |   -1.0 |
+| F5        | 24AWG                  | Fuse Link                                             | FLK-1                                         | R    |   3.0 | 123.0 | 29.0 |   -2.0 |
+| F6        | 60A                    | ANL Current Limiter                                   | C905-60/C903-2                                | R    |  60.0 | 123.2 | 30.4 |    0.6 |
+| F7        | 1A                     | Inline Fuse                                           | IFH-2                                         | R    |  10.0 | 123.0 | 34.4 |   -2.0 |
+| FH1       | 60A                    | Battery Bus                                           | FH6                                           | R    |  60.0 | 123.2 | 22.8 |   11.0 |
+| FH2       | 60A                    | Endurance Bus                                         | FH10                                          | R    |  60.0 |  47.3 |  1.2 |   -5.9 |
+| FH3       | 60A                    | Main Bus                                              | FH-20                                         | R    |  60.0 |  48.3 |  1.2 |    9.4 |
+| FH6       | G3X Bus                |                                                       | FH8                                           | R    |  40.0 |  35.0 | 20.0 |   -4.0 |
+| GND1      | GND1                   | Eng                                                   |                                               |      |       | 140.7 | 18.0 |    9.7 |
+| GND2      | GND2                   | Fwl                                                   |                                               |      |       | 122.3 | 29.1 |   -2.9 |
+| GND3      | GND3                   | Pnl                                                   |                                               |      |       |  39.6 |  4.8 |   -3.8 |
+| L23       | INTR LGHT LED FWD      | Interior Lights                                       |                                               | L    |   2.0 |  41.0 | 19.0 |   20.0 |
+| L6        | INTR LED AFT           | Interior Lights                                       |                                               | L    |   2.0 | 124.0 | 21.0 |  -19.0 |
+| L7        | ~                      | Landing Light                                         |                                               | L    |   4.0 |   3.9 | 11.3 |    2.3 |
+| L9        | ~                      | Taxi Light                                            |                                               | L    |   4.0 |   3.9 | 11.3 |   -2.3 |
+| LRU1      | val A                  | Crowbar Overvoltage Module                            | OTM-OVPD-2019/OVM-14                          | R    |  20.0 | 123.4 | 32.0 |   -7.6 |
+| LRU10-C   | val A                  | VHF Comm2                                             | GNC 355 Comm                                  | L    |   6.0 |  30.3 | 19.7 |    0.4 |
+| LRU10-N   | val A                  | GPS Navigator                                         | GNC 355 Nav                                   | L    |   0.6 |  32.4 | 16.2 |    0.9 |
+| LRU11     | val A                  | AutoPilot Panel                                       | GMC 507                                       | L    |   0.2 |  37.7 | 22.0 |    1.9 |
+| LRU12     | val A                  | Elec Prime Valve                                      | Elec Prime Valve                              | L    |   9.9 | 122.0 | 10.0 |    4.0 |
+| LRU13     | val A                  | Pitot Probe                                           | Space Age Pitot                               | L    |   9.9 |   3.9 | 11.3 |    2.3 |
+| LRU14     | val A                  | Canopy Actuator                                       | Linear Actuator, Canopy                       | L    |   9.9 |  88.7 | 23.0 |   -1.5 |
+| LRU15     | val A                  | Landing Brake Actuator                                | Linear Actuator, Lndg Brake                   | L    |   9.9 |  81.6 | 14.7 |   -1.5 |
+| LRU16     | val A                  | Nose Gear Actuator                                    | Linear Actuator, Nose Gear                    | L    |   9.9 |  30.6 | 14.5 |    0.8 |
+| LRU17     | val A                  | Fuel Boost Pump                                       | PN 2090255 Aux Pump                           | L    |  10.0 | 122.2 |  9.6 |    2.0 |
+| LRU18     | val A                  | Pitch Servo                                           | GSA 28                                        | L    |   2.8 |  34.8 |  8.0 |  -18.7 |
+| LRU19     | val A                  | Roll Servo                                            | GSA 28                                        | L    |   2.8 | 162.2 | 13.8 |   59.5 |
+| LRU2      | ~                      | Voltage Regulator                                     | PMR1D                                         | R    |  10.0 | 122.6 | 22.3 |    8.8 |
+| LRU20     | val A                  | Seat Heater                                           | TBD                                           | L    |   9.9 |  75.0 |  9.0 |   -1.0 |
+| LRU21     | val A                  | VHF Comm1                                             | GTR 20                                        | L    |   7.5 |  30.2 | 18.9 |  -17.4 |
+| LRU22     | val A                  | Audio Pnl w/ USB                                      | GMA 245                                       | L    |   2.3 |  30.2 | 19.7 |    0.3 |
+| LRU23     | val A                  | Panel Fan                                             | Computer Case Fan with Roll Own controller    | L    |   1.0 |  33.9 | 21.8 |    8.4 |
+| LRU24     | val A                  | Nav Intrfce                                           | GAD 29                                        | L    |   0.2 |  35.3 |  1.3 |   12.2 |
+| LRU25     | val A                  | Magnetometer                                          | GMU 11                                        | L    |   0.1 | 166.0 | 16.0 |  -62.0 |
+| LRU26     | val A                  | Backup ASI                                            | G5                                            | L    |   0.2 |  37.5 | 21.0 |   -6.0 |
+| LRU27     | val A                  | ADAHRS                                                | GSU 25                                        | L    |   0.2 |  24.3 |  3.4 |    5.0 |
+| LRU28     | val A                  | Xponder                                               | GTX 45R                                       | L    |   1.3 |  32.0 | 20.0 |   -5.0 |
+| LRU3      | val A                  | Shunt 2                                               | GEA 24                                        | L    |   1.0 | 121.8 | 26.9 |   10.0 |
+| LRU32     | val A                  | EIS                                                   | GEA 24                                        | L    |   0.4 | 121.8 | 29.8 |   10.0 |
+| LRU33     | val A                  | PFD 10in                                              | GDU 460                                       | L    |   2.0 |  38.5 | 18.9 |    6.0 |
+| LRU4      | val A                  | Auto Retract                                          | TBD                                           | R    |  20.0 |  40.0 | 10.0 |   -1.0 |
+| LRU5      | val A                  | Shunt 2                                               | GEA 24                                        | L    |   0.1 | 121.8 | 26.9 |   10.0 |
+| LRU6      | val A                  | ELEC IGNITION                                         | Plasma III                                    | L    |   5.0 | 122.5 | 25.8 |   -5.5 |
+| LRU60     | val A                  | USB Charger                                           | GSB 15                                        | L    |   5.0 |  40.0 | 21.0 |  -16.0 |
+| LRU61     | val A                  | Low Voltage Monitor Module                            | BC207/AEC9005-101                             | L    |   1.0 |  40.0 | 23.0 |    6.0 |
+| LRU7      | val A                  | Non-Impulse Magnito                                   | Magneto, Non-Imulse                           | L    |  10.0 | 130.8 | 24.5 |   -6.2 |
+| LRU8      | ~                      | Voltage Regulator                                     | LRE1B-14                                      | L    |   5.0 | 123.0 | 34.4 |   -1.0 |
+| LRU81     | ~                      | Lighting Controller Powersupply                       |                                               | L    |   4.0 |  40.0 | 23.0 |   -5.0 |
+| LRU85     | val A                  |                                                       | BLAZE 1R                                      | L    |   3.0 | 163.1 | 17.7 |  168.8 |
+| LRU89     | val A                  |                                                       | Blaze 1G                                      | L    |   3.0 | 163.1 | 17.7 | -168.8 |
+| M2        | Starter                | STARTER                                               | BCS206-149-12                                 | L    | 200.0 | 166.7 | 10.0 |   -5.3 |
+| PWR_FLAG  | PWR_FLAG               | Special symbol for telling ERC where power comes from | ~                                             |      |       |   0.0 |  0.0 |    0.0 |
+| R1        | Alt Feed Relay         | Relay, SPDT 12V 20A with Diode                        | S704-1, 1N4005                                | R    |  20.0 |  46.6 |  1.5 |  -10.4 |
+| R2        | Brownout Battery Relay | Relay, SPDT 12V 20A                                   | S704-1                                        | R    |  20.0 |  48.6 |  1.5 |  -10.4 |
+| R4        | 50MV/10A               | Shunt                                                 | S870-20                                       | R    |  20.0 | 123.3 | 29.4 |   -0.9 |
+| R5        | ~                      | Shunt                                                 | TBD                                           | R    |  60.0 | 123.3 | 29.4 |    0.6 |
+| R7        | INTR LGHT DIM          | Potentiometer Switch                                  | POT SWITCH TBD                                | R    |   4.0 |  41.3 | 22.9 |   -4.6 |
+| SW1       | E-Bus Alt Feed         | ON-none-ON                                            | S700-1-3                                      | R    |  15.0 |  41.3 | 22.9 |   -3.9 |
+| SW10      | Nose Gear              | (ON)-OFF-(ON)                                         | S700-1-7                                      | R    |  20.0 |  41.3 | 10.3 |   -1.7 |
+| SW11      | G3X                    | OFF-none-ON                                           | S700-1-2                                      | R    |  20.0 |  41.3 | 21.6 |  -17.9 |
+| SW12      | AP SERVOS              | OFF-none-ON                                           | S700-2-2                                      | R    |  20.0 |  41.3 | 12.3 |    0.3 |
+| SW13      | E IGN                  | (ON)-ON-ON                                            | S700-2-50                                     | R    |  20.0 |  41.3 | 22.9 |    0.8 |
+| SW14      | M IGN                  | ON-none-ON                                            | S700-2-3                                      | R    |  20.0 |  41.3 | 22.9 |    1.8 |
+| SW2       | Aux Alt Off/On         | ON-none-ON                                            | S700-1-3                                      | R    |  20.0 |  41.3 | 22.9 |    3.9 |
+| SW23      | LANDING LIGHT TAXI     | ON-ON-ON                                              | S700-2-10                                     | R    |  20.0 |  41.3 | 24.9 |   -1.3 |
+| SW24      | NAV+STRB               | ON-ON-ON                                              | S700-2-10                                     | R    |  20.0 |  41.3 | 24.9 |   -0.3 |
+| SW5       | BATT/ALT DC POWER      | ON-none-ON                                            | S700-2-3                                      | R    |  20.0 |  41.3 | 22.9 |    5.9 |
+| SW6       | Heater                 | OFF-none-ON                                           | S700-1-2                                      | R    |  20.0 |  41.0 | 20.0 |  -17.0 |
+| SW7       | Fuel Boost             | (ON)-ON-ON                                            | S700-2-50                                     | R    |  20.0 |  41.3 | 24.9 |   -2.4 |
+| SW8       | Canopy                 | (ON)-OFF-(ON)                                         | S700-1-7                                      | R    |  20.0 |  41.3 | 19.6 |   15.7 |
+| SW9       | Lnd Brake              | (ON)-OFF-(ON)                                         | S700-1-7                                      | R    |  20.0 |  41.3 | 10.3 |   -0.7 |
+| W1        | ~                      | Connection to Shield of Shielded Wire                 |                                               | R    |  20.0 |  41.0 | 23.0 |    2.0 |
+| W2        | ~                      | Connection to Shield of Shielded Wire                 |                                               | R    |  20.0 | 131.0 | 25.0 |   -6.0 |
 
 ---
 
@@ -556,7 +561,7 @@ Component count grouped by reference prefix.
 - **FH (FH)**: 4
 - **GND (GND)**: 3
 - **L (L)**: 4
-- **LRU (LRU)**: 37
+- **LRU (LRU)**: 35
 - **M (M)**: 1
 - **PWR (PWR)**: 1
 - **R (R)**: 5
@@ -568,7 +573,7 @@ Component count grouped by reference prefix.
 ## Wire Summary by System
 Wire count grouped by system code.
 
-- **Avionics (A)**: 13
+- **Avionics (A)**: 14
 - **Engine Instrument (E)**: 14
 - **Ground (G)**: 46
 - **Lighting (L)**: 17
