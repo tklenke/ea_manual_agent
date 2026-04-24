@@ -10,8 +10,6 @@
 
 **NOTE:** This task was added to writer_todo.md — Architect should verify Writer picks it up.
 
-### [x] Document connector pinout sub-page pattern in `architecture_decisions.md`
-
 ### [ ] Plan avionics pinout pages: N657CZ-specific connector wiring
 
 Tom has a data schematic (draft) with actual connector pin numbers for N657CZ avionics. When available, use it to plan how N657CZ-specific wiring data is incorporated into the pinout sub-pages. The wire BOM from `docs/references/electrical/wire_bom.csv` has schematic symbol pin numbers only — not physical connector pins — so it cannot be used for this purpose.
