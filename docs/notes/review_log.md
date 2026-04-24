@@ -34,17 +34,17 @@ Last updated: 2026-04-23
 | avionics-system-overview | Approved | 2026-04-19 |
 | landing-gear-nose | pending | 2026-04-19 |
 | landing-gear-nose-gear-actuator | pending | 2026-04-19 |
-| avionics-adahrs-pinouts | unreviewed | |
-| avionics-arinc-429-adapter-pinouts | unreviewed | |
-| avionics-audio-panel-pinouts | unreviewed | |
-| avionics-autopilot-pinouts | unreviewed | |
-| avionics-backup-instrument-pinouts | unreviewed | |
-| avionics-engine-data-acquisition-pinouts | unreviewed | |
-| avionics-gps-and-navigation-pinouts | unreviewed | |
-| avionics-magnetometer-pinouts | unreviewed | |
-| avionics-primary-flight-display-pinouts | unreviewed | |
-| avionics-transponder-adsb-pinouts | unreviewed | |
-| avionics-vhf-communication-pinouts | unreviewed | |
+| avionics-adahrs-pinouts | pending | 2026-04-23 |
+| avionics-arinc-429-adapter-pinouts | pending | 2026-04-23 |
+| avionics-audio-panel-pinouts | pending | 2026-04-23 |
+| avionics-autopilot-pinouts | pending | 2026-04-23 |
+| avionics-backup-instrument-pinouts | pending | 2026-04-23 |
+| avionics-engine-data-acquisition-pinouts | pending | 2026-04-23 |
+| avionics-gps-and-navigation-pinouts | pending | 2026-04-23 |
+| avionics-magnetometer-pinouts | pending | 2026-04-23 |
+| avionics-primary-flight-display-pinouts | pending | 2026-04-23 |
+| avionics-transponder-adsb-pinouts | pending | 2026-04-23 |
+| avionics-vhf-communication-pinouts | pending | 2026-04-23 |
 | electrical-bus-architecture | unreviewed | |
 | electrical-schematic-alarm-lighting | unreviewed | |
 | electrical-schematic-avionics | unreviewed | |
