@@ -44,28 +44,28 @@ When done, save the file — Architect will pick it up to create the Writer task
 | LRU26 | Backup Airspeed Indicator | G5 | 37.5 | 21.0 | -6.0 | .83 | |
 | LRU22 | Audio Panel | GMA 245 | 30.25 | 19.7 | 0.35 | 1.1 | |
 | LRU21 | VHF Comm 1 | GTR 20 | 30.2 | 18.9 | -17.4 | 1.2 | |
-| LRU10-C | VHF Comm 2 / GPS | GNC 355 | 30.3 | 19.7 | 0.4 | | |
-| LRU28 | Transponder / ADS-B | GTX 45R | 32.0 | 20.0 | -5.0 | | |
-| LRU11 | Autopilot Control Panel | GMC 507 | 37.7 | 22.0 | 1.9 | | |
-| LRU32 | Engine Information System | GEA 24 | 121.8 | 29.8 | 10.0 | | |
-| LRU24 | ARINC 429 Adapter | GAD 29 | 35.3 | 1.3 | 12.2 | | |
-| LRU27 | ADAHRS | GSU 25C | 24.3 | 3.4 | 5.0 | | |
-| LRU25 | Magnetometer | GMU 11 | 166.0 | 16.0 | -62.0 | | |
-| LRU13 | Pitot Probe | Space Age Pitot | 3.9 | 11.3 | 2.3 | | |
-| LRU8 | Main Alt Voltage Regulator | LRE1B-14 | 123.0 | 34.4 | -1.0 | | |
+| LRU10-C | VHF Comm 2 / GPS | GNC 355 | 30.3 | 19.7 | 0.4 | 3.3 | |
+| LRU28 | Transponder / ADS-B | GTX 45R | 32.0 | 20.0 | -5.0 | 2.2 | |
+| LRU11 | Autopilot Control Panel | GMC 507 | 37.7 | 22.0 | 1.9 | .7 | |
+| LRU32 | Engine Information System | GEA 24 | 121.8 | 29.8 | 10.0 | .7 | |
+| LRU24 | ARINC 429 Adapter | GAD 29 | 35.3 | 1.3 | 12.2 | .7 | |
+| LRU27 | ADAHRS | GSU 25C | 24.3 | 3.4 | 5.0 | .5 | |
+| LRU25 | Magnetometer | GMU 11 | 166.0 | 16.0 | -62.0 | .2 | |
+| LRU13 | Pitot Probe | Space Age Pitot | 3.9 | 11.3 | 2.3 | .25 | |
+| LRU8 | Main Alt Voltage Regulator | LRE1B-14 | 123.0 | 34.4 | -1.0 | .6 | |
 
 ## Lighting
 
 | Reference | Description | Model / Part No. | FS | WL | BL | Weight (lbs) | Source |
 |-----------|-------------|------------------|----|----|----|:------------:|--------|
-| LRU85 | Nav / Strobe Light, Right | Blaze 1R | 163.1 | 17.7 | 168.8 | | |
-| LRU89 | Nav / Strobe Light, Left | Blaze 1G | 163.1 | 17.7 | -168.8 | | |
-| L7 | Landing Light | (see schematic) | 3.9 | 11.3 | 2.3 | | |
-| L9 | Taxi Light | (see schematic) | 3.9 | 11.3 | -2.3 | | |
+| LRU85 | Nav / Strobe Light, Right | Blaze 1R | 163.1 | 17.7 | 168.8 | .2 | |
+| LRU89 | Nav / Strobe Light, Left | Blaze 1G | 163.1 | 17.7 | -168.8 | .2 | |
+| L7 | Landing Light | (see schematic) | 3.9 | 11.3 | 2.3 | @@TOM | |
+| L9 | Taxi Light | (see schematic) | 3.9 | 11.3 | -2.3 | @@TOM | |
 
 ## Misc
 
 | Reference | Description | Model / Part No. | FS | WL | BL | Weight (lbs) | Source |
 |-----------|-------------|------------------|----|----|----|:------------:|--------|
-| LRU20 | Seat Heater | TBD | 75.0 | 9.0 | -1.0 | | |
-| LRU60 | USB Charger | GSB 15 | 40.0 | 21.0 | -16.0 | | |
+| LRU20 | Seat Heater | TBD | 75.0 | 9.0 | -1.0 | @@TOM | |
+| LRU60 | USB Charger | GSB 15 | 40.0 | 21.0 | -16.0 | @@TOM | |

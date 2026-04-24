@@ -32,7 +32,7 @@ Physical installation standards for wiring on N657CZ. Sources: AC 43.13-1B Chapt
 
 Do NOT duplicate wire marking content here — that belongs on `electrical-wire-marking`.
 
-### [ ] Write `electrical-bus-architecture` — Bus Architecture and Schematics (Section 16)
+### [x] Write `electrical-bus-architecture` — Bus Architecture and Schematics (Section 16)
 
 Hub page for the electrical system. Two parts:
 
@@ -60,7 +60,7 @@ Embed syntax:
 
 After publishing, add cross-links: `avionics-system-overview` → `electrical-schematic-avionics`; `electrical-lighting` → `electrical-schematic-alarm-lighting`.
 
-### [~] Add citations to avionics pinout sub-pages
+### [x] Add citations to avionics pinout sub-pages
 
 Source information provided via `input/writer_todo/pinout_citations.txt`. For each of the 11 pinout pages, resolve the `@@TOM:` flag by:
 1. Adding an inline citation to the cited source section
